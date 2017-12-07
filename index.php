@@ -4,9 +4,11 @@
   <title>Formulaire d'inscription</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
   <style>
     
     body{
@@ -133,7 +135,7 @@
       <p class="second-titre">Études de premier cycle</p>
       <p class="troisieme-titre">demande d'admission</p>
       <p class="quatrieme-titre">instruction et formulaire</p>
-      <p class="cinquieme-titre">UQAM</p>
+      <p class="cinquieme-titre">UQÀM</p>
     </div><br>
 
     <div class="container well">    
@@ -428,7 +430,7 @@
           <br>
           <div class="row">
             <div class="col-md-12">
-              <label for="">Langue d’usage (Langue parlée le plus souvent à la maison)</label></div>
+              <label for="">Langue maternelle (Première langue apprise et encore comprise)</label></div>
           </div>
           <div class="row">
             <div class="col-md-12">
@@ -471,13 +473,9 @@
               <input type="text" class="form-control" name="langue_usage_autre" id="langue-usage-autre" placeholder="">
               <div class="valider-langue-usage-autre"></div>
             </div>
-          </div>          
-      
-        
+          </div>               
         </div>
       </div>
-
-
 
       <div class="row">
         <div class="col-md-12">
@@ -552,7 +550,8 @@
           </div>
         </div>
     </div><br>
-        <div class="container well">    
+    <!-- ################################# Page 2 programmes demandes ##########################################-->
+    <div class="container well">    
       <div class="row">
         <div class="col-md-4">
           <p class="entete-gauche">programmes demandes</p>
@@ -563,28 +562,400 @@
         <div class="col-md-4">
           <p class="entete-droite-premier">demande d'admission</p>
           <P class="entete-droite-second">Études de premier cycle</P>
-        </div>
-        
+        </div>        
       </div>
       <hr class="trait">
       <div class="row">
-        <div class="col-md-6"> 
-          <div class="panel panel-danger">
-            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+          <div class="col-md-4">
+            <p>Je désire entreprendre mes études au trimestre:</p>
           </div>
+          <div class="col-md-2">
+            <div class="radio">
+              <label><input type="radio" name="">Hiver</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="radio">
+              <label><input type="radio" name="optradio">Ete</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="radio">
+              <label><input type="radio" name="optradio">Automne</label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <input class="date-own form-control" type="text">
+            <p>Annee</p>
+          </div>
+      </div>
+      <!-- ################################# Premier choix programmes demandes ##########################################-->
+      <div class="row">
+        <div class="col-md-12">
+           <p>Premier Choix</p>
         </div>
-        <div class="col-md-6"> 
-          <div class="panel panel-success">
-            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+      <div class="row">
+        <div class="col-md-10">
+          <input type="text" class="form-control" name="Premier_choix_titre" id="Premier-choix-titre" placeholder="">
+          <label for="Premier-choix">Titre</label>
+          <div class="valider-Premier-choix-titre"></div>          
+        </div>
+        <div class="col-md-2">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Temp complet</label>
           </div>
         </div>
       </div>
-    </div><br>
 
+      <div class="row">
+        <div class="col-md-2">
+          <input type="text" class="form-control" name="Premier_choix-code" id="Premier-choix-code" placeholder="">
+          <label for="Premier-choix-code">Code</label>
+          <div class="valider-Premier-choix-code"></div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Baccalauréat</label>
+          </div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Majeure</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Mineure</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Certificat</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Programme court</label>
+          </div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Temps partiel</label>
+          </div>
+        </div> 
+      </div>      
+      <!-- ################################# Deuxieme choix programmes demandes ##########################################-->
+      <div class="row">
+        <div class="col-md-12">
+           <p>Deuxieme Choix</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10">
+          <input type="text" class="form-control" name="Deuxieme_choix_titre" id="Deuxieme-choix-titre" placeholder="">
+          <label for="Deuxieme-choix">Titre</label>
+          <div class="valider-Deuxieme-choix-titre"></div>          
+        </div>
+        <div class="col-md-2">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Temp complet</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <input type="text" class="form-control" name="Deuxieme_choix-code" id="Deuxieme-choix-code" placeholder="">
+          <label for="Deuxieme-choix-code">Code</label>
+          <div class="valider-Deuxieme-choix-code"></div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Baccalauréat</label>
+          </div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Majeure</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Mineure</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Certificat</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Programme court</label>
+          </div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Temps partiel</label>
+          </div>
+        </div> 
+      </div>      
+      <!-- ################################# Troisieme choix programmes demandes ##########################################-->
+      <div class="row">
+        <div class="col-md-12">
+           <p>Troisième choix (nous vous suggérons fortement un programme non contingenté)</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10">
+          <input type="text" class="form-control" name="Troisieme_choix_titre" id="Troisieme-choix-titre" placeholder="">
+          <label for="Troisieme-choix">Titre</label>
+          <div class="valider-Troisieme-choix-titre"></div>          
+        </div>
+        <div class="col-md-2">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Temp complet</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <input type="text" class="form-control" name="Troisieme_choix-code" id="Troisieme-choix-code" placeholder="">
+          <label for="Premier-choix-code">Code</label>
+          <div class="valider-Troisieme-choix-code"></div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Baccalauréat</label>
+          </div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Majeure</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Mineure</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Certificat</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Programme court</label>
+          </div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="radio">
+            <label><input type="radio" name="optradio">Temps partiel</label>
+          </div>
+        </div> 
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="#">RENSEIGNEMENTS SUR LES ÉTUDES SECONDAIRES ET COLLÉGIALES</label>  
+          <hr class="trait">
+        </div>
+      </div>
+      <!-- ################################# Page 2  renseignement sur les etudes secondaires et collegiales ################-->        
+      <div class="row">
+        <!-- ####### Page 2 partie champs text#############-->        
+        <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-12">
+                <p>Dernière année du secondaire complétée au Québec</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <input type="text" class="form-control" name="Derniere_annee_secondaire" id="Derniere-annee-secondaire" placeholder="">
+                <div class="valider-Derniere-annee-secondaire"></div>  
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Diplôme d’études secondaires ou collégiales poursuivies à l’extérieur du Québec</label>
+                </div>                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="">Nom du diplôme</label>
+                <input type="text" class="form-control" name="" id="" placeholder="">
+                <div class="valider-"></div>  
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="">Discipline ou spécialisation</label>
+                <input type="text" class="form-control" name="" id="" placeholder="">
+                <div class="valider-"></div>  
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="">Institution où vous avez poursuivi vos études</label>
+                <input type="text" class="form-control" name="" id="" placeholder="">
+                <div class="valider-"></div>  
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="">Pays</label>
+                <input type="text" class="form-control" name="" id="" placeholder="">
+                <div class="valider-"></div>  
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">DEC</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Autre diplome de niveau collegial(AEC,CEC,...)</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="">Nom du diplôme</label>
+                <input type="text" class="form-control" name="" id="" placeholder="">
+                <div class="valider-"></div>  
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="">Discipline ou spécialisation</label>
+                <input type="text" class="form-control" name="" id="" placeholder="">
+                <div class="valider-"></div>  
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="">Institution où vous avez poursuivi vos études en vue de l’obtention de ce diplôme</label>
+                <input type="text" class="form-control" name="" id="" placeholder="">
+                <div class="valider-"></div>  
+              </div>
+            </div>
+        </div>
+        <!-- ####### Page 2 partie date text#############-->
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <p>Période de fréquentation</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>De (année)</p> 
+            </div>
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>à (année)</p> 
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-12">
+              <p>Période de fréquentation</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>De (année)</p> 
+            </div>
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>à (année)</p> 
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <p>Date d'obtention</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>Mois</p> 
+            </div>
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>Année</p> 
+            </div>
+          </div>
+
+          <br>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="radio">
+                <label><input type="radio" name="optradio">Obtenu</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="radio">
+                <label><input type="radio" name="optradio">A obtenir</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+               <div class="radio">
+                <label><input type="radio" name="optradio">Ne sera pas obtenu</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <p>Période de fréquentation</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>De (année)</p> 
+            </div>
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>à (année)</p> 
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <p>Date d'obtention</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>Mois</p> 
+            </div>
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>Année</p> 
+            </div>
+          </div>
+        </div>        
+      </div>
+      </div><br>
+<!-- ################################# Page 3 programmes demandes ##########################################-->
     <div class="container well">    
       <div class="row">
         <div class="col-md-4">
@@ -601,23 +972,457 @@
       </div>
       <hr class="trait">
       <div class="row">
-        <div class="col-md-6"> 
-          <div class="panel panel-danger">
-            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <!-- ################################# Page 3 etudes universitaires ##########################################-->
+        <div class="col-md-8">
+          <div class="row">
+           <div class="col-md-12">
+              <div class="radio">
+                <label><input type="radio" name="optradio">Grade ou diplôme de niveau universitaire le plus récent entrepris ou complété</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <label for="">Nom du diplôme</label>
+              <input type="text" class="form-control" name="" id="" placeholder="">
+              <div class="valider-"></div>  
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="">Discipline ou spécialisation</label>
+              <input type="text" class="form-control" name="" id="" placeholder="">
+              <div class="valider-"></div>  
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="">Institution où vous avez poursuivi vos études en vue de l’obtention de ce diplôme</label>
+              <input type="text" class="form-control" name="" id="" placeholder="">
+              <div class="valider-"></div>  
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <label for="">Pays (si à l’extérieur du Canada)</label>
+              <input type="text" class="form-control" name="" id="" placeholder="">
+              <div class="valider-"></div>  
+            </div>
+          </div>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          
+         
+          <div class="row">
+           <div class="col-md-12">
+              <div class="radio">
+                <label><input type="radio" name="optradio">Autre grade ou diplôme de niveau universitaire entrepris ou complété</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <label for="">Nom du diplôme</label>
+              <input type="text" class="form-control" name="" id="" placeholder="">
+              <div class="valider-"></div>  
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="">Discipline ou spécialisation</label>
+              <input type="text" class="form-control" name="" id="" placeholder="">
+              <div class="valider-"></div>  
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="">Institution où vous avez poursuivi vos études en vue de l’obtention de ce diplôme</label>
+              <input type="text" class="form-control" name="" id="" placeholder="">
+              <div class="valider-"></div>  
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <label for="">Pays (si à l’extérieur du Canada)</label>
+              <input type="text" class="form-control" name="" id="" placeholder="">
+              <div class="valider-"></div>  
+            </div>
           </div>
         </div>
-        <div class="col-md-6"> 
-          <div class="panel panel-success">
-            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <!-- ################################# Page 3 etudes universitaires  dates ##########################################-->
+        
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="radio">
+                <label><input type="radio" name="optradio">Obtenu</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="radio">
+                <label><input type="radio" name="optradio">A obtenir</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+               <div class="radio">
+                <label><input type="radio" name="optradio">Ne sera pas obtenu</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-12">
+              <p>Période de fréquentation</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>De (année)</p> 
+            </div>
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>à (année)</p> 
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <p>Date d'obtention</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>Mois</p> 
+            </div>
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>Année</p> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+                <label for="">Nombre de crédits complétés</label>
+                <input type="text" class="form-control" name="" id="" placeholder="">
+                <div class="valider-"></div>   
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="radio">
+                <label><input type="radio" name="optradio">Obtenu</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="radio">
+                <label><input type="radio" name="optradio">A obtenir</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+               <div class="radio">
+                <label><input type="radio" name="optradio">Ne sera pas obtenu</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <p>Période de fréquentation</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>De (année)</p> 
+            </div>
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>à (année)</p> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p>Date d'obtention</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>Mois</p> 
+            </div>
+            <div class="col-md-6">
+              <input class="date-own form-control" type="text">
+              <p>Année</p> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+                <label for="">Nombre de crédits complétés</label>
+                <input type="text" class="form-control" name="" id="" placeholder="">
+                <div class="valider-"></div>   
+            </div>
           </div>
         </div>
       </div>
-    </div><br>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="#">RENSEIGNEMENTS SUR LES EMPLOIS</label>  
+          <hr class="trait">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+            <!-- Premier emploie -->
+            <div class="row">
+               <div class="col-md-12">
+                  <label for="">Nom de l’employeur</label>
+                  <input type="text" class="form-control" name="" id="" placeholder="">
+                  <div class="valider-"></div>  
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <label for="">Fonction occupée</label>
+                  <input type="text" class="form-control" name="" id="" placeholder="">
+                  <div class="valider-"></div>  
+               </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Emploi rémunéré</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Stage</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Bénévolat</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Temps complet</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Temps partiel</label>
+                </div>
+              </div>
+            </div>
 
+            <!-- Deuxieme emploie -->
+            <div class="row">
+               <div class="col-md-12">
+                  <label for="">Nom de l’employeur</label>
+                  <input type="text" class="form-control" name="" id="" placeholder="">
+                  <div class="valider-"></div>  
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <label for="">Fonction occupée</label>
+                  <input type="text" class="form-control" name="" id="" placeholder="">
+                  <div class="valider-"></div>  
+               </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Emploi rémunéré</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Stage</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Bénévolat</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Temps complet</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Temps partiel</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Troisieme emploie -->
+            <div class="row">
+               <div class="col-md-12">
+                  <label for="">Nom de l’employeur</label>
+                  <input type="text" class="form-control" name="" id="" placeholder="">
+                  <div class="valider-"></div>  
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <label for="">Fonction occupée</label>
+                  <input type="text" class="form-control" name="" id="" placeholder="">
+                  <div class="valider-"></div>  
+               </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Emploi rémunéré</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Stage</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Bénévolat</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Temps complet</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Temps partiel</label>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+
+          <div class="row">
+            <div class="col-md-12">
+              <p>Période de fréquentation</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <p>de</p>
+            </div>
+            <div class="col-md-5">
+              <input class="date-own form-control" type="text">
+              <p>Mois</p> 
+            </div>
+            <div class="col-md-5">
+              <input class="date-own form-control" type="text">
+              <p>Année</p> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <p>a</p>
+            </div>
+            <div class="col-md-5">
+              <input class="date-own form-control" type="text">
+              <p>Mois</p> 
+            </div>
+            <div class="col-md-5">
+              <input class="date-own form-control" type="text">
+              <p>Année</p> 
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <p>Période de fréquentation</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <p>de</p>
+            </div>
+            <div class="col-md-5">
+              <input class="date-own form-control" type="text">
+              <p>Mois</p> 
+            </div>
+            <div class="col-md-5">
+              <input class="date-own form-control" type="text">
+              <p>Année</p> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <p>a</p>
+            </div>
+            <div class="col-md-5">
+              <input class="date-own form-control" type="text">
+              <p>Mois</p> 
+            </div>
+            <div class="col-md-5">
+              <input class="date-own form-control" type="text">
+              <p>Année</p> 
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <p>Période de fréquentation</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <p>de</p>
+            </div>
+            <div class="col-md-5">
+              <input class="date-own form-control" type="text">
+              <p>Mois</p> 
+            </div>
+            <div class="col-md-5">
+              <input class="date-own form-control" type="text">
+              <p>Année</p> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <p>a</p>
+            </div>
+            <div class="col-md-5">
+              <input class="date-own form-control" type="text">
+              <p>Mois</p> 
+            </div>
+            <div class="col-md-5">
+              <input class="date-own form-control" type="text">
+              <p>Année</p> 
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </div><br>
+    <!-- ################################# Page 4 programmes demandes ##################################-->
     <div class="container well">    
       <div class="row">
         <div class="col-md-4">
@@ -633,20 +1438,15 @@
       </div>
       <hr class="trait">
       <div class="row">
-        <div class="col-md-6"> 
-          <div class="panel panel-danger">
-            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-          </div>
+        <div class="col-md-12">
+          <p>Veuillez indiquer toute autre expérience, différente d’un emploi, qui vous semble pertinente à votre demande d’admission. </p>
+          <p>Il peut s’agir de publications, de recherches, de contributions intellectuelles ou professionnelles.</p>
         </div>
-        <div class="col-md-6"> 
-          <div class="panel panel-success">
-            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-          </div>
-        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <textarea class="form-control" rows="20" id=""></textarea>  
+        </div>        
       </div>
     </div><br>
   </form>  
