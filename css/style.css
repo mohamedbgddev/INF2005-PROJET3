@@ -119,3 +119,9 @@ footer {
 	color: red;
 	display: none; 
 }
+
+.warningHeader { 
+  font-weight: bold; 
+  color: orange;
+  display: none; 
+}
