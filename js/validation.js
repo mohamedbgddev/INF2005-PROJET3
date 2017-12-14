@@ -311,8 +311,6 @@ function numeroTelephoneTravailValidation() {
 }
 
 
-
-
 /*
 Fonction de validations de formatage
 */
@@ -338,7 +336,7 @@ function validerNumeroAssurranceSociale(numero)
 	return pattern.test(numero); 
 }
 
-function validerFormatTelephone(numeroTelephone)
+function validerFormatTelephone(numeroTelephone)	
 { 
 	var pattern = ""; 
 	return pattern.test(numeroTelephone); 
