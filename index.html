@@ -8,21 +8,21 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
   <script type="text/javascript" src="js/validation.js"></script>
-</head> 
+</head>
 <body>
   <form>
     <div class="container preface">
-      <p><span class="premier-titre">prenez</span><span class="premier-titre-suite">votre place.</span></p>      
+      <p><span class="premier-titre">prenez</span><span class="premier-titre-suite">votre place.</span></p>
       <p class="second-titre">Études de premier cycle</p>
       <p class="troisieme-titre">demande d'admission</p>
       <p class="quatrieme-titre">instruction et formulaire</p>
       <p class="cinquieme-titre">UQÀM</p>
     </div><br>
 
-    <div class="container well">    
+    <div class="container well">
       <div class="row">
         <div class="col-md-4">
           <p class="entete-gauche">identification</p>
@@ -33,7 +33,7 @@
         <div class="col-md-4">
           <p class="entete-droite-premier">demande d'admission</p>
           <P class="entete-droite-second">Études de premier cycle</P>
-        </div>        
+        </div>
       </div>
       <hr class="trait">
       <div class="row">
@@ -50,12 +50,12 @@
           <label for="Date-de-naissance">Date de naissance</label>
           <div class="row">
             <div class="col-md-12">
-              <input type="text" class="form-control" 
-                    name="Date_de_naissance" 
+              <input type="text" class="form-control"
+                    name="Date_de_naissance"
                     id="Date-de-naissance"
                     placeholder="JJ-MM-AAAA"
-                    onblur="dateDeNaissanceValidation()">  
-              <div id="valider-Date-de-naissance" class="errorHeader"></div>  
+                    onblur="dateDeNaissanceValidation()">
+              <div id="valider-Date-de-naissance" class="errorHeader"></div>
             </div>
           </div>
         </div>
@@ -63,12 +63,12 @@
       <div class="row">
         <div class="col-md-8">
           <label for="Prenom-usuel">Prenom usuel</label>
-          <input type="text" class="form-control" 
-              name="Prenom_usuel" 
+          <input type="text" class="form-control"
+              name="Prenom_usuel"
               id="Prenom-usuel"
               placeholder=""
               onblur="prenomUsuelValidation()">
-          <div id="valider-Prenom-usuel" class="errorHeader"></div>  
+          <div id="valider-Prenom-usuel" class="errorHeader"></div>
         </div>
         <div class="col-md-4">
           <label for="Sexe">Sexe</label>
@@ -90,8 +90,8 @@
       <div class="row">
         <div class="col-md-12">
           <label for="Courriel-du-candidat">Courriel du candidat</label>
-          <input type="text" class="form-control" 
-                  name="Courriel_du_candidat" 
+          <input type="text" class="form-control"
+                  name="Courriel_du_candidat"
                   id="Courriel-du-candidat"
                   placeholder=""
                   onblur="courrielCandidatValidation()">
@@ -107,7 +107,7 @@
         <div class="col-md-5">
           <label for="Numero-assurance-sociale">No d’assurance sociale</label>
           <input type="text" class="form-control" name="Numero_assurance_sociale" id="Numero-assurance-sociale" placeholder="">
-          <div class="valider-Numero-assurance-sociale"></div>  
+          <div class="valider-Numero-assurance-sociale"></div>
         </div>
       </div>
       <div class="row">
@@ -180,7 +180,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-2">  
+            <div class="col-md-2">
               <input type="text" class="form-control" name="Ind_regional" id="Ind-regional" placeholder="">
               <p class="text-left">Ind.régional</p>
             </div>
@@ -192,7 +192,7 @@
               <input type="text" class="form-control" name="Poste_telephone" id="Poste-telephone" placeholder="">
               <p class="text-left">Poste</p>
             </div>
-          </div>       
+          </div>
         </dir>
 
         <div class="col-md-6">
@@ -359,7 +359,7 @@
               <input type="text" class="form-control" name="langue_usage_autre" id="langue-usage-autre" placeholder="">
               <div class="valider-langue-usage-autre"></div>
             </div>
-          </div>               
+          </div>
         </div>
       </div>
 
@@ -437,7 +437,7 @@
         </div>
     </div><br>
     <!-- ################################# Page 2 programmes demandes ##########################################-->
-    <div class="container well">    
+    <div class="container well">
       <div class="row">
         <div class="col-md-4">
           <p class="entete-gauche">programmes demandes</p>
@@ -448,7 +448,7 @@
         <div class="col-md-4">
           <p class="entete-droite-premier">demande d'admission</p>
           <P class="entete-droite-second">Études de premier cycle</P>
-        </div>        
+        </div>
       </div>
       <hr class="trait">
       <div class="row">
@@ -457,17 +457,17 @@
           </div>
           <div class="col-md-2">
             <div class="radio">
-              <label><input type="radio" name="">Hiver</label>
+              <label><input type="radio" name="radio-trimmestre">Hiver</label>
             </div>
           </div>
           <div class="col-md-2">
             <div class="radio">
-              <label><input type="radio" name="optradio">Ete</label>
+              <label><input type="radio" name="radio-trimmestre">Été</label>
             </div>
           </div>
           <div class="col-md-2">
             <div class="radio">
-              <label><input type="radio" name="optradio">Automne</label>
+              <label><input type="radio" name="radio-trimmestre">Automne</label>
             </div>
           </div>
           <div class="col-md-1">
@@ -485,11 +485,11 @@
         <div class="col-md-10">
           <input type="text" class="form-control" name="Premier_choix_titre" id="Premier-choix-titre" placeholder="">
           <label for="Premier-choix">Titre</label>
-          <div class="valider-Premier-choix-titre"></div>          
+          <div class="valider-Premier-choix-titre"></div>
         </div>
         <div class="col-md-2">
           <div class="radio">
-            <label><input type="radio" name="optradio">Temp complet</label>
+            <label><input type="radio" name="radio-temp-1">Temp complet</label>
           </div>
         </div>
       </div>
@@ -502,35 +502,35 @@
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Baccalauréat</label>
+            <label><input type="radio" name="radio-type-programme-1">Baccalauréat</label>
           </div>
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Majeure</label>
+            <label><input type="radio" name="radio-type-programme-1">Majeure</label>
           </div>
         </div>
         <div class="col-md-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Mineure</label>
+            <label><input type="radio" name="radio-type-programme-1">Mineure</label>
           </div>
         </div>
         <div class="col-md-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Certificat</label>
+            <label><input type="radio" name="radio-type-programme-1">Certificat</label>
           </div>
         </div>
         <div class="col-md-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Programme court</label>
+            <label><input type="radio" name="radio-type-programme-1">Programme court</label>
           </div>
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Temps partiel</label>
+            <label><input type="radio" name="radio-temp-1">Temps partiel</label>
           </div>
-        </div> 
-      </div>      
+        </div>
+      </div>
       <!-- ################################# Deuxieme choix programmes demandes ##########################################-->
       <div class="row">
         <div class="col-md-12">
@@ -541,11 +541,11 @@
         <div class="col-md-10">
           <input type="text" class="form-control" name="Deuxieme_choix_titre" id="Deuxieme-choix-titre" placeholder="">
           <label for="Deuxieme-choix">Titre</label>
-          <div class="valider-Deuxieme-choix-titre"></div>          
+          <div class="valider-Deuxieme-choix-titre"></div>
         </div>
         <div class="col-md-2">
           <div class="radio">
-            <label><input type="radio" name="optradio">Temp complet</label>
+            <label><input type="radio" name="radio-temp-2">Temp complet</label>
           </div>
         </div>
       </div>
@@ -558,35 +558,35 @@
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Baccalauréat</label>
+            <label><input type="radio" name="radio-type-programme-2">Baccalauréat</label>
           </div>
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Majeure</label>
+            <label><input type="radio" name="radio-type-programme-2">Majeure</label>
           </div>
         </div>
         <div class="col-md-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Mineure</label>
+            <label><input type="radio" name="radio-type-programme-2">Mineure</label>
           </div>
         </div>
         <div class="col-md-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Certificat</label>
+            <label><input type="radio" name="radio-type-programme-2">Certificat</label>
           </div>
         </div>
         <div class="col-md-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Programme court</label>
+            <label><input type="radio" name="radio-type-programme-2">Programme court</label>
           </div>
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Temps partiel</label>
+            <label><input type="radio" name="radio-temp-2">Temps partiel</label>
           </div>
-        </div> 
-      </div>      
+        </div>
+      </div>
       <!-- ################################# Troisieme choix programmes demandes ##########################################-->
       <div class="row">
         <div class="col-md-12">
@@ -597,11 +597,11 @@
         <div class="col-md-10">
           <input type="text" class="form-control" name="Troisieme_choix_titre" id="Troisieme-choix-titre" placeholder="">
           <label for="Troisieme-choix">Titre</label>
-          <div class="valider-Troisieme-choix-titre"></div>          
+          <div class="valider-Troisieme-choix-titre"></div>
         </div>
         <div class="col-md-2">
           <div class="radio">
-            <label><input type="radio" name="optradio">Temp complet</label>
+            <label><input type="radio" name="radio-temp-3">Temp complet</label>
           </div>
         </div>
       </div>
@@ -614,44 +614,44 @@
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Baccalauréat</label>
+            <label><input type="radio" name="radio-type-programme-3">Baccalauréat</label>
           </div>
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Majeure</label>
+            <label><input type="radio" name="radio-type-programme-3">Majeure</label>
           </div>
         </div>
         <div class="col-md-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Mineure</label>
+            <label><input type="radio" name="radio-type-programme-3">Mineure</label>
           </div>
         </div>
         <div class="col-md-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Certificat</label>
+            <label><input type="radio" name="radio-type-programme-3">Certificat</label>
           </div>
         </div>
         <div class="col-md-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Programme court</label>
+            <label><input type="radio" name="radio-type-programme-3">Programme court</label>
           </div>
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="optradio">Temps partiel</label>
+            <label><input type="radio" name="radio-temp-3">Temps partiel</label>
           </div>
-        </div> 
+        </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <label for="#">RENSEIGNEMENTS SUR LES ÉTUDES SECONDAIRES ET COLLÉGIALES</label>  
+          <label for="#">RENSEIGNEMENTS SUR LES ÉTUDES SECONDAIRES ET COLLÉGIALES</label>
           <hr class="trait">
         </div>
       </div>
-      <!-- ################################# Page 2  renseignement sur les etudes secondaires et collegiales ################-->        
+      <!-- ################################# Page 2  renseignement sur les etudes secondaires et collegiales ################-->
       <div class="row">
-        <!-- ####### Page 2 partie champs text#############-->        
+        <!-- ####### Page 2 partie champs text#############-->
         <div class="col-md-8">
             <div class="row">
               <div class="col-md-12">
@@ -661,53 +661,53 @@
             <div class="row">
               <div class="col-md-12">
                 <input type="text" class="form-control" name="Derniere_annee_secondaire" id="Derniere-annee-secondaire" placeholder="">
-                <div class="valider-Derniere-annee-secondaire"></div>  
+                <div class="valider-Derniere-annee-secondaire"></div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Diplôme d’études secondaires ou collégiales poursuivies à l’extérieur du Québec</label>
-                </div>                
+                  <label><input type="radio" name="radio-standalone-diplome">Diplôme d’études secondaires ou collégiales poursuivies à l’extérieur du Québec</label>
+                </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <label for="">Nom du diplôme</label>
                 <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>  
+                <div class="valider-"></div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <label for="">Discipline ou spécialisation</label>
                 <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>  
+                <div class="valider-"></div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <label for="">Institution où vous avez poursuivi vos études</label>
                 <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>  
+                <div class="valider-"></div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <label for="">Pays</label>
                 <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>  
+                <div class="valider-"></div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">DEC</label>
+                  <label><input type="radio" name="radio-DEC_ou_autre">DEC</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Autre diplome de niveau collegial(AEC,CEC,...)</label>
+                  <label><input type="radio" name="radio-DEC_ou_autre">Autre diplome de niveau collegial(AEC,CEC,...)</label>
                 </div>
               </div>
             </div>
@@ -715,21 +715,21 @@
               <div class="col-md-12">
                 <label for="">Nom du diplôme</label>
                 <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>  
+                <div class="valider-"></div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <label for="">Discipline ou spécialisation</label>
                 <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>  
+                <div class="valider-"></div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <label for="">Institution où vous avez poursuivi vos études en vue de l’obtention de ce diplôme</label>
                 <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>  
+                <div class="valider-"></div>
               </div>
             </div>
         </div>
@@ -743,14 +743,14 @@
           <div class="row">
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>De (année)</p> 
+              <p>De (année)</p>
             </div>
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>à (année)</p> 
+              <p>à (année)</p>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="col-md-12">
               <p>Période de fréquentation</p>
@@ -759,11 +759,11 @@
           <div class="row">
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>De (année)</p> 
+              <p>De (année)</p>
             </div>
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>à (année)</p> 
+              <p>à (année)</p>
             </div>
           </div>
 
@@ -775,11 +775,11 @@
           <div class="row">
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>Mois</p> 
+              <p>Mois</p>
             </div>
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>Année</p> 
+              <p>Année</p>
             </div>
           </div>
 
@@ -789,12 +789,12 @@
           <div class="row">
             <div class="col-md-6">
               <div class="radio">
-                <label><input type="radio" name="optradio">Obtenu</label>
+                <label><input type="radio" name="radio-obtention-diplome">Obtenu</label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="radio">
-                <label><input type="radio" name="optradio">A obtenir</label>
+                <label><input type="radio" name="radio-obtention-diplome">À obtenir</label>
               </div>
             </div>
           </div>
@@ -802,7 +802,7 @@
           <div class="row">
             <div class="col-md-12">
                <div class="radio">
-                <label><input type="radio" name="optradio">Ne sera pas obtenu</label>
+                <label><input type="radio" name="radio-obtention-diplome">Ne sera pas obtenu</label>
               </div>
             </div>
           </div>
@@ -815,11 +815,11 @@
           <div class="row">
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>De (année)</p> 
+              <p>De (année)</p>
             </div>
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>à (année)</p> 
+              <p>à (année)</p>
             </div>
           </div>
 
@@ -831,18 +831,18 @@
           <div class="row">
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>Mois</p> 
+              <p>Mois</p>
             </div>
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>Année</p> 
+              <p>Année</p>
             </div>
           </div>
-        </div>        
+        </div>
       </div>
       </div><br>
 <!-- ################################# Page 3 programmes demandes ##########################################-->
-    <div class="container well">    
+    <div class="container well">
       <div class="row">
         <div class="col-md-4">
           <p class="entete-gauche">renseignements sur les etudes universitaires</p>
@@ -854,7 +854,7 @@
           <p class="entete-droite-premier">demande d'admission</p>
           <P class="entete-droite-second">Études de premier cycle</P>
         </div>
-        
+
       </div>
       <hr class="trait">
       <div class="row">
@@ -872,21 +872,21 @@
             <div class="col-md-12">
               <label for="">Nom du diplôme</label>
               <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>  
+              <div class="valider-"></div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <label for="">Discipline ou spécialisation</label>
               <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>  
+              <div class="valider-"></div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <label for="">Institution où vous avez poursuivi vos études en vue de l’obtention de ce diplôme</label>
               <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>  
+              <div class="valider-"></div>
             </div>
           </div>
 
@@ -894,7 +894,7 @@
             <div class="col-md-12">
               <label for="">Pays (si à l’extérieur du Canada)</label>
               <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>  
+              <div class="valider-"></div>
             </div>
           </div>
 
@@ -902,8 +902,8 @@
           <br>
           <br>
           <br>
-          
-         
+
+
           <div class="row">
            <div class="col-md-12">
               <div class="radio">
@@ -916,21 +916,21 @@
             <div class="col-md-12">
               <label for="">Nom du diplôme</label>
               <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>  
+              <div class="valider-"></div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <label for="">Discipline ou spécialisation</label>
               <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>  
+              <div class="valider-"></div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <label for="">Institution où vous avez poursuivi vos études en vue de l’obtention de ce diplôme</label>
               <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>  
+              <div class="valider-"></div>
             </div>
           </div>
 
@@ -938,12 +938,12 @@
             <div class="col-md-12">
               <label for="">Pays (si à l’extérieur du Canada)</label>
               <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>  
+              <div class="valider-"></div>
             </div>
           </div>
         </div>
         <!-- ################################# Page 3 etudes universitaires  dates ##########################################-->
-        
+
         <div class="col-md-4">
           <div class="row">
             <div class="col-md-6">
@@ -965,7 +965,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="col-md-12">
               <p>Période de fréquentation</p>
@@ -974,11 +974,11 @@
           <div class="row">
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>De (année)</p> 
+              <p>De (année)</p>
             </div>
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>à (année)</p> 
+              <p>à (année)</p>
             </div>
           </div>
 
@@ -990,18 +990,18 @@
           <div class="row">
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>Mois</p> 
+              <p>Mois</p>
             </div>
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>Année</p> 
+              <p>Année</p>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
                 <label for="">Nombre de crédits complétés</label>
                 <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>   
+                <div class="valider-"></div>
             </div>
           </div>
           <br>
@@ -1034,11 +1034,11 @@
           <div class="row">
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>De (année)</p> 
+              <p>De (année)</p>
             </div>
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>à (année)</p> 
+              <p>à (année)</p>
             </div>
           </div>
           <div class="row">
@@ -1049,25 +1049,25 @@
           <div class="row">
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>Mois</p> 
+              <p>Mois</p>
             </div>
             <div class="col-md-6">
               <input class="date-own form-control" type="text">
-              <p>Année</p> 
+              <p>Année</p>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
                 <label for="">Nombre de crédits complétés</label>
                 <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>   
+                <div class="valider-"></div>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <label for="#">RENSEIGNEMENTS SUR LES EMPLOIS</label>  
+          <label for="#">RENSEIGNEMENTS SUR LES EMPLOIS</label>
           <hr class="trait">
         </div>
       </div>
@@ -1078,14 +1078,14 @@
                <div class="col-md-12">
                   <label for="">Nom de l’employeur</label>
                   <input type="text" class="form-control" name="" id="" placeholder="">
-                  <div class="valider-"></div>  
+                  <div class="valider-"></div>
                </div>
             </div>
             <div class="row">
                <div class="col-md-12">
                   <label for="">Fonction occupée</label>
                   <input type="text" class="form-control" name="" id="" placeholder="">
-                  <div class="valider-"></div>  
+                  <div class="valider-"></div>
                </div>
             </div>
             <div class="row">
@@ -1121,14 +1121,14 @@
                <div class="col-md-12">
                   <label for="">Nom de l’employeur</label>
                   <input type="text" class="form-control" name="" id="" placeholder="">
-                  <div class="valider-"></div>  
+                  <div class="valider-"></div>
                </div>
             </div>
             <div class="row">
                <div class="col-md-12">
                   <label for="">Fonction occupée</label>
                   <input type="text" class="form-control" name="" id="" placeholder="">
-                  <div class="valider-"></div>  
+                  <div class="valider-"></div>
                </div>
             </div>
             <div class="row">
@@ -1164,14 +1164,14 @@
                <div class="col-md-12">
                   <label for="">Nom de l’employeur</label>
                   <input type="text" class="form-control" name="" id="" placeholder="">
-                  <div class="valider-"></div>  
+                  <div class="valider-"></div>
                </div>
             </div>
             <div class="row">
                <div class="col-md-12">
                   <label for="">Fonction occupée</label>
                   <input type="text" class="form-control" name="" id="" placeholder="">
-                  <div class="valider-"></div>  
+                  <div class="valider-"></div>
                </div>
             </div>
             <div class="row">
@@ -1216,11 +1216,11 @@
             </div>
             <div class="col-md-5">
               <input class="date-own form-control" type="text">
-              <p>Mois</p> 
+              <p>Mois</p>
             </div>
             <div class="col-md-5">
               <input class="date-own form-control" type="text">
-              <p>Année</p> 
+              <p>Année</p>
             </div>
           </div>
           <div class="row">
@@ -1229,11 +1229,11 @@
             </div>
             <div class="col-md-5">
               <input class="date-own form-control" type="text">
-              <p>Mois</p> 
+              <p>Mois</p>
             </div>
             <div class="col-md-5">
               <input class="date-own form-control" type="text">
-              <p>Année</p> 
+              <p>Année</p>
             </div>
           </div>
 
@@ -1249,11 +1249,11 @@
             </div>
             <div class="col-md-5">
               <input class="date-own form-control" type="text">
-              <p>Mois</p> 
+              <p>Mois</p>
             </div>
             <div class="col-md-5">
               <input class="date-own form-control" type="text">
-              <p>Année</p> 
+              <p>Année</p>
             </div>
           </div>
           <div class="row">
@@ -1262,11 +1262,11 @@
             </div>
             <div class="col-md-5">
               <input class="date-own form-control" type="text">
-              <p>Mois</p> 
+              <p>Mois</p>
             </div>
             <div class="col-md-5">
               <input class="date-own form-control" type="text">
-              <p>Année</p> 
+              <p>Année</p>
             </div>
           </div>
 
@@ -1281,11 +1281,11 @@
             </div>
             <div class="col-md-5">
               <input class="date-own form-control" type="text">
-              <p>Mois</p> 
+              <p>Mois</p>
             </div>
             <div class="col-md-5">
               <input class="date-own form-control" type="text">
-              <p>Année</p> 
+              <p>Année</p>
             </div>
           </div>
           <div class="row">
@@ -1294,11 +1294,11 @@
             </div>
             <div class="col-md-5">
               <input class="date-own form-control" type="text">
-              <p>Mois</p> 
+              <p>Mois</p>
             </div>
             <div class="col-md-5">
               <input class="date-own form-control" type="text">
-              <p>Année</p> 
+              <p>Année</p>
             </div>
           </div>
 
@@ -1309,7 +1309,7 @@
 
     </div><br>
     <!-- ################################# Page 4 programmes demandes ##################################-->
-    <div class="container well">    
+    <div class="container well">
       <div class="row">
         <div class="col-md-4">
           <p class="entete-gauche">renseignements supplementaires</p>
@@ -1331,10 +1331,10 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <textarea class="form-control" rows="20" id=""></textarea>  
-        </div>        
+          <textarea class="form-control" rows="20" id=""></textarea>
+        </div>
       </div>
     </div><br>
-  </form>  
+  </form>
 </body>
 </html>
