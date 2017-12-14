@@ -75,12 +75,12 @@
           <div class="row">
             <div class="col-md-2">
               <div class="radio">
-                <label><input type="radio" name="">Feminin</label>
+                <label><input type="radio" name="sexe" value="Feminin">Feminin</label>
               </div>
             </div>
             <div class="col-md-2 col-md-offset-1">
               <div class="radio">
-                <label><input type="radio" name="">Masculain</label>
+                <label><input type="radio" name="sexe" value="Masculain">Masculain</label>
               </div>
             </div>
           </div>
@@ -101,13 +101,21 @@
       <div class="row">
         <div class="col-md-7">
           <label for="Code-permanent">Code permanent (alphanumérique) si vous avez déjà étudié à l’UQAM</label>
-          <input type="text" class="form-control" name="Code_permanent" id="Code-permanent" placeholder="">
-          <div class="valider-Code-permanent"></div>
+          <input type="text" class="form-control"
+              name="Code_permanent"
+              id="Code-permanent"
+              placeholder="XXXX99999999"
+              onblur="codePermanentValidation()">
+          <div id="valider-Code-permanent" class="errorHeader"></div>
         </div>
         <div class="col-md-5">
           <label for="Numero-assurance-sociale">No d’assurance sociale</label>
-          <input type="text" class="form-control" name="Numero_assurance_sociale" id="Numero-assurance-sociale" placeholder="">
-          <div class="valider-Numero-assurance-sociale"></div>
+          <input type="text" class="form-control"
+                name="Numero_assurance_sociale"
+                id="Numero-assurance-sociale"
+                placeholder=""
+                onblur="numeroAssurranceSocialeValidation()">
+          <div id="valider-Numero-assurance-sociale" class="errorHeader"></div>
         </div>
       </div>
       <div class="row">
@@ -119,82 +127,141 @@
           </div>
           <div class="row">
             <div class="col-md-6">
-              <label class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" name="sexe">
-                <span class="custom-control-indicator"></span>
-                <span class="custom-control-description">Canadienne</span>
-              </label>
+              <div class="radio">
+                <label><input type="radio" name="Citoyennete" value="Canadienne">Canadienne</label>
+              </div>
             </div>
             <div class="col-md-6">
-               <label class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" name="sexe">
-                <span class="custom-control-indicator"></span>
-                <span class="custom-control-description">Autre(precisez)</span>
-              </label>
+              <div class="radio">
+                <label><input type="radio" name="Citoyennete" value="">Autre(precisez)</label>
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
-              <input type="text" class="form-control" name="Autre_citoyennete" id="Autre-citoyennete" placeholder="">
-              <div class="valider-Autre-citoyennete"></div>
+              <input type="text" class="form-control" name="Autre_citoyennete"
+                   id="Autre-citoyennete"
+                   placeholder=""
+                   onblur="AutreCitoyenneteValidation()">
+              <div id="valider-Autre-citoyennete" class="errorHeader"></div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <label for="Lieu-de-naissance(ville)">Lieu de naissance(ville)</label>
-              <input type="text" class="form-control" name="Lieu_de_naissance(ville)" id="Lieu-de-naissance" placeholder="">
-              <div class="valider-Lieu-de-naissance"></div>
+              <input type="text" class="form-control"
+                    name="Lieu_de_naissance(ville)"
+                    id="Lieu-de-naissance"
+                    placeholder=""
+                    onblur="lieuNaissanceValidation()">
+              <div id="valider-Lieu-de-naissance" class="errorHeader"></div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <label for="Nom-de-famille-pere-naissance">Nom de famille du père à la naissance</label>
-              <input type="text" class="form-control" name="Nom_de_famille_pere_naissance" id="Nom-de-famille-pere-naissance" placeholder="">
-              <div class="valider-Nom-de-famille-pere-naissance"></div>
+              <input type="text" class="form-control"
+                    name="Nom_de_famille_pere_naissance"
+                    id="Nom-de-famille-pere-naissance"
+                    placeholder=""
+                    onblur="nomFamillePereNaissance()">
+              <div id="valider-Nom-de-famille-pere-naissance"></div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <label for="Prenom-usuel-du-pere">Prénom usuel du père</label>
-              <input type="text" class="form-control" name="Prenom_usuel_du_pere" id="Prenom-usuel-du-pere" placeholder="">
-              <div class="valider-Prenom-usuel-du-pere"></div>
+              <input type="text" class="form-control"
+                    name="Prenom_usuel_du_pere"
+                    id="Prenom-usuel-du-pere"
+                    placeholder=""
+                    onblur="prenomUsuelPere()">
+              <div id="valider-Prenom-usuel-du-pere"></div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <label for="Nom-de-famille-mere-naissance">Nom de famille de la mère à la naissance</label>
-              <input type="text" class="form-control" name="Nom_de_famille_mere_naissance" id="Nom-de-famille-mere-naissance" placeholder="">
-              <div class="valider-Nom-de-famille-mere-naissance"></div>
+              <input type="text" class="form-control"
+                     name="Nom_de_famille_mere_naissance"
+                     id="Nom-de-famille-mere-naissance"
+                     placeholder=""
+                     onblur="nomFamilleMereNaissance()">
+              <div id="valider-Nom-de-famille-mere-naissance"></div>
             </div>
           </div>
            <div class="row">
             <div class="col-md-12">
               <label for="Prenom-usuel-du-mere">Prénom usuel du mère</label>
-              <input type="text" class="form-control" name="Prenom_usuel_du_mere" id="Prenom-usuel-du-mere" placeholder="">
-              <div class="valider-Prenom-usuel-du-mere"></div>
+              <input type="text" class="form-control"
+                    name="Prenom_usuel_du_mere"
+                    id="Prenom-usuel-du-mere"
+                    placeholder=""
+                    onblur="prenomUsuelMere()">
+              <div id="valider-Prenom-usuel-du-mere"></div>
             </div>
           </div>
+
+          <!-- Telephone a domicile -->
+          <div class="row">
+            <div class="col-md-12">
+              <label for="">Téléphone a domicile</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <input type="text" class="form-control"
+                    name="Numero_telephone_domicile"
+                    id="Numero-telephone-domicile"
+                    placeholder="999-999-9999"
+                    onblur="numeroTelephoneDomicileValidation()">
+              <p class="text-left">Numéro</p>
+              <div id="valider-Numero-telephone-domicile"></div>
+            </div>
+          </div>
+          <!-- Cellulaire -->
+          <div class="row">
+            <div class="col-md-12">
+              <label for="">Cellulaire</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <input type="text" class="form-control"
+                    name="Numero_cellulaire"
+                    id="Numero-cellulaire"
+                    placeholder="999-999-9999"
+                    onblur="numeroCellulaireValidation()">
+              <p class="text-left">Numéro</p>
+              <div id="valider-Numero-cellulaire"></div>
+            </div>
+          </div>
+          <!-- Telephone au travail -->
           <div class="row">
             <div class="col-md-12">
               <label for="">Téléphone au travail</label>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-2">
-              <input type="text" class="form-control" name="Ind_regional" id="Ind-regional" placeholder="">
-              <p class="text-left">Ind.régional</p>
-            </div>
-            <div class="col-md-7">
-              <input type="text" class="form-control" name="Numero_telephone" id="Numero-telephone" placeholder="">
+            <div class="col-md-8">
+              <input type="text" class="form-control"
+                  name="Numero_telephone_travail"
+                  id="Numero-telephone-travail"
+                  placeholder="999-999-9999"
+                  onblur="numeroTelephoneTravailValidation()">
               <p class="text-left">Numéro</p>
+              <div id="valider-Numero-telephone-travail"></div>
             </div>
-            <div class="col-md-3">
-              <input type="text" class="form-control" name="Poste_telephone" id="Poste-telephone" placeholder="">
+            <div class="col-md-4">
+              <input type="text" class="form-control"
+                  name="Poste_telephone_tavail"
+                  id="Poste-telephone-travail"
+                  placeholder="">
               <p class="text-left">Poste</p>
+              <div id="valider-Poste-telephone-travail"></div>
             </div>
           </div>
         </dir>
-
         <div class="col-md-6">
           <br>
           <div class="row">
