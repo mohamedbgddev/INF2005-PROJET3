@@ -311,8 +311,6 @@ function numeroTelephoneTravailValidation() {
 }
 
 
-
-
 /*
 Fonction de validations de formatage
 */
