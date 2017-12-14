@@ -201,27 +201,67 @@
               <div id="valider-Prenom-usuel-du-mere"></div>
             </div>
           </div>
+
+          <!-- Telephone a domicile -->
+          <div class="row">
+            <div class="col-md-12">
+              <label for="">Téléphone a domicile</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <input type="text" class="form-control" 
+                    name="Numero_telephone_domicile" 
+                    id="Numero-telephone-domicile"
+                    placeholder="999-999-9999"
+                    onblur="numeroTelephoneDomicileValidation()">
+              <p class="text-left">Numéro</p>
+              <div id="valider-Numero-telephone-domicile"></div>
+            </div>
+          </div>
+          <!-- Cellulaire -->
+          <div class="row">
+            <div class="col-md-12">
+              <label for="">Cellulaire</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <input type="text" class="form-control" 
+                    name="Numero_cellulaire" 
+                    id="Numero-cellulaire"
+                    placeholder="999-999-9999"
+                    onblur="numeroCellulaireValidation()">
+              <p class="text-left">Numéro</p>
+              <div id="valider-Numero-cellulaire"></div>
+            </div>
+          </div>
+          <!-- Telephone au travail -->
           <div class="row">
             <div class="col-md-12">
               <label for="">Téléphone au travail</label>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-2">  
-              <input type="text" class="form-control" name="Ind_regional" id="Ind-regional" placeholder="">
-              <p class="text-left">Ind.régional</p>
-            </div>
-            <div class="col-md-7">
-              <input type="text" class="form-control" name="Numero_telephone" id="Numero-telephone" placeholder="">
+            <div class="col-md-8">
+              <input type="text" class="form-control" 
+                  name="Numero_telephone_travail" 
+                  id="Numero-telephone-travail" 
+                  placeholder="999-999-9999"
+                  onblur="numeroTelephoneTravailValidation()">
               <p class="text-left">Numéro</p>
+              <div id="valider-Numero-telephone-travail"></div>
             </div>
-            <div class="col-md-3">
-              <input type="text" class="form-control" name="Poste_telephone" id="Poste-telephone" placeholder="">
+            <div class="col-md-4">
+              <input type="text" class="form-control" 
+                  name="Poste_telephone_tavail" 
+                  id="Poste-telephone-travail" 
+                  placeholder="">
               <p class="text-left">Poste</p>
+              <div id="valider-Poste-telephone-travail"></div>
             </div>
-          </div>       
+          </div>
         </dir>
-
         <div class="col-md-6">
           <br>
           <div class="row">

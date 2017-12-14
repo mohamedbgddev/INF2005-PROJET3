@@ -262,6 +262,57 @@ function prenomUsuelMere(){
 }
 
 
+function numeroTelephoneDomicileValidation() {
+	var valeur = document.getElementById("Numero-telephone-domicile"); 
+
+	if(!validerFormatTelephone(value.value)) { 
+		document.getElementById("valider-Numero-telephone-domicile").style.display = "block";
+		valeur.classList.add('has-error', 'has-feedback'); 
+		document.getElementById('valider-Numero-telephone-domicile').innerHTML = 'Le format est invalide !';
+		return false; 
+	} else { 
+		document.getElementById("valider-Numero-telephone-domicile").style.display = "none"; 
+		valeur.classList.add('has-success', 'has-feedback'); 
+		document.getElementById('valider-Numero-telephone-domicile').innerHTML = '';
+		return true; 
+	}
+}
+
+function numeroCellulaireValidation() {
+	var valeur = document.getElementById("Numero-cellulaire"); 
+
+	if(!validerFormatTelephone(value.value)) { 
+		document.getElementById("valider-Numero-cellulaire").style.display = "block";
+		valeur.classList.add('has-error', 'has-feedback'); 
+		document.getElementById('valider-Numero-cellulaire').innerHTML = 'Le format est invalide !';
+		return false; 
+	} else { 
+		document.getElementById("valider-Numero-cellulaire").style.display = "none"; 
+		valeur.classList.add('has-success', 'has-feedback'); 
+		document.getElementById('valider-Numero-cellulaire').innerHTML = '';
+		return true; 
+	}
+}
+
+function numeroTelephoneTravailValidation() {
+	var valeur = document.getElementById("Numero-telephone-travail"); 
+
+	if(!validerFormatTelephone(value.value)) { 
+		document.getElementById("valider-Numero-telephone-travail").style.display = "block";
+		valeur.classList.add('has-error', 'has-feedback'); 
+		document.getElementById('valider-Numero-telephone-travail').innerHTML = 'Le format est invalide !';
+		return false; 
+	} else { 
+		document.getElementById("valider-Numero-telephone-travail").style.display = "none"; 
+		valeur.classList.add('has-success', 'has-feedback'); 
+		document.getElementById('valider-Numero-telephone-travail').innerHTML = '';
+		return true; 
+	}
+}
+
+
+
+
 /*
 Fonction de validations de formatage
 */
@@ -285,4 +336,10 @@ function validerNumeroAssurranceSociale(numero)
 { 
 	var pattern = ""; 
 	return pattern.test(numero); 
+}
+
+function validerFormatTelephone(numeroTelephone)
+{ 
+	var pattern = ""; 
+	return pattern.test(numeroTelephone); 
 }
