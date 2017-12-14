@@ -1,0 +1,122 @@
+body{
+  background-color: #464b51;
+}
+
+.container{
+    max-width: 970px;
+}
+
+.navbar {
+  margin-bottom: 50px;
+  border-radius: 0;
+}
+   
+.preface{
+  background-color: #1c5bbf;
+  color: white; 
+  padding-left: 70px;
+}   
+
+.premier-titre{
+  display: block;
+  font-size: 120px;
+  font-weight: bold;
+  text-transform: capitalize;
+  height: 100px;
+  margin-top: 180px;
+}
+
+.premier-titre-suite{
+  display: block;
+  font-size: 120px;
+  font-weight: bold;
+  margin-bottom: 50px;
+
+}
+
+.second-titre{
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 50px;
+}
+
+.troisieme-titre{
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize; 
+  height: 20px;
+}
+
+.quatrieme-titre{
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 250px; 
+}
+
+.cinquieme-titre{
+  font-size: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 20px; 
+}
+
+.entete-gauche{
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.entete-centre{
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.entete-droite-premier{
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Arial Black", Gadget, sans-serif;
+
+}
+.entete-droite-second{
+  font-size: 15px;
+  text-transform: capitalize;
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-align: center;
+}
+
+.trait{
+  border: none;
+  height: 5px;
+  background-color: #333;
+  margin-top: 0px;
+}
+
+.text-gauche{
+  float: left;
+}
+.text-centre{
+  margin-left: 50px;
+  float: center;
+}
+.text-droite{
+  float: right;
+}
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+
+}
+
+.errorHeader { 
+	font-weight: bold; 
+	color: red;
+	/* visibility: hidden; */ 
+	display: none; 
+}

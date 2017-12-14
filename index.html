@@ -6,127 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
-  <style>
-    
-    body{
-      background-color: #464b51;
-    }
-
-    .container{
-        max-width: 970px;
-    }
-
-    .navbar {
-      margin-bottom: 50px;
-      border-radius: 0;
-    }
-       
-    .preface{
-      background-color: #1c5bbf;
-      color: white; 
-      padding-left: 70px;
-    }   
-
-    .premier-titre{
-      display: block;
-      font-size: 120px;
-      font-weight: bold;
-      text-transform: capitalize;
-      height: 100px;
-      margin-top: 180px;
-    }
-
-    .premier-titre-suite{
-      display: block;
-      font-size: 120px;
-      font-weight: bold;
-      margin-bottom: 50px;
-
-    }
-
-    .second-titre{
-      font-size: 25px;
-      font-weight: bold;
-      text-transform: capitalize;
-      margin-bottom: 50px;
-    }
-
-    .troisieme-titre{
-      font-size: 20px;
-      font-weight: bold;
-      text-transform: capitalize; 
-      height: 20px;
-    }
-
-    .quatrieme-titre{
-      font-size: 20px;
-      font-weight: bold;
-      text-transform: capitalize;
-      margin-bottom: 250px; 
-    }
-
-    .cinquieme-titre{
-      font-size: 60px;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-family: "Times New Roman", Times, serif;
-      margin-bottom: 20px; 
-    }
-
-    .entete-gauche{
-      font-size: 15px;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-family: "Arial Black", Gadget, sans-serif;
-    }
-
-    .entete-centre{
-      font-size: 70px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .entete-droite-premier{
-      font-size: 20px;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-family: "Arial Black", Gadget, sans-serif;
-
-    }
-    .entete-droite-second{
-      font-size: 15px;
-      text-transform: capitalize;
-      font-family: "Arial Black", Gadget, sans-serif;
-      text-align: center;
-    }
-
-    .trait{
-      border: none;
-      height: 5px;
-      background-color: #333;
-      margin-top: 0px;
-    }
-
-    .text-gauche{
-      float: left;
-    }
-    .text-centre{
-      margin-left: 50px;
-      float: center;
-    }
-    .text-droite{
-      float: right;
-    }
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-
-    }
-  </style>
+  <script type="text/javascript" src="js/validation.js"></script>
 </head> 
 <body>
   <form>
@@ -153,36 +37,38 @@
       </div>
       <hr class="trait">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
           <label for="Nom-de-famille-a-la-naissance">Nom de famille a la naissance</label>
-          <input type="text" class="form-control" name="Nom_de_famille_a_la_naissance" id="Nom-de-famille-a-la-naissance" placeholder="">
-          <div class="valider-Nom-de-famille-a-la-naissance"></div>
+          <input type="text" class="form-control"
+                   name="Nom_de_famille_a_la_naissance"
+                   id="Nom-de-famille-a-la-naissance"
+                   placeholder=""
+                   onblur="nomFamilleNaissanceValidation()">
+          <span id="valider-Nom-de-famille-a-la-naissance" class="errorHeader"></span>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <label for="Date-de-naissance">Date de naissance</label>
           <div class="row">
-              <div class="col-md-2">
-                <input type="text" class="form-control" name="Date_de_naissance_jour" id="Date-de-naissance-jour" placeholder="">  
-                <p class="text-center">Jour</p>
-                <div class="valider-Date-de-naissance-jour"></div>  
-              </div>
-              <div class="col-md-2">
-                <input type="text" class="form-control" name="Date_de_naissance_mois" id="Date-de-naissance-mois" placeholder="">  
-                <p class="text-center">Mois</p>
-                <div class="valider-Date-de-naissance-mois"></div>
-              </div>
-              <div class="col-md-2">
-                <input type="text" class="form-control" name="Date_de_naissance_annee" id="Date-de-naissance-annee" placeholder="">  
-                <p class="text-center">Annee</p>
-                <div class="valider-Date-de-naissance-annee"></div>
-              </div>
+            <div class="col-md-12">
+              <input type="text" class="form-control" 
+                    name="Date_de_naissance" 
+                    id="Date-de-naissance"
+                    placeholder="JJ-MM-AAAA"
+                    onblur="dateDeNaissanceValidation()">  
+              <span id="valider-Date-de-naissance" class="errorHeader"></span>  
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-8">
           <label for="Prenom-usuel">Prenom usuel</label>
-          <input type="text" class="form-control" name="Prenom_usuel" id="Prenom-usuel" placeholder="">
+          <input type="text" class="form-control" 
+              name="Prenom_usuel" 
+              id="Prenom-usuel"
+              placeholder=""
+              onblur="prenomUsuelValidation()">
+          <span id="valider-Prenom-usuel" class="errorHeader"></span>  
         </div>
         <div class="col-md-4">
           <label for="Sexe">Sexe</label>
