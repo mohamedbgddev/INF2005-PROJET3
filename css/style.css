@@ -117,6 +117,5 @@ footer {
 .errorHeader { 
 	font-weight: bold; 
 	color: red;
-	/* visibility: hidden; */ 
 	display: none; 
 }

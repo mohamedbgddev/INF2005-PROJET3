@@ -55,7 +55,7 @@
                     id="Date-de-naissance"
                     placeholder="JJ-MM-AAAA"
                     onblur="dateDeNaissanceValidation()">  
-              <span id="valider-Date-de-naissance" class="errorHeader"></span>  
+              <div id="valider-Date-de-naissance" class="errorHeader"></div>  
             </div>
           </div>
         </div>
@@ -68,34 +68,34 @@
               id="Prenom-usuel"
               placeholder=""
               onblur="prenomUsuelValidation()">
-          <span id="valider-Prenom-usuel" class="errorHeader"></span>  
+          <div id="valider-Prenom-usuel" class="errorHeader"></div>  
         </div>
         <div class="col-md-4">
           <label for="Sexe">Sexe</label>
           <div class="row">
             <div class="col-md-2">
-              <label class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" name="sexe">
-                <span class="custom-control-indicator"></span>
-                <span class="custom-control-description">Feminin</span>
-              </label>
+              <div class="radio">
+                <label><input type="radio" name="">Feminin</label>
+              </div>
             </div>
             <div class="col-md-2 col-md-offset-1">
-              <label class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" name="sexe">
-                <span class="custom-control-indicator"></span>
-                <span class="custom-control-description">Masculin</span>
-              </label>
+              <div class="radio">
+                <label><input type="radio" name="">Masculain</label>
+              </div>
             </div>
           </div>
-          <div class="valider-Sexe"></div>
+          <div id="valider-Sexe" class="errorHeader"></div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
           <label for="Courriel-du-candidat">Courriel du candidat</label>
-          <input type="text" class="form-control" name="Courriel_du_candidat" id="Courriel-du-candidat" placeholder="">
-          <div class="valider-Courriel-du-candidat"></div>
+          <input type="text" class="form-control" 
+                  name="Courriel_du_candidat" 
+                  id="Courriel-du-candidat"
+                  placeholder=""
+                  onblur="courrielCandidatValidation()">
+          <div id="valider-Courriel-du-candidat" class="errorHeader"></div>
         </div>
       </div>
       <div class="row">
