@@ -657,7 +657,7 @@ function validerChaineSeulementNombre(nombre){
 
 
 /*
-	=============== Fonction de validations Section Programmes demandés page 2 ========================
+	=========================== PROGRAMMES DEMANDÉS ========================
 */
 
 
@@ -695,13 +695,6 @@ function trimestreAnneeValidation() {
 	}
 }
 
-
-
-
-
-/*
-		=================================== Validation premier choix =========================
-*/
 
 function premierChoixValidation() {
 	var progChoixTitre = document.getElementById("premier-choix-titre"); 
@@ -793,6 +786,47 @@ function troisiemeChoixValidation() {
 	}	
 }
 
+/*
+	=================================== RENSEIGNEMENTS SUR LES ÉTUDES SECONDAIRES ET COLLÉGIALES =========================
+*/
+
+
+function derniereAnneeSecondaireValidation() {
+	var programme = document.getElementById("derniere-annee-secondaire");
+	var deAnnnee = document.getElementById("de-annee-derniere-annee-secondaire");
+	var aAnnnee = document.getElementById("a-annee-derniere-annee-secondaire"); 	
+
+	if(programme.value == "") {
+		return true; 		
+	}else if(programme.value.length > 0) { 
+		if(deAnnnee.value == "" ) { 
+			document.getElementById("valider-derniere-annee-secondaire").style.display = "block";
+			document.getElementById('valider-derniere-annee-secondaire').innerHTML = 'Les champs sont tous requis!';
+			return false;
+		} else if(aAnnnee.value == "" ) { 
+			document.getElementById("valider-derniere-annee-secondaire").style.display = "block";
+			document.getElementById('valider-derniere-annee-secondaire').innerHTML = 'Les champs sont tous requis!';
+			return false; 
+		}else if ( !validerAnnee(deAnnnee.value)) {
+			document.getElementById("valider-derniere-annee-secondaire").style.display = "block";
+			document.getElementById('valider-derniere-annee-secondaire').innerHTML = 'Le format (de)(Annee) est invalide!';
+			return false; 				 
+		}else if ( !validerAnnee(aAnnnee.value)) {
+			document.getElementById("valider-derniere-annee-secondaire").style.display = "block";
+			document.getElementById('valider-derniere-annee-secondaire').innerHTML = 'Le format (a)(Annee) est invalide!';
+			return false;
+		}else if ( !verifierDateCorrecte(deAnnnee.value,aAnnnee.value)) {
+			document.getElementById("valider-derniere-annee-secondaire").style.display = "block";
+			document.getElementById('valider-derniere-annee-secondaire').innerHTML = 'Annee de debut supperieur a annee de fin!';
+			return false;
+		} else { 
+			document.getElementById("valider-derniere-annee-secondaire").style.display = "none"; 
+			document.getElementById('valider-derniere-annee-secondaire').innerHTML = '';
+			return true; 
+		}
+	}	
+}
+
 
 
 
@@ -801,8 +835,25 @@ function troisiemeChoixValidation() {
 */
 
 function validerAnnee(annee){
+	console.log(annee);
+
 	var pattern = /^(19|20)\d\d$/;
+	
+	console.log(pattern.test(annee));
+
 	return pattern.test(annee);
+}
+
+
+function verifierDateCorrecte(annee1, annee2){
+	var diffrence = annee2 - annee1;
+
+	console.log(diffrence);
+
+	if (diffrence >= 0) {
+		return true;
+	}	
+	return false;
 }
 
 

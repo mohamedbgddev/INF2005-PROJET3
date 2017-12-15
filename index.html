@@ -811,10 +811,15 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <input type="text" class="form-control" name="Derniere_annee_secondaire" id="Derniere-annee-secondaire" placeholder="">
-                <div class="valider-Derniere-annee-secondaire"></div>
+                <input type="text" class="form-control" 
+                    name="derniere_annee_secondaire" 
+                    id="derniere-annee-secondaire"
+                    placeholder=""
+                    onblur="derniereAnneeSecondaireValidation()">
+                <div id="valider-derniere-annee-secondaire" class="errorHeader"></div>
               </div>
             </div>
+            <br>  
             <div class="row">
               <div class="col-md-12">
                 <div class="radio">
@@ -893,11 +898,21 @@
           </div>
           <div class="row">
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control" 
+                type="text"
+                name="de_annee_derniere_annee_secondaire"
+                id="de-annee-derniere-annee-secondaire"
+                placeholder="1999"
+                onblur="derniereAnneeSecondaireValidation()">
               <p>De (année)</p>
             </div>
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="a_annee_derniere_annee_secondaire"
+                id="a-annee-derniere-annee-secondaire"
+                placeholder="1999" 
+                onblur="derniereAnneeSecondaireValidation()">
               <p>à (année)</p>
             </div>
           </div>
