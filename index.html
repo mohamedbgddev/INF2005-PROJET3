@@ -10,7 +10,6 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
-  <script type="text/javascript" src="js/validation.js"></script>
 </head>
 <body>
   <form>
@@ -602,55 +601,66 @@
       </div>
       <div class="row">
         <div class="col-md-10">
-          <input type="text" class="form-control" name="Premier_choix_titre" id="Premier-choix-titre" placeholder="">
+          <input type="text" 
+            class="form-control" 
+            name="premier_choix_titre" 
+            id="premier-choix-titre"
+            placeholder=""
+            onblur="premierChoixValidation()">
           <label for="Premier-choix">Titre</label>
-          <div class="valider-Premier-choix-titre"></div>
         </div>
         <div class="col-md-2">
           <div class="radio">
-            <label><input type="radio" name="radio-temp-1">Temp complet</label>
+            <label><input type="radio" 
+                name="radio-temp-1"
+                onclick="premierChoixValidation()" 
+               >Temp complet</label>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-2">
-          <input type="text" class="form-control" name="Premier_choix-code" id="Premier-choix-code" placeholder="">
-          <label for="Premier-choix-code">Code</label>
-          <div class="valider-Premier-choix-code"></div>
+          <input type="text" class="form-control" name="premier_choix_code"
+            id="premier-choix-code"
+            placeholder=""
+            onblur="premierChoixValidation()">
+          <label for="premier-choix-code">Code</label>
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="radio-type-programme-1">Baccalauréat</label>
-          </div>
-        </div>
-        <div class="col-md-1 col-md-offset-1">
-          <div class="radio">
-            <label><input type="radio" name="radio-type-programme-1">Majeure</label>
-          </div>
-        </div>
-        <div class="col-md-1">
-          <div class="radio">
-            <label><input type="radio" name="radio-type-programme-1">Mineure</label>
-          </div>
-        </div>
-        <div class="col-md-1">
-          <div class="radio">
-            <label><input type="radio" name="radio-type-programme-1">Certificat</label>
-          </div>
-        </div>
-        <div class="col-md-1">
-          <div class="radio">
-            <label><input type="radio" name="radio-type-programme-1">Programme court</label>
+            <label><input onclick="premierChoixValidation()" type="radio" name="radio-type-programme-1">Baccalauréat</label>
           </div>
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="radio-temp-1">Temps partiel</label>
+            <label><input onclick="premierChoixValidation()" type="radio" name="radio-type-programme-1">Majeure</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input onclick="premierChoixValidation()" type="radio" name="radio-type-programme-1">Mineure</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input onclick="premierChoixValidation()" type="radio" name="radio-type-programme-1">Certificat</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input onclick="premierChoixValidation()" type="radio" name="radio-type-programme-1">Programme court</label>
+          </div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="radio">
+            <label><input onclick="premierChoixValidation()" type="radio" name="radio-temp-1">Temps partiel</label>
           </div>
         </div>
       </div>
+      <div id="valider-programme-choix-1" class="errorHeader"></div>
       <!-- ################################# Deuxieme choix programmes demandes ##########################################-->
+      <br>  
       <div class="row">
         <div class="col-md-12">
            <p>Deuxieme Choix</p>
@@ -1473,4 +1483,5 @@
     </div><br>
   </form>
 </body>
+<script type="text/javascript" src="js/validation.js"></script>
 </html>

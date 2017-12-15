@@ -660,6 +660,20 @@ function validerChaineSeulementNombre(nombre){
 	=============== Fonction de validations Section Programmes demandés page 2 ========================
 */
 
+
+function verifierTrimestre(){
+	var valeur = document.querySelector('input[name = "radio-trimestre"]:checked');
+	if(valeur != null){
+		return true;
+	} else {
+		document.getElementById("valider-trimestre").style.display = "block";
+		valeur.classList.add('has-error', 'has-feedback'); 
+		document.getElementById('valider-trimestre').innerHTML = 'Le champs est requis !';
+		return false; 
+	}	
+}
+
+
 function trimestreAnneeValidation() {
 	var valeur = document.getElementById("trimestre-annee"); 
 
@@ -683,6 +697,40 @@ function trimestreAnneeValidation() {
 
 
 
+
+
+/*
+		=================================== Validation premier choix =========================
+*/
+
+function premierChoixValidation() {
+	var progChoix1Titre = document.getElementById("premier-choix-titre"); 
+	var progChoix1Temp  = document.querySelector('input[name = "radio-temp-1"]:checked');
+	var progChoix1Code  = document.getElementById("premier-choix-code"); 
+	var progChoix1Type  = document.querySelector('input[name = "radio-type-programme-1"]:checked');
+
+	if(progChoix1Titre.value == "") {  
+		document.getElementById("valider-programme-choix-1").style.display = "block";
+		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont requis!';
+		return false; 
+	} else if(progChoix1Code.value == "" ) { 
+		document.getElementById("valider-programme-choix-1").style.display = "block";
+		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont requis!';
+		return false;
+	} else if(progChoix1Temp == null ) { 
+		document.getElementById("valider-programme-choix-1").style.display = "block";
+		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont requis!';
+		return false; 
+	} else if(progChoix1Type == null ) { 
+		document.getElementById("valider-programme-choix-1").style.display = "block";
+		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont requis!';
+		return false; 		 
+	} else { 
+		document.getElementById("valider-programme-choix-1").style.display = "none"; 
+		document.getElementById('valider-programme-choix-1').innerHTML = '';
+		return true; 
+	}
+}
 
 
 /*
