@@ -17,6 +17,21 @@ body{
   padding-left: 70px;
 }   
 
+.confirmation{
+  background-color: #13c44b;
+  color: white; 
+  padding-left: 70px;
+}
+
+.erreur{
+  background-color: #f42c2c;
+  color: white; 
+  padding-left: 70px;
+}
+
+
+
+
 .premier-titre{
   display: block;
   font-size: 120px;
