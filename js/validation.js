@@ -657,11 +657,29 @@ function validerChaineSeulementNombre(nombre){
 
 
 /*
-	Fonction de validations Section Programmes demandés page 2
+	=============== Fonction de validations Section Programmes demandés page 2 ========================
 */
 
+function trimestreAnneeValidation() {
+	var valeur = document.getElementById("trimestre-annee"); 
 
-
+	if(valeur.value == "") {  
+		document.getElementById("valider-trimestre-annee").style.display = "block";
+		valeur.classList.add('has-error', 'has-feedback'); 
+		document.getElementById('valider-trimestre-annee').innerHTML = 'Le champs est requis !';
+		return false; 
+	} else if(!validerAnnee(valeur.value)) { 
+		document.getElementById('valider-trimestre-annee').style.display = "block";
+		valeur.classList.add('has-warning', 'has-feedback'); 
+		document.getElementById('valider-trimestre-annee').innerHTML = 'Le format est invalide !';
+		return false; 
+	} else { 
+		document.getElementById("valider-trimestre-annee").style.display = "none"; 
+		valeur.classList.add('has-success', 'has-feedback'); 
+		document.getElementById('valider-trimestre-annee').innerHTML = '';
+		return true; 
+	}
+}
 
 
 
