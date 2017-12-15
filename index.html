@@ -409,8 +409,12 @@
       <div class="row">
         <div class="col-md-12">
           <label for="Courriel-personnel">Courriel</label>
-          <input type="text" class="form-control" name="Courriel_personnel" id="Courriel-personnel" placeholder="">
-          <div class="valider-Courriel-personnel"></div>
+          <input type="text" class="form-control"
+              name="Courriel_personnel"
+              id="Courriel-personnel"
+              placeholder=""
+              onblur="courrielValidation()">
+          <div id="valider-Courriel-personnel" class="errorHeader"></div>
         </div>
       </div>
       <div class="row">
@@ -420,64 +424,98 @@
       </div>
         <div class="row">
           <div class="col-md-8">
-            <input type="text" class="form-control" name="Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue" id="Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue" placeholder="">
+            <input type="text" class="form-control" 
+              name="Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue"
+              id="Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue"
+              placeholder=""
+              onblur="NoCivicNomDirectionValidation()">
             <p><span class="text-gauche">Numéro civique</span><span class="text-centre">Type et nom de la rue</span>
             <span class="text-droite">Direction de rue</span></p>
-            <div class="valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue"></div>
+            <div id="valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue" class="errorHeader"></div>
           </div>
           <div class="col-md-4">
-            <input type="text" class="form-control" name="Numero_apartement" id="Numero-apartement" placeholder="">
+            <input type="text" class="form-control" 
+              name="Numero_apartement" 
+              id="Numero-apartement" 
+              placeholder=""
+              onblur="numeroApartementValidation()">
             <p>No d’appartement ou d’unité</p>
-            <div class="valider-Numero-apartement"></div>
+            <div id="valider-Numero-apartement" class="errorHeader"></div>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-8">
-            <input type="text" class="form-control" name="Municipalité_Pays" id="Municipalité-Pays" placeholder="">
+            <input type="text" class="form-control" 
+                name="Municipalité_Pays" 
+                id="Municipalité-Pays" 
+                placeholder=""
+                onblur="municipalitéPaysValidation()">
             <p><span class="text-gauche">Municipalité</span><span class="text-droite">Pays (si autre que le Canada)</span></p>
-            <div class="valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue"></div>
+            <div id="valider-Municipalité-Pays" class="errorHeader"></div>
           </div>
           <div class="col-md-4">
-            <input type="text" class="form-control" name="Code_postal" id="Code-postal" placeholder="">
+            <input type="text" class="form-control"
+              name="Code_postal" 
+              id="Code-postal" 
+              placeholder=""
+              onblur="codePostalValidation()">
             <p>Code postal</p>
-            <div class="valider-Code-postal"></div>
+            <div id="valider-Code-postal" class="errorHeader"></div>
           </div>
         </div>
 
 
 
         <div class="row">
-        <div class="col-md-12">
-          <label for="Adresse-de-correspondance-autre">Adresse où vous résidez actuellement (si différente de l’adresse de correspondance)</label>
+          <div class="col-md-12">
+            <label for="Adresse-de-correspondance-autre">Adresse où vous résidez actuellement (si différente de l’adresse de correspondance)</label>
+          </div>
         </div>
-      </div>
+      
         <div class="row">
           <div class="col-md-8">
-            <input type="text" class="form-control" name="Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue_autre" id="Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre" placeholder="">
+            <input type="text" class="form-control" 
+              name="Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue_autre"
+              id="Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre"
+              placeholder=""
+              onblur="NoCivicNomDirectionAutreValidation()">
             <p><span class="text-gauche">Numéro civique</span><span class="text-centre">Type et nom de la rue</span>
             <span class="text-droite">Direction de rue</span></p>
-            <div class="valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre"></div>
+            <div id="valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre" class="errorHeader"></div>
           </div>
           <div class="col-md-4">
-            <input type="text" class="form-control" name="Numero_apartement_autre" id="Numero-apartement-autre" placeholder="">
+            <input type="text" class="form-control" 
+              name="Numero_apartement_autre" 
+              id="Numero-apartement-autre" 
+              placeholder=""
+              onblur="numeroApartementAutreValidation()">
             <p>No d’appartement ou d’unité</p>
-            <div class="valider-Numero-apartement-autre"></div>
+            <div id="valider-Numero-apartement-autre" class="errorHeader"></div>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-8">
-            <input type="text" class="form-control" name="Municipalité_Pays_autre" id="Municipalité-Pays-autre" placeholder="">
+            <input type="text" class="form-control" 
+                name="Municipalité_Pays_Autre" 
+                id="Municipalité-Pays-Autre" 
+                placeholder=""
+                onblur="municipalitéPaysAutreValidation()">
             <p><span class="text-gauche">Municipalité</span><span class="text-droite">Pays (si autre que le Canada)</span></p>
-            <div class="valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre"></div>
+            <div id="valider-Municipalité-Pays-Autre" class="errorHeader"></div>
           </div>
           <div class="col-md-4">
-            <input type="text" class="form-control" name="Code_postal-autre" id="Code-postal-autre" placeholder="">
+            <input type="text" class="form-control"
+              name="Code_postal-autre" 
+              id="Code-postal-autre" 
+              placeholder=""
+              onblur="codePostalAutreValidation()">
             <p>Code postal</p>
-            <div class="valider-Code-postal-autre"></div>
+            <div id="valider-Code-postal-autre" class="errorHeader"></div>
           </div>
         </div>
+
     </div><br>
     <!-- ################################# Page 2 programmes demandes ##########################################-->
     <div class="container well">
