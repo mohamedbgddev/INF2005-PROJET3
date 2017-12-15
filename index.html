@@ -668,54 +668,65 @@
       </div>
       <div class="row">
         <div class="col-md-10">
-          <input type="text" class="form-control" name="Deuxieme_choix_titre" id="Deuxieme-choix-titre" placeholder="">
-          <label for="Deuxieme-choix">Titre</label>
-          <div class="valider-Deuxieme-choix-titre"></div>
+          <input type="text" 
+            class="form-control" 
+            name="deuxieme_choix_titre" 
+            id="deuxieme-choix-titre"
+            placeholder=""
+            onblur="deuxiemeChoixValidation()">
+          <label for="deuxieme-choix-titre">Titre</label>
         </div>
         <div class="col-md-2">
           <div class="radio">
-            <label><input type="radio" name="radio-temp-2">Temp complet</label>
+            <label><input type="radio" 
+                name="radio-temp-2"
+                onclick="deuxiemeChoixValidation()" 
+               >Temp complet</label>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-2">
-          <input type="text" class="form-control" name="Deuxieme_choix-code" id="Deuxieme-choix-code" placeholder="">
-          <label for="Deuxieme-choix-code">Code</label>
-          <div class="valider-Deuxieme-choix-code"></div>
+          <input type="text" class="form-control"
+            name="deuxieme_choix_code"
+            id="deuxieme-choix-code"
+            placeholder=""
+            onblur="deuxiemeChoixValidation()">
+          <label for="deuxieme-choix-code">Code</label>
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="radio-type-programme-2">Baccalauréat</label>
-          </div>
-        </div>
-        <div class="col-md-1 col-md-offset-1">
-          <div class="radio">
-            <label><input type="radio" name="radio-type-programme-2">Majeure</label>
-          </div>
-        </div>
-        <div class="col-md-1">
-          <div class="radio">
-            <label><input type="radio" name="radio-type-programme-2">Mineure</label>
-          </div>
-        </div>
-        <div class="col-md-1">
-          <div class="radio">
-            <label><input type="radio" name="radio-type-programme-2">Certificat</label>
-          </div>
-        </div>
-        <div class="col-md-1">
-          <div class="radio">
-            <label><input type="radio" name="radio-type-programme-2">Programme court</label>
+            <label><input onclick="deuxiemeChoixValidation()" type="radio" name="radio-type-programme-2">Baccalauréat</label>
           </div>
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="radio-temp-2">Temps partiel</label>
+            <label><input onclick="deuxiemeChoixValidation()" type="radio" name="radio-type-programme-2">Majeure</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input onclick="deuxiemeChoixValidation()" type="radio" name="radio-type-programme-2">Mineure</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input onclick="deuxiemeChoixValidation()" type="radio" name="radio-type-programme-2">Certificat</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input onclick="deuxiemeChoixValidation()" type="radio" name="radio-type-programme-2">Programme court</label>
+          </div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="radio">
+            <label><input onclick="deuxiemeChoixValidation()" type="radio" name="radio-temp-2">Temps partiel</label>
           </div>
         </div>
       </div>
+      <div id="valider-programme-choix-2" class="errorHeader"></div>
       <!-- ################################# Troisieme choix programmes demandes ##########################################-->
       <div class="row">
         <div class="col-md-12">
@@ -724,61 +735,72 @@
       </div>
       <div class="row">
         <div class="col-md-10">
-          <input type="text" class="form-control" name="Troisieme_choix_titre" id="Troisieme-choix-titre" placeholder="">
-          <label for="Troisieme-choix">Titre</label>
-          <div class="valider-Troisieme-choix-titre"></div>
+          <input type="text" 
+            class="form-control" 
+            name="troisieme_choix_titre" 
+            id="troisieme-choix-titre"
+            placeholder=""
+            onblur="troisiemeChoixValidation()">
+          <label for="troisieme-choix-titre">Titre</label>
         </div>
         <div class="col-md-2">
           <div class="radio">
-            <label><input type="radio" name="radio-temp-3">Temp complet</label>
+            <label><input type="radio" 
+                name="radio-temp-3"
+                onclick="troisiemeChoixValidation()" 
+               >Temp complet</label>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-2">
-          <input type="text" class="form-control" name="Troisieme_choix-code" id="Troisieme-choix-code" placeholder="">
-          <label for="Premier-choix-code">Code</label>
-          <div class="valider-Troisieme-choix-code"></div>
+          <input type="text" class="form-control"
+            name="troisieme_choix_code"
+            id="troisieme-choix-code"
+            placeholder=""
+            onblur="troisiemeChoixValidation()">
+          <label for="troisieme-choix-code">Code</label>
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="radio-type-programme-3">Baccalauréat</label>
-          </div>
-        </div>
-        <div class="col-md-1 col-md-offset-1">
-          <div class="radio">
-            <label><input type="radio" name="radio-type-programme-3">Majeure</label>
-          </div>
-        </div>
-        <div class="col-md-1">
-          <div class="radio">
-            <label><input type="radio" name="radio-type-programme-3">Mineure</label>
-          </div>
-        </div>
-        <div class="col-md-1">
-          <div class="radio">
-            <label><input type="radio" name="radio-type-programme-3">Certificat</label>
-          </div>
-        </div>
-        <div class="col-md-1">
-          <div class="radio">
-            <label><input type="radio" name="radio-type-programme-3">Programme court</label>
+            <label><input onclick="troisiemeChoixValidation()" type="radio" name="radio-type-programme-3">Baccalauréat</label>
           </div>
         </div>
         <div class="col-md-1 col-md-offset-1">
           <div class="radio">
-            <label><input type="radio" name="radio-temp-3">Temps partiel</label>
+            <label><input onclick="troisiemeChoixValidation()" type="radio" name="radio-type-programme-3">Majeure</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input onclick="troisiemeChoixValidation()" type="radio" name="radio-type-programme-3">Mineure</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input onclick="troisiemeChoixValidation()" type="radio" name="radio-type-programme-3">Certificat</label>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="radio">
+            <label><input onclick="troisiemeChoixValidation()" type="radio" name="radio-type-programme-3">Programme court</label>
+          </div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="radio">
+            <label><input onclick="troisiemeChoixValidation()" type="radio" name="radio-temp-3">Temps partiel</label>
           </div>
         </div>
       </div>
+      <div id="valider-programme-choix-3" class="errorHeader"></div>
+      <!-- ################################# Page 2  renseignement sur les etudes secondaires et collegiales ################-->
       <div class="row">
         <div class="col-md-12">
           <label for="#">RENSEIGNEMENTS SUR LES ÉTUDES SECONDAIRES ET COLLÉGIALES</label>
           <hr class="trait">
         </div>
       </div>
-      <!-- ################################# Page 2  renseignement sur les etudes secondaires et collegiales ################-->
       <div class="row">
         <!-- ####### Page 2 partie champs text#############-->
         <div class="col-md-8">

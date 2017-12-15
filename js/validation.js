@@ -704,26 +704,26 @@ function trimestreAnneeValidation() {
 */
 
 function premierChoixValidation() {
-	var progChoix1Titre = document.getElementById("premier-choix-titre"); 
-	var progChoix1Temp  = document.querySelector('input[name = "radio-temp-1"]:checked');
-	var progChoix1Code  = document.getElementById("premier-choix-code"); 
-	var progChoix1Type  = document.querySelector('input[name = "radio-type-programme-1"]:checked');
+	var progChoixTitre = document.getElementById("premier-choix-titre"); 
+	var progChoixTemp  = document.querySelector('input[name = "radio-temp-1"]:checked');
+	var progChoixCode  = document.getElementById("premier-choix-code"); 
+	var progChoixType  = document.querySelector('input[name = "radio-type-programme-1"]:checked');
 
-	if(progChoix1Titre.value == "") {  
+	if(progChoixTitre.value == "") {  
 		document.getElementById("valider-programme-choix-1").style.display = "block";
-		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont requis!';
+		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont tous requis!';
 		return false; 
-	} else if(progChoix1Code.value == "" ) { 
+	} else if(progChoixCode.value == "" ) { 
 		document.getElementById("valider-programme-choix-1").style.display = "block";
-		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont requis!';
+		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont tous requis!';
 		return false;
-	} else if(progChoix1Temp == null ) { 
+	} else if(progChoixTemp == null ) { 
 		document.getElementById("valider-programme-choix-1").style.display = "block";
-		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont requis!';
+		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont tous requis!';
 		return false; 
-	} else if(progChoix1Type == null ) { 
+	} else if(progChoixType == null ) { 
 		document.getElementById("valider-programme-choix-1").style.display = "block";
-		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont requis!';
+		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont tous requis!';
 		return false; 		 
 	} else { 
 		document.getElementById("valider-programme-choix-1").style.display = "none"; 
@@ -731,6 +731,69 @@ function premierChoixValidation() {
 		return true; 
 	}
 }
+
+
+function deuxiemeChoixValidation() {
+	var progChoixTitre = document.getElementById("deuxieme-choix-titre"); 
+	var progChoixTemp  = document.querySelector('input[name = "radio-temp-2"]:checked');
+	var progChoixCode  = document.getElementById("deuxieme-choix-code"); 
+	var progChoixType  = document.querySelector('input[name = "radio-type-programme-2"]:checked');
+
+	if(progChoixTitre.value == "") {
+		return true; 		
+	}else if(progChoixTitre.value.length > 0) { 
+		if(progChoixCode.value == "" ) { 
+			document.getElementById("valider-programme-choix-2").style.display = "block";
+			document.getElementById('valider-programme-choix-2').innerHTML = 'Les champs du deuxieme choix sont tous requis!';
+			return false;
+		} else if(progChoixTemp == null ) { 
+			document.getElementById("valider-programme-choix-2").style.display = "block";
+			document.getElementById('valider-programme-choix-2').innerHTML = 'Les champs du deuxieme choix sont tous requis!';
+			return false; 
+		} else if(progChoixType == null ) { 
+			document.getElementById("valider-programme-choix-2").style.display = "block";
+			document.getElementById('valider-programme-choix-2').innerHTML = 'Les champs du deuxieme choix sont tous requis!';
+			return false; 		 
+		} else { 
+			document.getElementById("valider-programme-choix-2").style.display = "none"; 
+			document.getElementById('valider-programme-choix-2').innerHTML = '';
+			return true; 
+		}
+	}	
+}
+
+
+
+function troisiemeChoixValidation() {
+	var progChoixTitre = document.getElementById("troisieme-choix-titre"); 
+	var progChoixTemp  = document.querySelector('input[name = "radio-temp-3"]:checked');
+	var progChoixCode  = document.getElementById("troisieme-choix-code"); 
+	var progChoixType  = document.querySelector('input[name = "radio-type-programme-3"]:checked');
+
+	if(progChoixTitre.value == "") {
+		return true; 		
+	}else if(progChoixTitre.value.length > 0) { 
+		if(progChoixCode.value == "" ) { 
+			document.getElementById("valider-programme-choix-3").style.display = "block";
+			document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
+			return false;
+		} else if(progChoixTemp == null ) { 
+			document.getElementById("valider-programme-choix-3").style.display = "block";
+			document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
+			return false; 
+		} else if(progChoixType == null ) { 
+			document.getElementById("valider-programme-choix-3").style.display = "block";
+			document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
+			return false; 		 
+		} else { 
+			document.getElementById("valider-programme-choix-3").style.display = "none"; 
+			document.getElementById('valider-programme-choix-3').innerHTML = '';
+			return true; 
+		}
+	}	
+}
+
+
 
 
 /*
