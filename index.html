@@ -141,7 +141,7 @@
             <div class="col-md-12">
               <input type="text" class="form-control" name="Autre_citoyennete"
                    id="Autre-citoyennete"
-                   placeholder=""
+                   placeholder="" 
                    onblur="AutreCitoyenneteValidation()">
               <div id="valider-Autre-citoyennete" class="errorHeader"></div>
             </div>
@@ -325,28 +325,36 @@
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input type="radio" name="radio-langue-usage" value="Francais">Francais</label>
+                <label><input 
+                  onclick="document.getElementById('langue-usage-autre').disabled = true;"
+                  type="radio" name="radio-langue-usage" value="Francais">Francais</label>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input type="radio" name="radio-langue-usage" value="Anglais">Anglais</label>
+                <label><input 
+                  onclick="document.getElementById('langue-usage-autre').disabled = true;"
+                  type="radio" name="radio-langue-usage" value="Anglais">Anglais</label>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input type="radio" name="radio-langue-usage" value="Amérindien ou Inuktitut">Amérindien ou Inuktitut</label>
+                <label><input 
+                  onclick="document.getElementById('langue-usage-autre').disabled = true;"
+                  type="radio" name="radio-langue-usage" value="Amérindien ou Inuktitut">Amérindien ou Inuktitut</label>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input type="radio" name="radio-langue-usage" value="AutreLangue">Autre (précisez)</label>
+                <label><input 
+                  onclick="document.getElementById('langue-usage-autre').disabled = false;"
+                  type="radio" name="radio-langue-usage" value="AutreLangueUsage">Autre (précisez)</label>
               </div>
             </div>
           </div>
@@ -356,7 +364,8 @@
                     name="langue_usage_autre"
                     id="langue-usage-autre"
                     placeholder=""
-                    onblur="autreLangeValidation()">
+                    disabled="disabled"
+                    onblur="autreLangueUsageValidation()">
               <div id="valider-langue-usage-autre" class="errorHeader"></div>
             </div>
           </div>
@@ -368,28 +377,38 @@
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input type="radio" name="radio-langue-maternelle" value="Francais">Francais</label>
+                <label><input 
+                  onclick="document.getElementById('langue-maternelle-autre').disabled = true;"
+                  type="radio" name="radio-langue-maternelle" value="Francais">Francais</label>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input type="radio" name="radio-langue-maternelle" value="Anglais">Anglais</label>
+                <label><input 
+                  onclick="document.getElementById('langue-maternelle-autre').disabled = true;"
+                  type="radio" name="radio-langue-maternelle" value="Anglais">Anglais</label>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input type="radio" name="radio-langue-maternelle" value="Amérindien ou Inuktitut">Amérindien ou Inuktitut</label>
+                <label><input 
+                  onclick="document.getElementById('langue-maternelle-autre').disabled = true;" 
+                  type="radio" name="radio-langue-maternelle"
+                  value="Amérindien ou Inuktitut">Amérindien ou Inuktitut</label>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input type="radio" name="radio-langue-maternelle" value="AutreLangue">Autre (précisez)</label>
+                <label><input 
+                  onclick="document.getElementById('langue-maternelle-autre').disabled = false;"                  
+                  type="radio" name="radio-langue-maternelle"
+                  value="AutreLangueMaternelle">Autre (précisez)</label>
               </div>
             </div>
           </div>
@@ -399,7 +418,8 @@
                     name="langue_usage_autre"
                     id="langue-maternelle-autre"
                     placeholder=""
-                    onblur="autreLangeValidation()">
+                    disabled="disabled"
+                    onblur="autreLangueMaternelleValidation()">
               <div id="valider-langue-maternelle-autre" class="errorHeader"></div>
             </div>
           </div>

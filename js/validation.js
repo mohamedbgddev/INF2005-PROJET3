@@ -495,6 +495,42 @@ function codePostalAutreValidation() {
 }
 
 
+
+function autreLangueUsageValidation() {
+	var valeur = document.getElementById("langue-usage-autre"); 
+
+	if(valeur.value == "") {  
+		document.getElementById("valider-langue-usage-autre").style.display = "block";
+		valeur.classList.add('has-error', 'has-feedback'); 
+		document.getElementById('valider-langue-usage-autre').innerHTML = ' Le champs est requis !';
+		return false; 
+	} else { 
+		document.getElementById("valider-langue-usage-autre").style.display = "none"; 
+		valeur.classList.add('has-success', 'has-feedback'); 
+		document.getElementById('valider-langue-usage-autre').innerHTML = '';
+		return true; 
+	}
+}
+
+
+function autreLangueMaternelleValidation() {
+	var valeur = document.getElementById("langue-maternelle-autre"); 
+
+	if(valeur.value == "") {  
+		document.getElementById("valider-langue-maternelle-autre").style.display = "block";
+		valeur.classList.add('has-error', 'has-feedback'); 
+		document.getElementById('valider-langue-maternelle-autre').innerHTML = 'Le champs est requis !';
+		return false; 
+	} else { 
+		document.getElementById("valider-langue-maternelle-autre").style.display = "none"; 
+		valeur.classList.add('has-success', 'has-feedback'); 
+		document.getElementById('valider-langue-maternelle-autre').innerHTML = '';
+		return true; 
+	}
+}
+
+
+
 /*
 -------------------------------------------------------
 */
@@ -531,6 +567,11 @@ function verifierStatutCanada(){
 function verifierLangueUsage(){
 	var valeur = document.querySelector('input[name = "radio-langue-usage"]:checked');
 	if(valeur != null){
+		if (valeur.value == "AutreLangueUsage") {
+			if(!autreLangueUsageValidation())
+				return false
+			return true
+		}
 		return true;
 	} else {
 		return false; 
@@ -540,15 +581,16 @@ function verifierLangueUsage(){
 function verifierLangueMaternelle(){
 	var valeur = document.querySelector('input[name = "radio-langue-maternelle"]:checked');
 	if(valeur != null){
+		if (valeur.value == "AutreLangueMaternelle") {
+			if(!autreLangueMaternelleValidation())
+				return false
+			return true
+		}
 		return true;
 	} else {
 		return false; 
 	}	
 }
-
-
-
-
 
 /*
 	Fonction de validations de formatage
@@ -617,6 +659,10 @@ function validerChaineSeulementNombre(nombre){
 /*
 	Fonction de validations Section Programmes demandés page 2
 */
+
+
+
+
 
 
 
