@@ -585,6 +585,10 @@ function validerCodePostal(codePostal) {
 
 
 
+/* validerNumeroAssurranceSociale(numero) retourne vrai si le numero correspond au format
+ * 999999999
+ * Exemple : 123456789 -> true , 123 456789  -> false
+*/
 function validerNumeroAssurranceSociale(numero)
 {
 	var pattern = /^\d{9}$/;
