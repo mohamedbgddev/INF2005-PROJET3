@@ -1,5 +1,5 @@
 /*
-	Fonction de validations Section indentification
+	Fonction de validations Section indentification page 1
 */
 
 function nomFamilleNaissanceValidation() {
@@ -547,6 +547,9 @@ function verifierLangueMaternelle(){
 }
 
 
+
+
+
 /*
 	Fonction de validations de formatage
 */
@@ -608,4 +611,27 @@ function validerFormatTelephone(numeroTelephone)
 function validerChaineSeulementNombre(nombre){
 	var pattern = /^[0-9]*$/;
 	return pattern.test(nombre);
+}
+
+
+/*
+	Fonction de validations Section Programmes demandés page 2
+*/
+
+
+
+
+/*
+	Fonction de validations de formatage
+*/
+
+function validerAnnee(annee){
+	var pattern = /^(19|20)\d\d$/;
+	return pattern.test(annee);
+}
+
+
+function validerMois(mois){
+	var pattern = /^(0[1-9]|1[012])$/;
+	return pattern.test(mois);
 }
