@@ -2,7 +2,7 @@
 
 define('REGEX_TELEPHONE', '/^\d{3}-\d{3}-\d{3}$/');
 define('REGEX_POSTE', '/^\d{1,10}$/');
-define('REGEX_TAILLE_CHAMPS', '/.{2,50}/');
+define('REGEX_TAILLE_CHAMPS', '/.{2,60}/');
 define('REGEX_DATE', '/^(0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]19\d\d$/');
 define('REGEX_CODE_PERMANENT', '/^[A-Z]{4}\d{8}$/');
 define('REGEX_COURRIEL', '/^[a-zA-Z0-9._-]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/');
@@ -75,8 +75,8 @@ function verifierTexteAutre($radioID, $textName, $pattern){
 
 function validerSectionIdentification(){
   //tout les champs obligatoires sont pleins
-  $champsObligatoires = array("Nom_de_famille_a_la_naissance", "Date_de_naissance", "Prenom_usuel", "radio_sexe", "Code_permanent_ministere", "radio_citoyennete", "Lieu_de_naissance",
-    "radio_statut_canada", "radio_langue_usage", "radio_langue_maternelle", "Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue");
+  $champsObligatoires = array("Nom_de_famille_a_la_naissance", "Date_de_naissance", "Prenom_usuel", "radio-sexe", "Code_permanent_ministere", "radio_citoyennete", "Lieu_de_naissance",
+    "radio-statut-canada", "radio-langue-usage", "radio-langue-maternelle", "Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue");
   if(!verifierChampsVide($champsObligatoires)){
     return false;
   }
@@ -104,14 +104,14 @@ function validerSectionIdentification(){
   }
 
   //verification parents, si un champs est remplis alors l'autre aussi
-  $pereNomValide = empty($_POST["Nom_de_famille_pere_naissance"]) ? false : preg_match(REGEX_TAILLE_CHAMPS, $_POST["Nom_de_famille_pere_naissance"]);
-  $perePrenomValide = empty($_POST["Prenom_usuel_du_pere"]) ? false : preg_match(REGEX_TAILLE_CHAMPS, $_POST["Prenom_usuel_du_pere"]);
+  $pereNomValide = empty($_POST["Nom_de_famille_pere_naissance"]);
+  $perePrenomValide = empty($_POST["Prenom_usuel_du_pere"]);
   if( $pereNomValide != $perePrenomValide){
     logger("ERREUR - Les champs Nom_de_famille_pere_naissance et Prenom_usuel_du_pere ne sont pas tout les deux pleins ou tout les deux vides.");
     return false;
   }
-  $mereNomValide = empty($_POST["Nom_de_famille_mere_naissance"]) ? false : preg_match(REGEX_TAILLE_CHAMPS, $_POST["Nom_de_famille_mere_naissance"]);
-  $merePrenomValide = empty($_POST["Prenom_usuel_du_mere"]) ? false : preg_match(REGEX_TAILLE_CHAMPS, $_POST["Prenom_usuel_du_mere"]);
+  $mereNomValide = empty($_POST["Nom_de_famille_mere_naissance"]);
+  $merePrenomValide = empty($_POST["Prenom_usuel_du_mere"]);
   if( $mereNomValide != $merePrenomValide){
     logger("ERREUR - Les champs Nom_de_famille_mere_naissance et Prenom_usuel_du_mere ne sont pas tout les deux pleins ou tout les deux vides.");
     return false;
@@ -128,17 +128,48 @@ function validerSectionIdentification(){
 
   $formatsValide = $dateNaissanceValide && $codePermanentValide && $codePermanentMinistereValide && $assuranceSocialValide && $codePostalValide && $codePostalAutreValide && $courrielValide;
   if($formatsValide){
-    logger("INFO - premiere page valide - fin courte.");
+    logger("INFO - section identification valide - fin courte.");
     return true;
   }else{
     return false;
   }
-  logger("INFO - premiere page valide - fin longue.");
+}
+
+
+function validerSectionProgrammes(){
+  //tout les champs obligatoires sont pleins
+  $champsObligatoires = array("radio-trimestre", "trimestre_annee", "premier_choix_titre", "radio-temp-1", "premier_choix_code", "radio-type-programme-1");
+  if(!verifierChampsVide($champsObligatoires)){
+    return false;
+  }
+//présence au québec??
+
+  //deuxieme choix, soit tout les champs vide ou tout les champs remplis
+  if( !(empty($_POST["deuxieme_choix_titre"]) === empty($_POST["deuxieme_choix_code"]) === empty($_POST["radio-temp-2"]) === empty($_POST["radio-type-programme-2"])) ){
+    logger("ERREUR - deuxieme choix invalide.");
+    return false;
+  }
+
+  //troisieme choix, soit tout les champs vide ou tout les champs remplis
+  if( !(empty($_POST["troisieme_choix_titre"]) === empty($_POST["troisieme_choix_code"]) === empty($_POST["radio-temp-3"]) === empty($_POST["radio-type-programme-3"])) ){
+    logger("ERREUR - troisieme choix invalide.");
+    return false;
+  }
+  logger("INFO - section programmes valide.");
   return true;
 }
 
+/*
+function validerSectionEtudeSC(){
+
+  logger("INFO - section etude secondaires et collegiales valide.");
+  return true;
+}*/
+
 if ($_POST) {
   $identificationValide = validerSectionIdentification();
+  $programmesValide = validerSectionProgrammes();
+  //$etudeSecondairesEtCollegialesValide = validerSectionEtudeSC();
   //test();
   /*foreach ($_POST as $param_name => $param_val) {
     logger( "Param: $param_name - Value: $param_val");

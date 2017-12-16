@@ -16,3 +16,14 @@
 [20_43_08] --- ERREUR - Le champ radio_statut_canada est obligatoire.
 [20_43_08] --- ERREUR - Le champ radio_langue_usage est obligatoire.
 [20_43_08] --- ERREUR - Le champ radio_langue_maternelle est obligatoire.
+[21_05_20] --- ERREUR - Le champ Nom_de_famille_a_la_naissance est obligatoire.
+[21_05_20] --- ERREUR - Le champ Date_de_naissance est obligatoire.
+[21_05_20] --- ERREUR - Le champ Prenom_usuel est obligatoire.
+[21_05_20] --- ERREUR - Le champ radio_sexe est obligatoire.
+[21_05_20] --- ERREUR - Le champ Code_permanent_ministere est obligatoire.
+[21_05_20] --- ERREUR - Le champ radio_citoyennete est obligatoire.
+[21_05_20] --- ERREUR - Le champ Lieu_de_naissance est obligatoire.
+[21_05_20] --- ERREUR - Le champ radio_statut_canada est obligatoire.
+[21_05_20] --- ERREUR - Le champ radio_langue_usage est obligatoire.
+[21_05_20] --- ERREUR - Le champ radio_langue_maternelle est obligatoire.
+[21_05_20] --- ERREUR - Le champ Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue est obligatoire.
