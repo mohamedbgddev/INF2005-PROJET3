@@ -7,7 +7,7 @@
 
 */
 function enregistrerInformations($detailsInscription,$codePermanent){        
-   $fichierInscption = 'sauvegarde/'.$codePermanent.'txt';
+   $fichierInscption = 'sauvegarde/'.$codePermanent.'.txt';
    $ecriture = fopen($fichierInscption, 'a') or die("Impossible d'ouvrir le fichier");
    fwrite($ecriture, $detailsCommande); 
    fclose($ecriture);
