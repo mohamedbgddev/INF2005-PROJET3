@@ -87,17 +87,6 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12">
-          <label for="Courriel-du-candidat">Courriel du candidat</label>
-          <input type="text" class="form-control"
-                  name="Courriel_du_candidat"
-                  id="Courriel-du-candidat"
-                  placeholder=""
-                  onblur="courrielCandidatValidation()">
-          <div id="valider-Courriel-du-candidat" class="errorHeader"></div>
-        </div>
-      </div>
-      <div class="row">
         <div class="col-md-7">
           <label for="Code-permanent">Code permanent (alphanumérique) si vous avez déjà étudié à l’UQAM</label>
           <input type="text" class="form-control"

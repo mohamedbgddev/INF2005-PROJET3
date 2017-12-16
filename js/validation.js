@@ -64,28 +64,6 @@ function prenomUsuelValidation(){
 }
 
 
-function courrielCandidatValidation() {
-	var valeur = document.getElementById("Courriel-du-candidat");
-
-	if(valeur.value == "") {
-		document.getElementById("valider-Courriel-du-candidat").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
-		document.getElementById('valider-Courriel-du-candidat').innerHTML = ' Le corriel du candidat est requis !';
-		return false;
-	} else if(!validerCourriel(valeur.value)) {
-		document.getElementById("valider-Courriel-du-candidat").style.display = "block";
-		valeur.classList.add('has-warning', 'has-feedback');
-		document.getElementById("valider-Courriel-du-candidat").innerHTML = "Format du courriel est incorrect!";
-		return false;
-	} else {
-		document.getElementById("valider-Courriel-du-candidat").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
-		document.getElementById('valider-Courriel-du-candidat').innerHTML = '';
-		return true;
-	}
-}
-
-
 function codePermanentValidation(){
 	var valeur = document.getElementById("Code-permanent");
 
