@@ -59,14 +59,12 @@ body{
 .troisieme-titre{
   font-size: 20px;
   font-weight: bold;
-  text-transform: capitalize; 
   height: 20px;
 }
 
 .quatrieme-titre{
   font-size: 20px;
   font-weight: bold;
-  text-transform: capitalize;
   margin-bottom: 250px; 
 }
 

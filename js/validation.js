@@ -1175,10 +1175,220 @@ function diplomeUniversitaire2Validation() {
 
 
 
+function employe1Validation() {  
+
+  var radioTypeEmploye  = document.querySelector('input[name = "radio-type-employe-1"]:checked');
+  var radioTempsEmploye = document.querySelector('input[name = "radio-temps-employe-1"]:checked');
+  var nomDiplome        = document.getElementById("nom-employe-1");
+  var fonctionOccupee   = document.getElementById("fonction-occupee-1");
+  var moisDebut         = document.getElementById("de-mois-employe-1"); 
+  var anneeDebut        = document.getElementById("de-annee-employe-1");
+  var moisFin           = document.getElementById("a-mois-employe-1"); 
+  var anneeFin          = document.getElementById("a-annee-employe-1");
 
 
+if(nomDiplome.value == "") {
+    return true;    
+  }else if(nomDiplome.value.length > 0) { 
+    if(fonctionOccupee.value == "" ) { 
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(moisDebut.value == "" ) { 
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else if(anneeDebut.value == "" ) { 
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(moisFin.value == "" ) { 
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else if(anneeFin.value == "" ) { 
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if(radioTypeEmploye == null ) { 
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    }else if(radioTempsEmploye == null ) { 
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if ( !validerAnnee(anneeDebut.value)) {
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Le format (de)(Annee) est invalide!';
+      return false;          
+    }else if ( !validerAnnee(anneeFin.value)) {
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Le format (a)(Annee) est invalide!';
+      return false;
+    }else if ( !validerMois(moisDebut.value)) {
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Le format (de)(Mois) est invalide!';
+      return false;
+    }else if ( !validerMois(moisFin.value)) {
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Le format (a)(Mois) est invalide!';
+      return false;
+    }else if ( !verifierAnneeMoisCorrecte(anneeFin.value,moisFin.value,anneeDebut.value,moisDebut.value)) {
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Date de debut est supperieur a date de fin!';
+      return false;
+    } else { 
+      document.getElementById("valider-employe-1").style.display = "none"; 
+      document.getElementById('valider-employe-1').innerHTML = '';
+      return true; 
+    }
+  }
+}
 
 
+function employe2Validation() {  
+
+  var radioTypeEmploye  = document.querySelector('input[name = "radio-type-employe-2"]:checked');
+  var radioTempsEmploye = document.querySelector('input[name = "radio-temps-employe-2"]:checked');
+  var nomDiplome        = document.getElementById("nom-employe-2");
+  var fonctionOccupee   = document.getElementById("fonction-occupee-2");
+  var moisDebut         = document.getElementById("de-mois-employe-2"); 
+  var anneeDebut        = document.getElementById("de-annee-employe-2");
+  var moisFin           = document.getElementById("a-mois-employe-2"); 
+  var anneeFin          = document.getElementById("a-annee-employe-2");
+
+
+if(nomDiplome.value == "") {
+    return true;    
+  }else if(nomDiplome.value.length > 0) { 
+    if(fonctionOccupee.value == "" ) { 
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(moisDebut.value == "" ) { 
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else if(anneeDebut.value == "" ) { 
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(moisFin.value == "" ) { 
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else if(anneeFin.value == "" ) { 
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if(radioTypeEmploye == null ) { 
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    }else if(radioTempsEmploye == null ) { 
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if ( !validerAnnee(anneeDebut.value)) {
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Le format (de)(Annee) est invalide!';
+      return false;          
+    }else if ( !validerAnnee(anneeFin.value)) {
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Le format (a)(Annee) est invalide!';
+      return false;
+    }else if ( !validerMois(moisDebut.value)) {
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Le format (de)(Mois) est invalide!';
+      return false;
+    }else if ( !validerMois(moisFin.value)) {
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Le format (a)(Mois) est invalide!';
+      return false;
+    }else if ( !verifierAnneeMoisCorrecte(anneeFin.value,moisFin.value,anneeDebut.value,moisDebut.value)) {
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Dte de debut est supperieur a date de fin!';
+      return false;
+    } else { 
+      document.getElementById("valider-employe-2").style.display = "none"; 
+      document.getElementById('valider-employe-2').innerHTML = '';
+      return true; 
+    }
+  }
+}
+
+
+function employe3Validation() {  
+
+  var radioTypeEmploye  = document.querySelector('input[name = "radio-type-employe-3"]:checked');
+  var radioTempsEmploye = document.querySelector('input[name = "radio-temps-employe-3"]:checked');
+  var nomDiplome        = document.getElementById("nom-employe-3");
+  var fonctionOccupee   = document.getElementById("fonction-occupee-3");
+  var moisDebut         = document.getElementById("de-mois-employe-3"); 
+  var anneeDebut        = document.getElementById("de-annee-employe-3");
+  var moisFin           = document.getElementById("a-mois-employe-3"); 
+  var anneeFin          = document.getElementById("a-annee-employe-3");
+
+
+if(nomDiplome.value == "") {
+    return true;    
+  }else if(nomDiplome.value.length > 0) { 
+    if(fonctionOccupee.value == "" ) { 
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(moisDebut.value == "" ) { 
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else if(anneeDebut.value == "" ) { 
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(moisFin.value == "" ) { 
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else if(anneeFin.value == "" ) { 
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if(radioTypeEmploye == null ) { 
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    }else if(radioTempsEmploye == null ) { 
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if ( !validerAnnee(anneeDebut.value)) {
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Le format (de)(Annee) est invalide!';
+      return false;          
+    }else if ( !validerAnnee(anneeFin.value)) {
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Le format (a)(Annee) est invalide!';
+      return false;
+    }else if ( !validerMois(moisDebut.value)) {
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Le format (de)(Mois) est invalide!';
+      return false;
+    }else if ( !validerMois(moisFin.value)) {
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Le format (a)(Mois) est invalide!';
+      return false;
+    }else if ( !verifierAnneeMoisCorrecte(anneeFin.value,moisFin.value,anneeDebut.value,moisDebut.value)) {
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Dte de debut est supperieur a date de fin!';
+      return false;
+    } else { 
+      document.getElementById("valider-employe-3").style.display = "none"; 
+      document.getElementById('valider-employe-3').innerHTML = '';
+      return true; 
+    }
+  }
+}
 
 
 /*
@@ -1201,7 +1411,17 @@ function verifierDateCorrecte(annee1, annee2){
 
 	console.log(diffrence);
 
-	if (diffrence >= 0) {
+	if (diffrence > 0) {
+		return true;
+	}	
+	return false;
+}
+
+
+function verifierAnneeMoisCorrecte(anneefin, moisfin, anneedebut, moisdebut){
+	var diffrence = (anneefin + moisfin) - (anneedebut + moisdebut);
+	console.log(diffrence);
+	if (diffrence > 0) {
 		return true;
 	}	
 	return false;

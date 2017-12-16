@@ -16,8 +16,8 @@
     <div class="container preface">
       <p><span class="premier-titre">prenez</span><span class="premier-titre-suite">votre place.</span></p>
       <p class="second-titre">Études de premier cycle</p>
-      <p class="troisieme-titre">demande d'admission</p>
-      <p class="quatrieme-titre">instruction et formulaire</p>
+      <p class="troisieme-titre">Demande d'admission</p>
+      <p class="quatrieme-titre">Instruction et formulaire</p>
       <p class="cinquieme-titre">UQÀM</p>
     </div><br>
 
@@ -1386,24 +1386,24 @@
             </div>
             </div>
             <div class="row">
-            <div class="col-md-6">
-              <input class="date-own form-control"
-                type="text"
-                name="mois_obtention_diplome_universitaire_2"
-                id="mois-obtention-diplome-universitaire-2"
-                placeholder="10"
-                onblur="diplomeUniversitaire2Validation()">
-              <p>Mois</p>
-            </div>
-            <div class="col-md-6">
-              <input class="date-own form-control"
-                type="text"
-                name="annee_obtention_diplome_universitaire_2"
-                id="annee-obtention-diplome-universitaire-2"
-                placeholder="1999"
-                onblur="diplomeUniversitaire2Validation()">
-              <p>Année</p>
-            </div>
+              <div class="col-md-6">
+                <input class="date-own form-control"
+                  type="text"
+                  name="mois_obtention_diplome_universitaire_2"
+                  id="mois-obtention-diplome-universitaire-2"
+                  placeholder="10"
+                  onblur="diplomeUniversitaire2Validation()">
+                <p>Mois</p>
+              </div>
+              <div class="col-md-6">
+                <input class="date-own form-control"
+                  type="text"
+                  name="annee_obtention_diplome_universitaire_2"
+                  id="annee-obtention-diplome-universitaire-2"
+                  placeholder="1999"
+                  onblur="diplomeUniversitaire2Validation()">
+                <p>Année</p>
+              </div>
             </div>
             <div class="row">
             <div class="col-md-12">
@@ -1417,9 +1417,7 @@
             </div>
             </div>  
 
-
-
-
+<!-- ================================ RENSEIGNEMENTS SUR LES EMPLOIS ==================================-->
         </div>
       </div>
       <div class="row">
@@ -1433,234 +1431,363 @@
             <!-- Premier emploie -->
             <div class="row">
                <div class="col-md-12">
-                  <label for="">Nom de l’employeur</label>
-                  <input type="text" class="form-control" name="" id="" placeholder="">
-                  <div class="valider-"></div>
+                  <label for="nom-employe-1">Nom de l’employeur</label>
+                  <input type="text" 
+                    class="form-control" 
+                    name="nom_employe_1" 
+                    id="nom-employe-1" 
+                    placeholder=""
+                    onblur="employe1Validation()">
                </div>
             </div>
             <div class="row">
                <div class="col-md-12">
-                  <label for="">Fonction occupée</label>
-                  <input type="text" class="form-control" name="" id="" placeholder="">
-                  <div class="valider-"></div>
+                  <label for="fonction-occupee-1">Fonction occupée</label>
+                  <input type="text" 
+                    class="form-control" 
+                    name="fonction_occupee_1" 
+                    id="fonction-occupee-1" 
+                    placeholder=""
+                    onblur="employe1Validation()">
                </div>
             </div>
             <div class="row">
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Emploi rémunéré</label>
+                  <label><input 
+                    onclick="employe1Validation()" 
+                    type="radio" 
+                    name="radio-type-employe-1">Emploi rémunéré</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Stage</label>
+                  <label><input 
+                    onclick="employe1Validation()"
+                    type="radio" 
+                    name="radio-type-employe-1">Stage</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Bénévolat</label>
+                  <label><input
+                    onclick="employe1Validation()"
+                    type="radio" 
+                    name="radio-type-employe-1">Bénévolat</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Temps complet</label>
+                  <label><input 
+                    onclick="employe1Validation()"
+                    type="radio" 
+                    name="radio-temps-employe-1">Temps complet</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Temps partiel</label>
+                  <label><input 
+                    onclick="employe1Validation()"
+                    type="radio" 
+                    name="radio-temps-employe-1">Temps partiel</label>
                 </div>
               </div>
             </div>
-
+            <div id="valider-employe-1" class="errorHeader"></div>
             <!-- Deuxieme emploie -->
+            <br>
             <div class="row">
                <div class="col-md-12">
-                  <label for="">Nom de l’employeur</label>
-                  <input type="text" class="form-control" name="" id="" placeholder="">
-                  <div class="valider-"></div>
+                  <label for="nom-employe-2">Nom de l’employeur</label>
+                  <input type="text" 
+                    class="form-control" 
+                    name="nom_employe_2" 
+                    id="nom-employe-2" 
+                    placeholder=""
+                    onblur="employe2Validation()">
                </div>
             </div>
             <div class="row">
                <div class="col-md-12">
-                  <label for="">Fonction occupée</label>
-                  <input type="text" class="form-control" name="" id="" placeholder="">
-                  <div class="valider-"></div>
+                  <label for="fonction-occupee-2">Fonction occupée</label>
+                  <input type="text" 
+                    class="form-control" 
+                    name="fonction_occupee_2" 
+                    id="fonction-occupee-2" 
+                    placeholder=""
+                    onblur="employe2Validation()">
                </div>
             </div>
             <div class="row">
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Emploi rémunéré</label>
+                  <label><input 
+                    onclick="employe2Validation()" 
+                    type="radio" 
+                    name="radio-type-employe-2">Emploi rémunéré</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Stage</label>
+                  <label><input 
+                    onclick="employe2Validation()"
+                    type="radio" 
+                    name="radio-type-employe-2">Stage</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Bénévolat</label>
+                  <label><input
+                    onclick="employe2Validation()"
+                    type="radio" 
+                    name="radio-type-employe-2">Bénévolat</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Temps complet</label>
+                  <label><input 
+                    onclick="employe2Validation()"
+                    type="radio" 
+                    name="radio-temps-employe-2">Temps complet</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Temps partiel</label>
+                  <label><input 
+                    onclick="employe2Validation()"
+                    type="radio" 
+                    name="radio-temps-employe-2">Temps partiel</label>
                 </div>
               </div>
             </div>
-
+            <div id="valider-employe-2" class="errorHeader"></div>
             <!-- Troisieme emploie -->
+            <br>
             <div class="row">
-               <div class="col-md-12">
-                  <label for="">Nom de l’employeur</label>
-                  <input type="text" class="form-control" name="" id="" placeholder="">
-                  <div class="valider-"></div>
+            <div class="col-md-12">
+                  <label for="nom-employe-3">Nom de l’employeur</label>
+                  <input type="text" 
+                    class="form-control" 
+                    name="nom_employe_3" 
+                    id="nom-employe-3" 
+                    placeholder=""
+                    onblur="employe3Validation()">
                </div>
             </div>
             <div class="row">
                <div class="col-md-12">
-                  <label for="">Fonction occupée</label>
-                  <input type="text" class="form-control" name="" id="" placeholder="">
-                  <div class="valider-"></div>
+                  <label for="fonction-occupee-3">Fonction occupée</label>
+                  <input type="text" 
+                    class="form-control" 
+                    name="fonction_occupee_3" 
+                    id="fonction-occupee-3" 
+                    placeholder=""
+                    onblur="employe3Validation()">
                </div>
             </div>
             <div class="row">
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Emploi rémunéré</label>
+                  <label><input 
+                    onclick="employe3Validation()" 
+                    type="radio" 
+                    name="radio-type-employe-3">Emploi rémunéré</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Stage</label>
+                  <label><input 
+                    onclick="employe3Validation()"
+                    type="radio" 
+                    name="radio-type-employe-3">Stage</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Bénévolat</label>
+                  <label><input
+                    onclick="employe3Validation()"
+                    type="radio" 
+                    name="radio-type-employe-3">Bénévolat</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Temps complet</label>
+                  <label><input 
+                    onclick="employe3Validation()"
+                    type="radio" 
+                    name="radio-temps-employe-3">Temps complet</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Temps partiel</label>
+                  <label><input 
+                    onclick="employe3Validation()"
+                    type="radio" 
+                    name="radio-temps-employe-3">Temps partiel</label>
                 </div>
               </div>
             </div>
         </div>
+        <div id="valider-employe-3" class="errorHeader"></div>
 
         <div class="col-md-4">
-
           <div class="row">
             <div class="col-md-12">
-              <p>Période de fréquentation</p>
+                <p>Période de fréquentation</p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <p>de</p>
-            </div>
-            <div class="col-md-5">
-              <input class="date-own form-control" type="text">
+            <div class="row">
+              <div class="col-md-2">
+                <p>de</p>
+              </div>
+              <div class="col-md-5">
+              <input class="date-own form-control"
+                type="text"
+                name="de_mois_employe_1"
+                id="de-mois-employe-1"
+                placeholder="10"
+                onblur="employe1Validation()">
               <p>Mois</p>
+              </div>
+              <div class="col-md-5">
+                <input class="date-own form-control"
+                  type="text"
+                  name="de_annee_employe_1"
+                  id="de-annee-employe-1"
+                  placeholder="1999"
+                  onblur="employe1Validation()">
+                <p>Année</p>
+              </div>
             </div>
-            <div class="col-md-5">
-              <input class="date-own form-control" type="text">
-              <p>Année</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <p>a</p>
-            </div>
-            <div class="col-md-5">
-              <input class="date-own form-control" type="text">
+            <div class="row">
+              <div class="col-md-2">
+                <p>a</p>
+              </div>
+              <div class="col-md-5">
+              <input class="date-own form-control"
+                type="text"
+                name="a_mois_employe_1"
+                id="a-mois-employe-1"
+                placeholder="10"
+                onblur="employe1Validation()">
               <p>Mois</p>
+              </div>
+              <div class="col-md-5">
+                <input class="date-own form-control"
+                  type="text"
+                  name="a_annee_employe_1"
+                  id="a-annee-employe-1"
+                  placeholder="1999"
+                  onblur="employe1Validation()">
+                <p>Année</p>
+              </div>
             </div>
-            <div class="col-md-5">
-              <input class="date-own form-control" type="text">
-              <p>Année</p>
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="col-md-12">
-              <p>Période de fréquentation</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <p>de</p>
-            </div>
-            <div class="col-md-5">
-              <input class="date-own form-control" type="text">
-              <p>Mois</p>
-            </div>
-            <div class="col-md-5">
-              <input class="date-own form-control" type="text">
-              <p>Année</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <p>a</p>
-            </div>
-            <div class="col-md-5">
-              <input class="date-own form-control" type="text">
-              <p>Mois</p>
-            </div>
-            <div class="col-md-5">
-              <input class="date-own form-control" type="text">
-              <p>Année</p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              <p>Période de fréquentation</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <p>de</p>
-            </div>
-            <div class="col-md-5">
-              <input class="date-own form-control" type="text">
-              <p>Mois</p>
-            </div>
-            <div class="col-md-5">
-              <input class="date-own form-control" type="text">
-              <p>Année</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <p>a</p>
-            </div>
-            <div class="col-md-5">
-              <input class="date-own form-control" type="text">
-              <p>Mois</p>
-            </div>
-            <div class="col-md-5">
-              <input class="date-own form-control" type="text">
-              <p>Année</p>
-            </div>
-          </div>
-
-
-
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-md-12">
+                  <p>Période de fréquentation</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-2">
+                  <p>de</p>
+                </div>
+                <div class="col-md-5">
+                <input class="date-own form-control"
+                  type="text"
+                  name="de_mois_employe_2"
+                  id="de-mois-employe-2"
+                  placeholder="10"
+                  onblur="employe2Validation()">
+                <p>Mois</p>
+                </div>
+                <div class="col-md-5">
+                  <input class="date-own form-control"
+                    type="text"
+                    name="de_annee_employe_2"
+                    id="de-annee-employe-2"
+                    placeholder="1999"
+                    onblur="employe2Validation()">
+                  <p>Année</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-2">
+                  <p>a</p>
+                </div>
+                <div class="col-md-5">
+                <input class="date-own form-control"
+                  type="text"
+                  name="a_mois_employe_2"
+                  id="a-mois-employe-2"
+                  placeholder="10"
+                  onblur="employe2Validation()">
+                <p>Mois</p>
+                </div>
+                <div class="col-md-5">
+                  <input class="date-own form-control"
+                    type="text"
+                    name="a_annee_employe_2"
+                    id="a-annee-employe-2"
+                    placeholder="1999"
+                    onblur="employe2Validation()">
+                  <p>Année</p>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="row">
+                <div class="col-md-12">
+                    <p>Période de fréquentation</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-2">
+                    <p>de</p>
+                  </div>
+                  <div class="col-md-5">
+                  <input class="date-own form-control"
+                    type="text"
+                    name="de_mois_employe_3"
+                    id="de-mois-employe-3"
+                    placeholder="10"
+                    onblur="employe3Validation()">
+                  <p>Mois</p>
+                  </div>
+                  <div class="col-md-5">
+                    <input class="date-own form-control"
+                      type="text"
+                      name="de_annee_employe_3"
+                      id="de-annee-employe-3"
+                      placeholder="1999"
+                      onblur="employe3Validation()">
+                    <p>Année</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-2">
+                    <p>a</p>
+                  </div>
+                  <div class="col-md-5">
+                  <input class="date-own form-control"
+                    type="text"
+                    name="a_mois_employe_3"
+                    id="a-mois-employe-3"
+                    placeholder="10"
+                    onblur="employe3Validation()">
+                  <p>Mois</p>
+                  </div>
+                  <div class="col-md-5">
+                    <input class="date-own form-control"
+                      type="text"
+                      name="a_annee_employe_3"
+                      id="a-annee-employe-3"
+                      placeholder="1999"
+                      onblur="employe3Validation()">
+                    <p>Année</p>
+                  </div>
+                </div>
         </div>
       </div>
 
