@@ -12,7 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
 </head>
 <body>
-  <form>
+  <form method="post" action="validation.php">
     <div class="container preface">
       <p><span class="premier-titre">prenez</span><span class="premier-titre-suite">votre place.</span></p>
       <p class="second-titre">Études de premier cycle</p>
@@ -1827,6 +1827,18 @@
         </div>
       </div>
     </div><br>
+
+
+    <div class="container well">
+      <div class="row">
+         <div class="col-md-6">
+            <button type="submit" class="btn btn-success col-md-12">Soumettre</button>    
+         </div>
+         <div class="col-md-6">
+            <button type="reset" class="btn btn-warning col-md-12">Effacer</button>    
+         </div>
+      </div>          
+    </div>  
   </form>
 </body>
 <script type="text/javascript" src="js/validation.js"></script>
