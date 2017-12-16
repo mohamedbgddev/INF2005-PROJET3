@@ -1,3 +1,10 @@
+
+/*
+	=========================== PAGE 1 ========================
+*/
+
+
+
 /*
 	Fonction de validations Section indentification page 1
 */
@@ -657,6 +664,12 @@ function validerChaineSeulementNombre(nombre){
 
 
 /*
+	=========================== PAGE 2 ========================
+*/
+
+
+
+/*
 	=========================== PROGRAMMES DEMANDÉS ========================
 */
 
@@ -979,6 +992,185 @@ function diplomeSecColDansQuebecValidation() {
 			return true; 
 		}
 	}	
+}
+
+
+/*
+	=========================== PAGE 3 ========================
+*/
+
+
+/*
+	=========================== PAGE 3 RENSEIGNEMENTS SUR LES ÉTUDES UNIVERSITAIRES =====================
+*/
+
+
+
+
+
+function diplomeUniversitaire1Validation() {
+
+  var radioDiplome        = document.querySelector('input[name = "radio-diplome-universitaire-1"]:checked');
+  var radioDiplomeObtenu  = document.querySelector('input[name = "radio-obtention-diplome-universitaire-1"]:checked');
+  var diplome             = document.getElementById("diplome-universitaire-1");
+  var descipline          = document.getElementById("discipline-specialisation-universitaire-1");
+  var institution         = document.getElementById("institution-universitaire-1");
+  var deAnnee             = document.getElementById("de-annee-diplome-universitaire-1");
+  var aAnnee              = document.getElementById("a-annee-diplome-universitaire-1");
+  var moisObtention       = document.getElementById("mois-obtention-diplome-universitaire-1");
+  var anneeObtention      = document.getElementById("annee-obtention-diplome-universitaire-1");
+  var nombreCredits       = document.getElementById("nombre-credits-diplome-universitaire-1");
+
+
+  if(diplome.value == "") {
+    return true;    
+  }else if(diplome.value.length > 0) { 
+    if(descipline.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(institution.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false;  
+    } else if(deAnnee.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else if(aAnnee.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else if(moisObtention.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else if(anneeObtention.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(nombreCredits.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if ( !validerAnnee(deAnnee.value)) {
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Le format (de)(Annee) est invalide!';
+      return false;          
+    }else if ( !validerAnnee(aAnnee.value)) {
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Le format (a)(Annee) est invalide!';
+      return false;
+    }else if ( !validerAnnee(anneeObtention.value)) {
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Le format (Annee)(Obtention) est invalide!';
+      return false;
+    }else if ( !validerMois(moisObtention.value)) {
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Le format (Mois)(Obtention) est invalide!';
+      return false;
+    }else if ( !verifierDateCorrecte(deAnnee.value,aAnnee.value)) {
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Annee de debut supperieur a annee de fin!';
+      return false;
+    }else if(radioDiplome == null ) { 
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    }else if(radioDiplomeObtenu == null ) { 
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else { 
+      document.getElementById("valider-diplome-universitaire-1").style.display = "none"; 
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = '';
+      return true; 
+    }
+  } 
+}
+
+
+
+
+function diplomeUniversitaire2Validation() {
+
+  var radioDiplome        = document.querySelector('input[name = "radio-diplome-universitaire-2"]:checked');
+  var radioDiplomeObtenu  = document.querySelector('input[name = "radio-obtention-diplome-universitaire-2"]:checked');
+  var diplome             = document.getElementById("diplome-universitaire-2");
+  var descipline          = document.getElementById("discipline-specialisation-universitaire-2");
+  var institution         = document.getElementById("institution-universitaire-2");
+  var deAnnee             = document.getElementById("de-annee-diplome-universitaire-2");
+  var aAnnee              = document.getElementById("a-annee-diplome-universitaire-2");
+  var moisObtention       = document.getElementById("mois-obtention-diplome-universitaire-2");
+  var anneeObtention      = document.getElementById("annee-obtention-diplome-universitaire-2");
+  var nombreCredits       = document.getElementById("nombre-credits-diplome-universitaire-2");
+
+
+  if(diplome.value == "") {
+    return true;    
+  }else if(diplome.value.length > 0) { 
+    if(descipline.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(institution.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
+      return false;  
+    } else if(deAnnee.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else if(aAnnee.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else if(moisObtention.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else if(anneeObtention.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(nombreCredits.value == "" ) { 
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if ( !validerAnnee(deAnnee.value)) {
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Le format (de)(Annee) est invalide!';
+      return false;          
+    }else if ( !validerAnnee(aAnnee.value)) {
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Le format (a)(Annee) est invalide!';
+      return false;
+    }else if ( !validerAnnee(anneeObtention.value)) {
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Le format (Annee)(Obtention) est invalide!';
+      return false;
+    }else if ( !validerMois(moisObtention.value)) {
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Le format (Mois)(Obtention) est invalide!';
+      return false;
+    }else if ( !verifierDateCorrecte(deAnnee.value,aAnnee.value)) {
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Annee de debut supperieur a annee de fin!';
+      return false;
+    }else if(radioDiplome == null ) { 
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    }else if(radioDiplomeObtenu == null ) { 
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
+      return false; 
+    } else { 
+      document.getElementById("valider-diplome-universitaire-2").style.display = "none"; 
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = '';
+      return true; 
+    }
+  } 
 }
 
 

@@ -1087,16 +1087,16 @@
         </div>
       </div>
       </div><br>
-<!-- ################################# Page 3 programmes demandes ##########################################-->
-<!-- ################################# Page 3 programmes demandes ##########################################-->
-<!-- ################################# Page 3 programmes demandes ##########################################-->
-<!-- ################################# Page 3 programmes demandes ##########################################-->
-<!-- ################################# Page 3 programmes demandes ##########################################-->
-<!-- ################################# Page 3 programmes demandes ##########################################-->
-<!-- ################################# Page 3 programmes demandes ##########################################-->
-<!-- ################################# Page 3 programmes demandes ##########################################-->
-<!-- ################################# Page 3 programmes demandes ##########################################-->
-<!-- ################################# Page 3 programmes demandes ##########################################-->
+<!-- ################################# Page 3 ##########################################-->
+<!-- ################################# Page 3 ##########################################-->
+<!-- ################################# Page 3 ##########################################-->
+<!-- ################################# Page 3 ##########################################-->
+<!-- ################################# Page 3 ##########################################-->
+<!-- ################################# Page 3 ##########################################-->
+<!-- ################################# Page 3 ##########################################-->
+<!-- ################################# Page 3 ##########################################-->
+<!-- ################################# Page 3 ##########################################-->
+<!-- ################################# Page 3 ##########################################-->
     <div class="container well">
       <div class="row">
         <div class="col-md-4">
@@ -1116,86 +1116,119 @@
         <!-- ################################# Page 3 etudes universitaires ##########################################-->
         <div class="col-md-8">
           <div class="row">
-           <div class="col-md-12">
+            <div class="col-md-12">
               <div class="radio">
-                <label><input type="radio" name="optradio">Grade ou diplôme de niveau universitaire le plus récent entrepris ou complété</label>
+                <label><input type="radio" 
+                  name="radio-diplome-universitaire-1"
+                  onclick="diplomeUniversitaire1Validation()" 
+                  >Grade ou diplôme de niveau universitaire le plus récent entrepris ou complété</label>
               </div>
             </div>
           </div>
-
           <div class="row">
             <div class="col-md-12">
-              <label for="">Nom du diplôme</label>
-              <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>
+              <label for="diplome-universitaire-1">Nom du diplôme</label>
+              <input type="text" class="form-control"
+                 name="diplome_universitaire_1"
+                 id="diplome-universitaire-1" 
+                 placeholder=""
+                 onblur="diplomeUniversitaire1Validation()">
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
-              <label for="">Discipline ou spécialisation</label>
-              <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>
+              <label for="discipline-specialisation-universitaire-1">Discipline ou spécialisation</label>
+              <input type="text" 
+                class="form-control" 
+                name="discipline_specialisation_universitaire_1"
+                id="discipline-specialisation-universitaire-1"
+                placeholder=""
+                onblur="diplomeUniversitaire1Validation()">
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
-              <label for="">Institution où vous avez poursuivi vos études en vue de l’obtention de ce diplôme</label>
-              <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>
+              <label for="institution-universitaire-1">Institution où vous avez poursuivi vos études en vue de l’obtention de ce diplôme</label>
+              <input type="text" 
+                class="form-control" 
+                name="institution_universitaire_1" 
+                id="institution-universitaire-1" 
+                placeholder=""
+                onblur="diplomeUniversitaire1Validation()">
             </div>
           </div>
-
           <div class="row">
             <div class="col-md-12">
-              <label for="">Pays (si à l’extérieur du Canada)</label>
-              <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>
+              <label for="pays-universitaire-1">Pays(si à l’extérieur du Canada)</label>
+              <input type="text" 
+                class="form-control" 
+                name="pays_universitaire_1" 
+                id="pays-universitaire-1" 
+                placeholder=""
+                onblur="diplomeUniversitaire1Validation()">
             </div>
           </div>
-
+          <div id="valider-diplome-universitaire-1" class="errorHeader"></div>
           <br>
           <br>
           <br>
           <br>
-
-
           <div class="row">
-           <div class="col-md-12">
+            <div class="col-md-12">
               <div class="radio">
-                <label><input type="radio" name="optradio">Autre grade ou diplôme de niveau universitaire entrepris ou complété</label>
+                <label><input type="radio" 
+                  name="radio-diplome-universitaire-2"
+                  onclick="diplomeUniversitaire2Validation()" 
+                  >Autre grade ou diplôme de niveau universitaire entrepris ou complété</label>
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="diplome-universitaire-2">Nom du diplôme</label>
+              <input type="text" class="form-control"
+                 name="diplome_universitaire_2"
+                 id="diplome-universitaire-2" 
+                 placeholder=""
+                 onblur="diplomeUniversitaire2Validation()">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="discipline-specialisation-universitaire-2">Discipline ou spécialisation</label>
+              <input type="text" 
+                class="form-control" 
+                name="discipline_specialisation_universitaire_2"
+                id="discipline-specialisation-universitaire-2"
+                placeholder=""
+                onblur="diplomeUniversitaire2Validation()">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="institution-universitaire-2">Institution où vous avez poursuivi vos études en vue de l’obtention de ce diplôme</label>
+              <input type="text" 
+                class="form-control" 
+                name="institution_universitaire_2" 
+                id="institution-universitaire-2" 
+                placeholder=""
+                onblur="diplomeUniversitaire2Validation()">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="pays-universitaire-2">Pays(si à l’extérieur du Canada)</label>
+              <input type="text" 
+                class="form-control" 
+                name="pays_universitaire_2" 
+                id="pays-universitaire-2" 
+                placeholder=""
+                onblur="diplomeUniversitaire2Validation()">
+            </div>
+          </div>
+          <div id="valider-diplome-universitaire-2" class="errorHeader"></div>
 
-          <div class="row">
-            <div class="col-md-12">
-              <label for="">Nom du diplôme</label>
-              <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <label for="">Discipline ou spécialisation</label>
-              <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <label for="">Institution où vous avez poursuivi vos études en vue de l’obtention de ce diplôme</label>
-              <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-md-12">
-              <label for="">Pays (si à l’extérieur du Canada)</label>
-              <input type="text" class="form-control" name="" id="" placeholder="">
-              <div class="valider-"></div>
-            </div>
-          </div>
         </div>
         <!-- ################################# Page 3 etudes universitaires  dates ##########################################-->
 
@@ -1203,12 +1236,18 @@
           <div class="row">
             <div class="col-md-6">
               <div class="radio">
-                <label><input type="radio" name="optradio">Obtenu</label>
+                <label><input 
+                  onclick="diplomeUniversitaire1Validation()" 
+                  type="radio"
+                  name="radio-obtention-diplome-universitaire-1">Obtenu</label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="radio">
-                <label><input type="radio" name="optradio">A obtenir</label>
+                <label><input 
+                  onclick="diplomeUniversitaire1Validation()" 
+                  type="radio"
+                  name="radio-obtention-diplome-universitaire-1">À obtenir</label>
               </div>
             </div>
           </div>
@@ -1216,23 +1255,35 @@
           <div class="row">
             <div class="col-md-12">
                <div class="radio">
-                <label><input type="radio" name="optradio">Ne sera pas obtenu</label>
+                <label><input 
+                  onclick="diplomeUniversitaire1Validation()" 
+                  type="radio" 
+                  name="radio-obtention-diplome-universitaire-1">Ne sera pas obtenu</label>
               </div>
             </div>
           </div>
-
-          <div class="row">
+           <div class="row">
             <div class="col-md-12">
               <p>Période de fréquentation</p>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="de_annee_diplome_universitaire_1"
+                id="de-annee-diplome-universitaire-1"
+                placeholder="1999"
+                onblur="diplomeUniversitaire1Validation()">
               <p>De (année)</p>
             </div>
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="a_annee_diplome_universitaire_1"
+                id="a-annee-diplome-universitaire-1"
+                placeholder="1999"
+                onblur="diplomeUniversitaire1Validation()">
               <p>à (année)</p>
             </div>
           </div>
@@ -1244,80 +1295,131 @@
           </div>
           <div class="row">
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="mois_obtention_diplome_universitaire_1"
+                id="mois-obtention-diplome-universitaire-1"
+                placeholder="10"
+                onblur="diplomeUniversitaire1Validation()">
               <p>Mois</p>
             </div>
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="annee_obtention_diplome_universitaire_1"
+                id="annee-obtention-diplome-universitaire-1"
+                placeholder="1999"
+                onblur="diplomeUniversitaire1Validation()">
               <p>Année</p>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
                 <label for="">Nombre de crédits complétés</label>
-                <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>
+                <input type="text"
+                class="form-control" 
+                name="nombre_credits_diplome_universitaire_1"
+                id="nombre-credits-diplome-universitaire-1"
+                placeholder=""
+                onblur="diplomeUniversitaire1Validation()">
             </div>
           </div>
           <br>
           <div class="row">
             <div class="col-md-6">
               <div class="radio">
-                <label><input type="radio" name="optradio">Obtenu</label>
+                <label><input 
+                  onclick="diplomeUniversitaire2Validation()" 
+                  type="radio"
+                  name="radio-obtention-diplome-universitaire-2">Obtenu</label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="radio">
-                <label><input type="radio" name="optradio">A obtenir</label>
+                <label><input 
+                  onclick="diplomeUniversitaire2Validation()" 
+                  type="radio"
+                  name="radio-obtention-diplome-universitaire-2">À obtenir</label>
               </div>
             </div>
-          </div>
+            </div>
 
-          <div class="row">
+            <div class="row">
             <div class="col-md-12">
                <div class="radio">
-                <label><input type="radio" name="optradio">Ne sera pas obtenu</label>
+                <label><input 
+                  onclick="diplomeUniversitaire2Validation()" 
+                  type="radio" 
+                  name="radio-obtention-diplome-universitaire-2">Ne sera pas obtenu</label>
               </div>
             </div>
-          </div>
-
-          <div class="row">
+            </div>
+            <div class="row">
             <div class="col-md-12">
               <p>Période de fréquentation</p>
             </div>
-          </div>
-          <div class="row">
+            </div>
+            <div class="row">
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="de_annee_diplome_universitaire_2"
+                id="de-annee-diplome-universitaire-2"
+                placeholder="1999"
+                onblur="diplomeUniversitaire2Validation()">
               <p>De (année)</p>
             </div>
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="a_annee_diplome_universitaire_2"
+                id="a-annee-diplome-universitaire-2"
+                placeholder="1999"
+                onblur="diplomeUniversitaire2Validation()">
               <p>à (année)</p>
             </div>
-          </div>
-          <div class="row">
+            </div>
+
+            <div class="row">
             <div class="col-md-12">
               <p>Date d'obtention</p>
             </div>
-          </div>
-          <div class="row">
+            </div>
+            <div class="row">
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="mois_obtention_diplome_universitaire_2"
+                id="mois-obtention-diplome-universitaire-2"
+                placeholder="10"
+                onblur="diplomeUniversitaire2Validation()">
               <p>Mois</p>
             </div>
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="annee_obtention_diplome_universitaire_2"
+                id="annee-obtention-diplome-universitaire-2"
+                placeholder="1999"
+                onblur="diplomeUniversitaire2Validation()">
               <p>Année</p>
             </div>
-          </div>
-          <div class="row">
+            </div>
+            <div class="row">
             <div class="col-md-12">
                 <label for="">Nombre de crédits complétés</label>
-                <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>
+                <input type="text"
+                class="form-control" 
+                name="nombre_credits_diplome_universitaire_2"
+                id="nombre-credits-diplome-universitaire-2"
+                placeholder=""
+                onblur="diplomeUniversitaire2Validation()">
             </div>
-          </div>
+            </div>  
+
+
+
+
         </div>
       </div>
       <div class="row">
