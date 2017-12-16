@@ -121,7 +121,7 @@
         <div class="col-md-7">
           <label for="Code-permanent-ministere">Code permanent (alphanumérique) du ministère de l’Éducation et de l’Enseignement supérieur</label>
           <input type="text" class="form-control"
-              name="Code_permanent-ministere"
+              name="Code_permanent_ministere"
               id="Code-permanent-ministere"
               placeholder="XXXX99999999"
               onblur="codePermanentMinistereValidation()">
@@ -138,12 +138,14 @@
           <div class="row">
             <div class="col-md-6">
               <div class="radio">
-                <label><input type="radio" name="radio-citoyennete" value="Canadienne">Canadienne</label>
+                <label><input onclick="document.getElementById('Autre-citoyennete').disabled = true;"
+                   type="radio" name="radio-citoyennete" value="Canadienne">Canadienne</label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="radio">
-                <label><input type="radio" name="radio-citoyennete" value="">Autre(precisez)</label>
+                <label><input onclick="document.getElementById('Autre-citoyennete').disabled = false;"
+                  type="radio" name="radio-citoyennete" value="AutreCitoyennete">Autre(precisez)</label>
               </div>
             </div>
           </div>
@@ -152,6 +154,7 @@
               <input type="text" class="form-control" name="Autre_citoyennete"
                    id="Autre-citoyennete"
                    placeholder=""
+                   disabled="disabled"
                    onblur="AutreCitoyenneteValidation()">
               <div id="valider-Autre-citoyennete" class="errorHeader"></div>
             </div>
@@ -488,7 +491,7 @@
             <input type="text" class="form-control"
               name="Code_postal"
               id="Code-postal"
-              placeholder=""
+              placeholder="X9X 9X9"
               onblur="codePostalValidation()">
             <p>Code postal</p>
             <div id="valider-Code-postal" class="errorHeader"></div>
@@ -539,7 +542,7 @@
             <input type="text" class="form-control"
               name="Code_postal-autre"
               id="Code-postal-autre"
-              placeholder=""
+              placeholder="X9X 9X9"
               onblur="codePostalAutreValidation()">
             <p>Code postal</p>
             <div id="valider-Code-postal-autre" class="errorHeader"></div>

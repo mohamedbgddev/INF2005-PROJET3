@@ -70,7 +70,7 @@ function courrielCandidatValidation() {
 	if(valeur.value == "") {
 		document.getElementById("valider-Courriel-du-candidat").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
-		document.getElementById('valider-Courriel-du-candidat').innerHTML = ' Le corriel du canddidat est requis !';
+		document.getElementById('valider-Courriel-du-candidat').innerHTML = ' Le corriel du candidat est requis !';
 		return false;
 	} else if(!validerCourriel(valeur.value)) {
 		document.getElementById("valider-Courriel-du-candidat").style.display = "block";
@@ -552,6 +552,22 @@ function autreLangueMaternelleValidation() {
 		document.getElementById("valider-langue-maternelle-autre").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-langue-maternelle-autre').innerHTML = '';
+		return true;
+	}
+}
+
+function AutreCitoyenneteValidation() {
+	var valeur = document.getElementById("Autre-citoyennete");
+
+	if(valeur.value == "") {
+		document.getElementById("valider-Autre-citoyennete").style.display = "block";
+		valeur.classList.add('has-error', 'has-feedback');
+		document.getElementById('valider-Autre-citoyennete').innerHTML = 'Le champs est requis !';
+		return false;
+	} else {
+		document.getElementById("valider-Autre-citoyennete").style.display = "none";
+		valeur.classList.add('has-success', 'has-feedback');
+		document.getElementById('valider-Autre-citoyennete').innerHTML = '';
 		return true;
 	}
 }
