@@ -823,38 +823,57 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="radio">
-                  <label><input type="radio" name="radio-standalone-diplome">Diplôme d’études secondaires ou collégiales poursuivies à l’extérieur du Québec</label>
+                  <label><input type="radio" 
+                    name="radio-diplome-sec-col-hors-quebec"
+                    onclick="diplomeSecColHorsQuebecValidation()" 
+                    >Diplôme d’études secondaires ou collégiales poursuivies à l’extérieur du Québec</label>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <label for="">Nom du diplôme</label>
-                <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>
+                <label for="diplome-sec-col-hors-quebec">Nom du diplôme</label>
+                <input type="text" class="form-control"
+                   name="diplome_sec_col_hors_quebec"
+                   id="diplome-sec-col-hors-quebec" placeholder=""
+                   onblur="diplomeSecColHorsQuebecValidation()">
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <label for="#">Discipline ou spécialisation</label>
-                <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>
+                <label for="discipline-specialisation-hors-quebec">Discipline ou spécialisation</label>
+                <input type="text" 
+                  class="form-control" 
+                  name="discipline_specialisation_hors_quebec"
+                  id="discipline-specialisation-hors-quebec"
+                  placeholder=""
+                  onblur="diplomeSecColHorsQuebecValidation()">
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <label for="">Institution où vous avez poursuivi vos études</label>
-                <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>
+                <label for="institution-hors-quebec">Institution où vous avez poursuivi vos études</label>
+                <input type="text" 
+                  class="form-control" 
+                  name="institution_hors_quebec" 
+                  id="institution-hors-quebec" 
+                  placeholder=""
+                  onblur="diplomeSecColHorsQuebecValidation()">
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <label for="">Pays</label>
-                <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>
+                <label for="pays-hors-quebec">Pays</label>
+                <input type="text" 
+                  class="form-control" 
+                  name="pays_hors_quebec" 
+                  id="pays-hors-quebec" 
+                  placeholder=""
+                  onblur="diplomeSecColHorsQuebecValidation()">
               </div>
             </div>
+            <div id="valider-diplome-hors-quebec" class="errorHeader"></div>
+            <br>
             <div class="row">
               <div class="col-md-6">
                 <div class="radio">
@@ -869,25 +888,37 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <label for="">Nom du diplôme</label>
-                <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>
+                <label for="diplome-sec-col-dans-quebec">Nom du diplôme</label>
+                <input type="text" class="form-control"
+                   name="diplome_sec_col_dans_quebec"
+                   id="diplome-sec-col-dans-quebec"
+                   placeholder=""
+                   onblur="diplomeSecColDansQuebecValidation()">
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <label for="">Discipline ou spécialisation</label>
-                <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>
+                <label for="discipline-specialisation-dans-quebec">Discipline ou spécialisation</label>
+                <input type="text" 
+                  class="form-control" 
+                  name="discipline_specialisation_dans_quebec"
+                  id="discipline-specialisation-dans-quebec"
+                  placeholder=""
+                  onblur="diplomeSecColDansQuebecValidation()">
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <label for="">Institution où vous avez poursuivi vos études en vue de l’obtention de ce diplôme</label>
-                <input type="text" class="form-control" name="" id="" placeholder="">
-                <div class="valider-"></div>
+                <label for="institution-dans-quebec">Institution où vous avez poursuivi vos études</label>
+                <input type="text" 
+                  class="form-control" 
+                  name="institution_dans_quebec" 
+                  id="institution-dans-quebec" 
+                  placeholder=""
+                  onblur="diplomeSecColDansQuebecValidation()">
               </div>
             </div>
+            <div id="valider-diplome-dans-quebec" class="errorHeader"></div>
         </div>
         <!-- ####### Page 2 partie date text#############-->
         <div class="col-md-4">
@@ -924,11 +955,21 @@
           </div>
           <div class="row">
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="de_annee_diplome_hors_quebec"
+                id="de-annee-diplome-hors-quebec"
+                placeholder="1999"
+                onblur="diplomeSecColHorsQuebecValidation()">
               <p>De (année)</p>
             </div>
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="a_annee_diplome_hors_quebec"
+                id="a-annee-diplome-hors-quebec"
+                placeholder="1999"
+                onblur="diplomeSecColHorsQuebecValidation()">
               <p>à (année)</p>
             </div>
           </div>
@@ -940,15 +981,27 @@
           </div>
           <div class="row">
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="mois_obtention_diplome_hors_quebec"
+                id="mois-obtention-diplome-hors-quebec"
+                placeholder="10"
+                onblur="diplomeSecColHorsQuebecValidation()">
               <p>Mois</p>
             </div>
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="annee_obtention_diplome_hors_quebec"
+                id="annee-obtention-diplome-hors-quebec"
+                placeholder="1999"
+                onblur="diplomeSecColHorsQuebecValidation()">
               <p>Année</p>
             </div>
           </div>
 
+          <br>
+          <br>
           <br>
           <br>
           <br>
