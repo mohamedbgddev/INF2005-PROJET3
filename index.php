@@ -118,6 +118,17 @@
         </div>
       </div>
       <div class="row">
+        <div class="col-md-7">
+          <label for="Code-permanent-ministere">Code permanent (alphanumérique) du ministère de l’Éducation et de l’Enseignement supérieur</label>
+          <input type="text" class="form-control"
+              name="Code_permanent-ministere"
+              id="Code-permanent-ministere"
+              placeholder="XXXX99999999"
+              onblur="codePermanentMinistereValidation()">
+          <div id="valider-Code-permanent-ministere" class="errorHeader"></div>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-md-6">
           <div class="row">
             <div class="col-md-12">
@@ -140,7 +151,7 @@
             <div class="col-md-12">
               <input type="text" class="form-control" name="Autre_citoyennete"
                    id="Autre-citoyennete"
-                   placeholder="" 
+                   placeholder=""
                    onblur="AutreCitoyenneteValidation()">
               <div id="valider-Autre-citoyennete" class="errorHeader"></div>
             </div>
@@ -324,7 +335,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input 
+                <label><input
                   onclick="document.getElementById('langue-usage-autre').disabled = true;"
                   type="radio" name="radio-langue-usage" value="Francais">Francais</label>
               </div>
@@ -333,7 +344,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input 
+                <label><input
                   onclick="document.getElementById('langue-usage-autre').disabled = true;"
                   type="radio" name="radio-langue-usage" value="Anglais">Anglais</label>
               </div>
@@ -342,7 +353,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input 
+                <label><input
                   onclick="document.getElementById('langue-usage-autre').disabled = true;"
                   type="radio" name="radio-langue-usage" value="Amérindien ou Inuktitut">Amérindien ou Inuktitut</label>
               </div>
@@ -351,7 +362,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input 
+                <label><input
                   onclick="document.getElementById('langue-usage-autre').disabled = false;"
                   type="radio" name="radio-langue-usage" value="AutreLangueUsage">Autre (précisez)</label>
               </div>
@@ -376,7 +387,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input 
+                <label><input
                   onclick="document.getElementById('langue-maternelle-autre').disabled = true;"
                   type="radio" name="radio-langue-maternelle" value="Francais">Francais</label>
               </div>
@@ -385,7 +396,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input 
+                <label><input
                   onclick="document.getElementById('langue-maternelle-autre').disabled = true;"
                   type="radio" name="radio-langue-maternelle" value="Anglais">Anglais</label>
               </div>
@@ -394,8 +405,8 @@
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input 
-                  onclick="document.getElementById('langue-maternelle-autre').disabled = true;" 
+                <label><input
+                  onclick="document.getElementById('langue-maternelle-autre').disabled = true;"
                   type="radio" name="radio-langue-maternelle"
                   value="Amérindien ou Inuktitut">Amérindien ou Inuktitut</label>
               </div>
@@ -404,8 +415,8 @@
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input 
-                  onclick="document.getElementById('langue-maternelle-autre').disabled = false;"                  
+                <label><input
+                  onclick="document.getElementById('langue-maternelle-autre').disabled = false;"
                   type="radio" name="radio-langue-maternelle"
                   value="AutreLangueMaternelle">Autre (précisez)</label>
               </div>
@@ -443,7 +454,7 @@
       </div>
         <div class="row">
           <div class="col-md-8">
-            <input type="text" class="form-control" 
+            <input type="text" class="form-control"
               name="Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue"
               id="Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue"
               placeholder=""
@@ -453,9 +464,9 @@
             <div id="valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue" class="errorHeader"></div>
           </div>
           <div class="col-md-4">
-            <input type="text" class="form-control" 
-              name="Numero_apartement" 
-              id="Numero-apartement" 
+            <input type="text" class="form-control"
+              name="Numero_apartement"
+              id="Numero-apartement"
               placeholder=""
               onblur="numeroApartementValidation()">
             <p>No d’appartement ou d’unité</p>
@@ -465,9 +476,9 @@
 
         <div class="row">
           <div class="col-md-8">
-            <input type="text" class="form-control" 
-                name="Municipalité_Pays" 
-                id="Municipalité-Pays" 
+            <input type="text" class="form-control"
+                name="Municipalité_Pays"
+                id="Municipalité-Pays"
                 placeholder=""
                 onblur="municipalitéPaysValidation()">
             <p><span class="text-gauche">Municipalité</span><span class="text-droite">Pays (si autre que le Canada)</span></p>
@@ -475,8 +486,8 @@
           </div>
           <div class="col-md-4">
             <input type="text" class="form-control"
-              name="Code_postal" 
-              id="Code-postal" 
+              name="Code_postal"
+              id="Code-postal"
               placeholder=""
               onblur="codePostalValidation()">
             <p>Code postal</p>
@@ -491,10 +502,10 @@
             <label for="Adresse-de-correspondance-autre">Adresse où vous résidez actuellement (si différente de l’adresse de correspondance)</label>
           </div>
         </div>
-      
+
         <div class="row">
           <div class="col-md-8">
-            <input type="text" class="form-control" 
+            <input type="text" class="form-control"
               name="Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue_autre"
               id="Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre"
               placeholder=""
@@ -504,9 +515,9 @@
             <div id="valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre" class="errorHeader"></div>
           </div>
           <div class="col-md-4">
-            <input type="text" class="form-control" 
-              name="Numero_apartement_autre" 
-              id="Numero-apartement-autre" 
+            <input type="text" class="form-control"
+              name="Numero_apartement_autre"
+              id="Numero-apartement-autre"
               placeholder=""
               onblur="numeroApartementAutreValidation()">
             <p>No d’appartement ou d’unité</p>
@@ -516,9 +527,9 @@
 
         <div class="row">
           <div class="col-md-8">
-            <input type="text" class="form-control" 
-                name="Municipalité_Pays_Autre" 
-                id="Municipalité-Pays-Autre" 
+            <input type="text" class="form-control"
+                name="Municipalité_Pays_Autre"
+                id="Municipalité-Pays-Autre"
                 placeholder=""
                 onblur="municipalitéPaysAutreValidation()">
             <p><span class="text-gauche">Municipalité</span><span class="text-droite">Pays (si autre que le Canada)</span></p>
@@ -526,8 +537,8 @@
           </div>
           <div class="col-md-4">
             <input type="text" class="form-control"
-              name="Code_postal-autre" 
-              id="Code-postal-autre" 
+              name="Code_postal-autre"
+              id="Code-postal-autre"
               placeholder=""
               onblur="codePostalAutreValidation()">
             <p>Code postal</p>
@@ -585,7 +596,7 @@
             <input class="form-control"
                    type="text"
                    name="trimestre_annee"
-                   id="trimestre-annee" 
+                   id="trimestre-annee"
                    placeholder=""
                    onblur="trimestreAnneeValidation()">
             <p>Annee</p>
@@ -601,9 +612,9 @@
       </div>
       <div class="row">
         <div class="col-md-10">
-          <input type="text" 
-            class="form-control" 
-            name="premier_choix_titre" 
+          <input type="text"
+            class="form-control"
+            name="premier_choix_titre"
             id="premier-choix-titre"
             placeholder=""
             onblur="premierChoixValidation()">
@@ -611,9 +622,9 @@
         </div>
         <div class="col-md-2">
           <div class="radio">
-            <label><input type="radio" 
+            <label><input type="radio"
                 name="radio-temp-1"
-                onclick="premierChoixValidation()" 
+                onclick="premierChoixValidation()"
                >Temp complet</label>
           </div>
         </div>
@@ -660,7 +671,7 @@
       </div>
       <div id="valider-programme-choix-1" class="errorHeader"></div>
       <!-- ################################# Deuxieme choix programmes demandes ##########################################-->
-      <br>  
+      <br>
       <div class="row">
         <div class="col-md-12">
            <p>Deuxieme Choix</p>
@@ -668,9 +679,9 @@
       </div>
       <div class="row">
         <div class="col-md-10">
-          <input type="text" 
-            class="form-control" 
-            name="deuxieme_choix_titre" 
+          <input type="text"
+            class="form-control"
+            name="deuxieme_choix_titre"
             id="deuxieme-choix-titre"
             placeholder=""
             onblur="deuxiemeChoixValidation()">
@@ -678,9 +689,9 @@
         </div>
         <div class="col-md-2">
           <div class="radio">
-            <label><input type="radio" 
+            <label><input type="radio"
                 name="radio-temp-2"
-                onclick="deuxiemeChoixValidation()" 
+                onclick="deuxiemeChoixValidation()"
                >Temp complet</label>
           </div>
         </div>
@@ -735,9 +746,9 @@
       </div>
       <div class="row">
         <div class="col-md-10">
-          <input type="text" 
-            class="form-control" 
-            name="troisieme_choix_titre" 
+          <input type="text"
+            class="form-control"
+            name="troisieme_choix_titre"
             id="troisieme-choix-titre"
             placeholder=""
             onblur="troisiemeChoixValidation()">
@@ -745,9 +756,9 @@
         </div>
         <div class="col-md-2">
           <div class="radio">
-            <label><input type="radio" 
+            <label><input type="radio"
                 name="radio-temp-3"
-                onclick="troisiemeChoixValidation()" 
+                onclick="troisiemeChoixValidation()"
                >Temp complet</label>
           </div>
         </div>
@@ -811,21 +822,21 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <input type="text" class="form-control" 
-                    name="derniere_annee_secondaire" 
+                <input type="text" class="form-control"
+                    name="derniere_annee_secondaire"
                     id="derniere-annee-secondaire"
                     placeholder=""
                     onblur="derniereAnneeSecondaireValidation()">
                 <div id="valider-derniere-annee-secondaire" class="errorHeader"></div>
               </div>
             </div>
-            <br>  
+            <br>
             <div class="row">
               <div class="col-md-12">
                 <div class="radio">
-                  <label><input type="radio" 
+                  <label><input type="radio"
                     name="radio-diplome-sec-col-hors-quebec"
-                    onclick="diplomeSecColHorsQuebecValidation()" 
+                    onclick="diplomeSecColHorsQuebecValidation()"
                     >Diplôme d’études secondaires ou collégiales poursuivies à l’extérieur du Québec</label>
                 </div>
               </div>
@@ -842,8 +853,8 @@
             <div class="row">
               <div class="col-md-12">
                 <label for="discipline-specialisation-hors-quebec">Discipline ou spécialisation</label>
-                <input type="text" 
-                  class="form-control" 
+                <input type="text"
+                  class="form-control"
                   name="discipline_specialisation_hors_quebec"
                   id="discipline-specialisation-hors-quebec"
                   placeholder=""
@@ -853,10 +864,10 @@
             <div class="row">
               <div class="col-md-12">
                 <label for="institution-hors-quebec">Institution où vous avez poursuivi vos études</label>
-                <input type="text" 
-                  class="form-control" 
-                  name="institution_hors_quebec" 
-                  id="institution-hors-quebec" 
+                <input type="text"
+                  class="form-control"
+                  name="institution_hors_quebec"
+                  id="institution-hors-quebec"
                   placeholder=""
                   onblur="diplomeSecColHorsQuebecValidation()">
               </div>
@@ -864,10 +875,10 @@
             <div class="row">
               <div class="col-md-12">
                 <label for="pays-hors-quebec">Pays</label>
-                <input type="text" 
-                  class="form-control" 
-                  name="pays_hors_quebec" 
-                  id="pays-hors-quebec" 
+                <input type="text"
+                  class="form-control"
+                  name="pays_hors_quebec"
+                  id="pays-hors-quebec"
                   placeholder=""
                   onblur="diplomeSecColHorsQuebecValidation()">
               </div>
@@ -899,8 +910,8 @@
             <div class="row">
               <div class="col-md-12">
                 <label for="discipline-specialisation-dans-quebec">Discipline ou spécialisation</label>
-                <input type="text" 
-                  class="form-control" 
+                <input type="text"
+                  class="form-control"
                   name="discipline_specialisation_dans_quebec"
                   id="discipline-specialisation-dans-quebec"
                   placeholder=""
@@ -910,10 +921,10 @@
             <div class="row">
               <div class="col-md-12">
                 <label for="institution-dans-quebec">Institution où vous avez poursuivi vos études</label>
-                <input type="text" 
-                  class="form-control" 
-                  name="institution_dans_quebec" 
-                  id="institution-dans-quebec" 
+                <input type="text"
+                  class="form-control"
+                  name="institution_dans_quebec"
+                  id="institution-dans-quebec"
                   placeholder=""
                   onblur="diplomeSecColDansQuebecValidation()">
               </div>
@@ -929,7 +940,7 @@
           </div>
           <div class="row">
             <div class="col-md-6">
-              <input class="date-own form-control" 
+              <input class="date-own form-control"
                 type="text"
                 name="de_annee_derniere_annee_secondaire"
                 id="de-annee-derniere-annee-secondaire"
@@ -942,7 +953,7 @@
                 type="text"
                 name="a_annee_derniere_annee_secondaire"
                 id="a-annee-derniere-annee-secondaire"
-                placeholder="1999" 
+                placeholder="1999"
                 onblur="derniereAnneeSecondaireValidation()">
               <p>à (année)</p>
             </div>
@@ -1007,16 +1018,16 @@
           <div class="row">
             <div class="col-md-6">
               <div class="radio">
-                <label><input 
-                  onclick="diplomeSecColDansQuebecValidation()" 
+                <label><input
+                  onclick="diplomeSecColDansQuebecValidation()"
                   type="radio"
                   name="radio-obtention-diplome-page-2">Obtenu</label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="radio">
-                <label><input 
-                  onclick="diplomeSecColDansQuebecValidation()" 
+                <label><input
+                  onclick="diplomeSecColDansQuebecValidation()"
                   type="radio"
                   name="radio-obtention-diplome-page-2">À obtenir</label>
               </div>
@@ -1026,9 +1037,9 @@
           <div class="row">
             <div class="col-md-12">
                <div class="radio">
-                <label><input 
-                  onclick="diplomeSecColDansQuebecValidation()" 
-                  type="radio" 
+                <label><input
+                  onclick="diplomeSecColDansQuebecValidation()"
+                  type="radio"
                   name="radio-obtention-diplome-page-2">Ne sera pas obtenu</label>
               </div>
             </div>
@@ -1118,9 +1129,9 @@
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input type="radio" 
+                <label><input type="radio"
                   name="radio-diplome-universitaire-1"
-                  onclick="diplomeUniversitaire1Validation()" 
+                  onclick="diplomeUniversitaire1Validation()"
                   >Grade ou diplôme de niveau universitaire le plus récent entrepris ou complété</label>
               </div>
             </div>
@@ -1130,7 +1141,7 @@
               <label for="diplome-universitaire-1">Nom du diplôme</label>
               <input type="text" class="form-control"
                  name="diplome_universitaire_1"
-                 id="diplome-universitaire-1" 
+                 id="diplome-universitaire-1"
                  placeholder=""
                  onblur="diplomeUniversitaire1Validation()">
             </div>
@@ -1138,8 +1149,8 @@
           <div class="row">
             <div class="col-md-12">
               <label for="discipline-specialisation-universitaire-1">Discipline ou spécialisation</label>
-              <input type="text" 
-                class="form-control" 
+              <input type="text"
+                class="form-control"
                 name="discipline_specialisation_universitaire_1"
                 id="discipline-specialisation-universitaire-1"
                 placeholder=""
@@ -1149,10 +1160,10 @@
           <div class="row">
             <div class="col-md-12">
               <label for="institution-universitaire-1">Institution où vous avez poursuivi vos études en vue de l’obtention de ce diplôme</label>
-              <input type="text" 
-                class="form-control" 
-                name="institution_universitaire_1" 
-                id="institution-universitaire-1" 
+              <input type="text"
+                class="form-control"
+                name="institution_universitaire_1"
+                id="institution-universitaire-1"
                 placeholder=""
                 onblur="diplomeUniversitaire1Validation()">
             </div>
@@ -1160,10 +1171,10 @@
           <div class="row">
             <div class="col-md-12">
               <label for="pays-universitaire-1">Pays(si à l’extérieur du Canada)</label>
-              <input type="text" 
-                class="form-control" 
-                name="pays_universitaire_1" 
-                id="pays-universitaire-1" 
+              <input type="text"
+                class="form-control"
+                name="pays_universitaire_1"
+                id="pays-universitaire-1"
                 placeholder=""
                 onblur="diplomeUniversitaire1Validation()">
             </div>
@@ -1176,9 +1187,9 @@
           <div class="row">
             <div class="col-md-12">
               <div class="radio">
-                <label><input type="radio" 
+                <label><input type="radio"
                   name="radio-diplome-universitaire-2"
-                  onclick="diplomeUniversitaire2Validation()" 
+                  onclick="diplomeUniversitaire2Validation()"
                   >Autre grade ou diplôme de niveau universitaire entrepris ou complété</label>
               </div>
             </div>
@@ -1188,7 +1199,7 @@
               <label for="diplome-universitaire-2">Nom du diplôme</label>
               <input type="text" class="form-control"
                  name="diplome_universitaire_2"
-                 id="diplome-universitaire-2" 
+                 id="diplome-universitaire-2"
                  placeholder=""
                  onblur="diplomeUniversitaire2Validation()">
             </div>
@@ -1196,8 +1207,8 @@
           <div class="row">
             <div class="col-md-12">
               <label for="discipline-specialisation-universitaire-2">Discipline ou spécialisation</label>
-              <input type="text" 
-                class="form-control" 
+              <input type="text"
+                class="form-control"
                 name="discipline_specialisation_universitaire_2"
                 id="discipline-specialisation-universitaire-2"
                 placeholder=""
@@ -1207,10 +1218,10 @@
           <div class="row">
             <div class="col-md-12">
               <label for="institution-universitaire-2">Institution où vous avez poursuivi vos études en vue de l’obtention de ce diplôme</label>
-              <input type="text" 
-                class="form-control" 
-                name="institution_universitaire_2" 
-                id="institution-universitaire-2" 
+              <input type="text"
+                class="form-control"
+                name="institution_universitaire_2"
+                id="institution-universitaire-2"
                 placeholder=""
                 onblur="diplomeUniversitaire2Validation()">
             </div>
@@ -1218,10 +1229,10 @@
           <div class="row">
             <div class="col-md-12">
               <label for="pays-universitaire-2">Pays(si à l’extérieur du Canada)</label>
-              <input type="text" 
-                class="form-control" 
-                name="pays_universitaire_2" 
-                id="pays-universitaire-2" 
+              <input type="text"
+                class="form-control"
+                name="pays_universitaire_2"
+                id="pays-universitaire-2"
                 placeholder=""
                 onblur="diplomeUniversitaire2Validation()">
             </div>
@@ -1236,16 +1247,16 @@
           <div class="row">
             <div class="col-md-6">
               <div class="radio">
-                <label><input 
-                  onclick="diplomeUniversitaire1Validation()" 
+                <label><input
+                  onclick="diplomeUniversitaire1Validation()"
                   type="radio"
                   name="radio-obtention-diplome-universitaire-1">Obtenu</label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="radio">
-                <label><input 
-                  onclick="diplomeUniversitaire1Validation()" 
+                <label><input
+                  onclick="diplomeUniversitaire1Validation()"
                   type="radio"
                   name="radio-obtention-diplome-universitaire-1">À obtenir</label>
               </div>
@@ -1255,9 +1266,9 @@
           <div class="row">
             <div class="col-md-12">
                <div class="radio">
-                <label><input 
-                  onclick="diplomeUniversitaire1Validation()" 
-                  type="radio" 
+                <label><input
+                  onclick="diplomeUniversitaire1Validation()"
+                  type="radio"
                   name="radio-obtention-diplome-universitaire-1">Ne sera pas obtenu</label>
               </div>
             </div>
@@ -1317,7 +1328,7 @@
             <div class="col-md-12">
                 <label for="">Nombre de crédits complétés</label>
                 <input type="text"
-                class="form-control" 
+                class="form-control"
                 name="nombre_credits_diplome_universitaire_1"
                 id="nombre-credits-diplome-universitaire-1"
                 placeholder=""
@@ -1328,16 +1339,16 @@
           <div class="row">
             <div class="col-md-6">
               <div class="radio">
-                <label><input 
-                  onclick="diplomeUniversitaire2Validation()" 
+                <label><input
+                  onclick="diplomeUniversitaire2Validation()"
                   type="radio"
                   name="radio-obtention-diplome-universitaire-2">Obtenu</label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="radio">
-                <label><input 
-                  onclick="diplomeUniversitaire2Validation()" 
+                <label><input
+                  onclick="diplomeUniversitaire2Validation()"
                   type="radio"
                   name="radio-obtention-diplome-universitaire-2">À obtenir</label>
               </div>
@@ -1347,9 +1358,9 @@
             <div class="row">
             <div class="col-md-12">
                <div class="radio">
-                <label><input 
-                  onclick="diplomeUniversitaire2Validation()" 
-                  type="radio" 
+                <label><input
+                  onclick="diplomeUniversitaire2Validation()"
+                  type="radio"
                   name="radio-obtention-diplome-universitaire-2">Ne sera pas obtenu</label>
               </div>
             </div>
@@ -1409,13 +1420,13 @@
             <div class="col-md-12">
                 <label for="">Nombre de crédits complétés</label>
                 <input type="text"
-                class="form-control" 
+                class="form-control"
                 name="nombre_credits_diplome_universitaire_2"
                 id="nombre-credits-diplome-universitaire-2"
                 placeholder=""
                 onblur="diplomeUniversitaire2Validation()">
             </div>
-            </div>  
+            </div>
 
 <!-- ================================ RENSEIGNEMENTS SUR LES EMPLOIS ==================================-->
         </div>
@@ -1432,10 +1443,10 @@
             <div class="row">
                <div class="col-md-12">
                   <label for="nom-employe-1">Nom de l’employeur</label>
-                  <input type="text" 
-                    class="form-control" 
-                    name="nom_employe_1" 
-                    id="nom-employe-1" 
+                  <input type="text"
+                    class="form-control"
+                    name="nom_employe_1"
+                    id="nom-employe-1"
                     placeholder=""
                     onblur="employe1Validation()">
                </div>
@@ -1443,10 +1454,10 @@
             <div class="row">
                <div class="col-md-12">
                   <label for="fonction-occupee-1">Fonction occupée</label>
-                  <input type="text" 
-                    class="form-control" 
-                    name="fonction_occupee_1" 
-                    id="fonction-occupee-1" 
+                  <input type="text"
+                    class="form-control"
+                    name="fonction_occupee_1"
+                    id="fonction-occupee-1"
                     placeholder=""
                     onblur="employe1Validation()">
                </div>
@@ -1454,17 +1465,17 @@
             <div class="row">
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input 
-                    onclick="employe1Validation()" 
-                    type="radio" 
+                  <label><input
+                    onclick="employe1Validation()"
+                    type="radio"
                     name="radio-type-employe-1">Emploi rémunéré</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input 
+                  <label><input
                     onclick="employe1Validation()"
-                    type="radio" 
+                    type="radio"
                     name="radio-type-employe-1">Stage</label>
                 </div>
               </div>
@@ -1472,23 +1483,23 @@
                 <div class="radio">
                   <label><input
                     onclick="employe1Validation()"
-                    type="radio" 
+                    type="radio"
                     name="radio-type-employe-1">Bénévolat</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input 
+                  <label><input
                     onclick="employe1Validation()"
-                    type="radio" 
+                    type="radio"
                     name="radio-temps-employe-1">Temps complet</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input 
+                  <label><input
                     onclick="employe1Validation()"
-                    type="radio" 
+                    type="radio"
                     name="radio-temps-employe-1">Temps partiel</label>
                 </div>
               </div>
@@ -1499,10 +1510,10 @@
             <div class="row">
                <div class="col-md-12">
                   <label for="nom-employe-2">Nom de l’employeur</label>
-                  <input type="text" 
-                    class="form-control" 
-                    name="nom_employe_2" 
-                    id="nom-employe-2" 
+                  <input type="text"
+                    class="form-control"
+                    name="nom_employe_2"
+                    id="nom-employe-2"
                     placeholder=""
                     onblur="employe2Validation()">
                </div>
@@ -1510,10 +1521,10 @@
             <div class="row">
                <div class="col-md-12">
                   <label for="fonction-occupee-2">Fonction occupée</label>
-                  <input type="text" 
-                    class="form-control" 
-                    name="fonction_occupee_2" 
-                    id="fonction-occupee-2" 
+                  <input type="text"
+                    class="form-control"
+                    name="fonction_occupee_2"
+                    id="fonction-occupee-2"
                     placeholder=""
                     onblur="employe2Validation()">
                </div>
@@ -1521,17 +1532,17 @@
             <div class="row">
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input 
-                    onclick="employe2Validation()" 
-                    type="radio" 
+                  <label><input
+                    onclick="employe2Validation()"
+                    type="radio"
                     name="radio-type-employe-2">Emploi rémunéré</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input 
+                  <label><input
                     onclick="employe2Validation()"
-                    type="radio" 
+                    type="radio"
                     name="radio-type-employe-2">Stage</label>
                 </div>
               </div>
@@ -1539,23 +1550,23 @@
                 <div class="radio">
                   <label><input
                     onclick="employe2Validation()"
-                    type="radio" 
+                    type="radio"
                     name="radio-type-employe-2">Bénévolat</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input 
+                  <label><input
                     onclick="employe2Validation()"
-                    type="radio" 
+                    type="radio"
                     name="radio-temps-employe-2">Temps complet</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input 
+                  <label><input
                     onclick="employe2Validation()"
-                    type="radio" 
+                    type="radio"
                     name="radio-temps-employe-2">Temps partiel</label>
                 </div>
               </div>
@@ -1566,10 +1577,10 @@
             <div class="row">
             <div class="col-md-12">
                   <label for="nom-employe-3">Nom de l’employeur</label>
-                  <input type="text" 
-                    class="form-control" 
-                    name="nom_employe_3" 
-                    id="nom-employe-3" 
+                  <input type="text"
+                    class="form-control"
+                    name="nom_employe_3"
+                    id="nom-employe-3"
                     placeholder=""
                     onblur="employe3Validation()">
                </div>
@@ -1577,10 +1588,10 @@
             <div class="row">
                <div class="col-md-12">
                   <label for="fonction-occupee-3">Fonction occupée</label>
-                  <input type="text" 
-                    class="form-control" 
-                    name="fonction_occupee_3" 
-                    id="fonction-occupee-3" 
+                  <input type="text"
+                    class="form-control"
+                    name="fonction_occupee_3"
+                    id="fonction-occupee-3"
                     placeholder=""
                     onblur="employe3Validation()">
                </div>
@@ -1588,17 +1599,17 @@
             <div class="row">
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input 
-                    onclick="employe3Validation()" 
-                    type="radio" 
+                  <label><input
+                    onclick="employe3Validation()"
+                    type="radio"
                     name="radio-type-employe-3">Emploi rémunéré</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input 
+                  <label><input
                     onclick="employe3Validation()"
-                    type="radio" 
+                    type="radio"
                     name="radio-type-employe-3">Stage</label>
                 </div>
               </div>
@@ -1606,23 +1617,23 @@
                 <div class="radio">
                   <label><input
                     onclick="employe3Validation()"
-                    type="radio" 
+                    type="radio"
                     name="radio-type-employe-3">Bénévolat</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input 
+                  <label><input
                     onclick="employe3Validation()"
-                    type="radio" 
+                    type="radio"
                     name="radio-temps-employe-3">Temps complet</label>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="radio">
-                  <label><input 
+                  <label><input
                     onclick="employe3Validation()"
-                    type="radio" 
+                    type="radio"
                     name="radio-temps-employe-3">Temps partiel</label>
                 </div>
               </div>
@@ -1832,13 +1843,13 @@
     <div class="container well">
       <div class="row">
          <div class="col-md-6">
-            <button type="submit" class="btn btn-success col-md-12">Soumettre</button>    
+            <button type="submit" class="btn btn-success col-md-12">Soumettre</button>
          </div>
          <div class="col-md-6">
-            <button type="reset" class="btn btn-warning col-md-12">Effacer</button>    
+            <button type="reset" class="btn btn-warning col-md-12">Effacer</button>
          </div>
-      </div>          
-    </div>  
+      </div>
+    </div>
   </form>
 </body>
 <script type="text/javascript" src="js/validation.js"></script>

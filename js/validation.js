@@ -107,6 +107,26 @@ function codePermanentValidation(){
 	}
 }
 
+function codePermanentMinistereValidation(){
+	var valeur = document.getElementById("Code-permanent-ministere");
+
+	if(valeur.value == "") {
+		document.getElementById("valider-Code-permanent-ministere").style.display = "block";
+		valeur.classList.add('has-error', 'has-feedback');
+		document.getElementById('valider-Code-permanent-ministere').innerHTML = ' Code permanent ministere requis!';
+		return false;
+	} else if(!validerCodePermanent(valeur.value)) {
+		document.getElementById("valider-Code-permanent-ministere").style.display = "block";
+		valeur.classList.add('has-warning', 'has-feedback');
+		document.getElementById("valider-Code-permanent-ministere").innerHTML = "Code permanent ministere non valide!";
+		return false;
+	} else {
+		document.getElementById("valider-Code-permanent-ministere").style.display = "none";
+		valeur.classList.add('has-success', 'has-feedback');
+		document.getElementById('valider-Code-permanent-ministere').innerHTML = '';
+		return true;
+	}
+}
 
 function numeroAssurranceSocialeValidation() {
 	var valeur = document.getElementById("");
@@ -319,102 +339,102 @@ function numeroTelephoneTravailValidation() {
 
 
 function courrielValidation() {
-	var valeur = document.getElementById("Courriel-personnel"); 
+	var valeur = document.getElementById("Courriel-personnel");
 
-	if(valeur.value == "") {  
+	if(valeur.value == "") {
 		document.getElementById("valider-Courriel-personnel").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Courriel-personnel').innerHTML = ' Le corriel est requis !';
-		return false; 
-	} else if(!validerCourriel(valeur.value)) { 
+		return false;
+	} else if(!validerCourriel(valeur.value)) {
 		document.getElementById("valider-Courriel-personnel").style.display = "block";
 		valeur.classList.add('has-warning', 'has-feedback');
-		document.getElementById("valider-Courriel-personnel").innerHTML = "Format du courriel est incorrect!"; 
-		return false; 
-	} else { 
-		document.getElementById("valider-Courriel-personnel").style.display = "none"; 
-		valeur.classList.add('has-success', 'has-feedback'); 
+		document.getElementById("valider-Courriel-personnel").innerHTML = "Format du courriel est incorrect!";
+		return false;
+	} else {
+		document.getElementById("valider-Courriel-personnel").style.display = "none";
+		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Courriel-personnel').innerHTML = '';
-		return true; 
+		return true;
 	}
 }
 
 
 function NoCivicNomDirectionValidation(){
 
-	var valeur = document.getElementById("Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue"); 
+	var valeur = document.getElementById("Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue");
 
-	if(valeur.value == "") {  
+	if(valeur.value == "") {
 		document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue').innerHTML = 'Ce champs est requis !';
-		return false; 
-	} else { 
-		document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue").style.display = "none"; 
+		return false;
+	} else {
+		document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue').innerHTML = '';
-		return true; 
+		return true;
 	}
 }
 
 
 
 function numeroApartementValidation() {
-	var valeur = document.getElementById("Numero-apartement"); 
+	var valeur = document.getElementById("Numero-apartement");
 
-	if(valeur.value == "") {  
+	if(valeur.value == "") {
 		document.getElementById("valider-Numero-apartement").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-apartement').innerHTML = 'Ce champs est requis !';
-		return false; 
-	} else if(!validerChaineSeulementNombre(value.value)) { 
-		valeur.classList.add('has-warning', 'has-feedback'); 
+		return false;
+	} else if(!validerChaineSeulementNombre(value.value)) {
+		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Numero-apartement').innerHTML = 'Ce champs doit etre comprose de nombre seulement !';
-		return false; 
-	} else {  
-		document.getElementById("valider-Numero-apartement").style.display = "none"; 
+		return false;
+	} else {
+		document.getElementById("valider-Numero-apartement").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Numero-apartement').innerHTML = '';
-		return true; 
+		return true;
 	}
 }
 
 
 function municipalitéPaysValidation(){
 
-	var valeur = document.getElementById("Municipalité-Pays"); 
+	var valeur = document.getElementById("Municipalité-Pays");
 
-	if(valeur.value == "") {  
+	if(valeur.value == "") {
 		document.getElementById("valider-Municipalité-Pays").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Municipalité-Pays').innerHTML = 'Ce champs est requis !';
-		return false; 
-	} else { 
-		document.getElementById("valider-Municipalité-Pays").style.display = "none"; 
+		return false;
+	} else {
+		document.getElementById("valider-Municipalité-Pays").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Municipalité-Pays').innerHTML = '';
-		return true; 
+		return true;
 	}
 }
 
 
 function codePostalValidation() {
-	var valeur = document.getElementById("Code-postal"); 
+	var valeur = document.getElementById("Code-postal");
 
-	if(valeur.value == "") {  
+	if(valeur.value == "") {
 		document.getElementById("valider-Code-postal").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Code-postal').innerHTML = 'Ce champs est requis !';
-		return false; 
-	} else if(!validerCodePostal(value.value)) { 
-		valeur.classList.add('has-warning', 'has-feedback'); 
+		return false;
+	} else if(!validerCodePostal(value.value)) {
+		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Code-postal').innerHTML = 'Le format du code postal est invalide!';
-		return false; 
-	} else {  
-		document.getElementById("valider-Code-postal").style.display = "none"; 
+		return false;
+	} else {
+		document.getElementById("valider-Code-postal").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Code-postal').innerHTML = '';
-		return true; 
+		return true;
 	}
 }
 
@@ -425,114 +445,114 @@ function codePostalValidation() {
 
 function NoCivicNomDirectionAutreValidation(){
 
-	var valeur = document.getElementById("Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre"); 
+	var valeur = document.getElementById("Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre");
 
-	if(valeur.value == "") {  
+	if(valeur.value == "") {
 		document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre').innerHTML = 'Ce champs est requis !';
-		return false; 
-	} else { 
-		document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "none"; 
+		return false;
+	} else {
+		document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre').innerHTML = '';
-		return true; 
+		return true;
 	}
 }
 
 
 
 function numeroApartementAutreValidation() {
-	var valeur = document.getElementById("Numero-apartement-autre"); 
+	var valeur = document.getElementById("Numero-apartement-autre");
 
-	if(valeur.value == "") {  
+	if(valeur.value == "") {
 		document.getElementById("valider-Numero-apartement-autre").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-apartement-autre').innerHTML = 'Ce champs est requis !';
-		return false; 
-	} else if(!validerChaineSeulementNombre(value.value)) { 
-		valeur.classList.add('has-warning', 'has-feedback'); 
+		return false;
+	} else if(!validerChaineSeulementNombre(value.value)) {
+		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Numero-apartement-autre').innerHTML = 'Ce champs doit etre comprose de nombre seulement !';
-		return false; 
-	} else {  
-		document.getElementById("valider-Numero-apartement").style.display = "none"; 
+		return false;
+	} else {
+		document.getElementById("valider-Numero-apartement").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Numero-apartement-autre').innerHTML = '';
-		return true; 
+		return true;
 	}
 }
 
 
 function municipalitéPaysAutreValidation(){
 
-	var valeur = document.getElementById("Municipalité-Pays"); 
+	var valeur = document.getElementById("Municipalité-Pays");
 
-	if(valeur.value == "") {  
+	if(valeur.value == "") {
 		document.getElementById("valider-Municipalité-Pays-Autre").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Municipalité-Pays-Autre').innerHTML = 'Ce champs est requis !';
-		return false; 
-	} else { 
-		document.getElementById("valider-Municipalité-Pays-Autre").style.display = "none"; 
+		return false;
+	} else {
+		document.getElementById("valider-Municipalité-Pays-Autre").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Municipalité-Pays-Autre').innerHTML = '';
-		return true; 
+		return true;
 	}
 }
 
 
 function codePostalAutreValidation() {
-	var valeur = document.getElementById("Code-postal-autre"); 
+	var valeur = document.getElementById("Code-postal-autre");
 
-	if(valeur.value == "") {  
+	if(valeur.value == "") {
 		document.getElementById("valider-Code-postal-autre").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Code-postal-autre').innerHTML = 'Ce champs est requis !';
-		return false; 
-	} else if(!validerCodePostal(value.value)) { 
-		valeur.classList.add('has-warning', 'has-feedback'); 
+		return false;
+	} else if(!validerCodePostal(value.value)) {
+		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Code-postal-autre').innerHTML = 'Le format du code postal est invalide!';
-		return false; 
-	} else {  
-		document.getElementById("valider-Code-postal-autre").style.display = "none"; 
+		return false;
+	} else {
+		document.getElementById("valider-Code-postal-autre").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Code-postal-autre').innerHTML = '';
-		return true; 
+		return true;
 	}
 }
 
 
 
 function autreLangueUsageValidation() {
-	var valeur = document.getElementById("langue-usage-autre"); 
+	var valeur = document.getElementById("langue-usage-autre");
 
-	if(valeur.value == "") {  
+	if(valeur.value == "") {
 		document.getElementById("valider-langue-usage-autre").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback'); 
+		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-langue-usage-autre').innerHTML = ' Le champs est requis !';
-		return false; 
-	} else { 
-		document.getElementById("valider-langue-usage-autre").style.display = "none"; 
-		valeur.classList.add('has-success', 'has-feedback'); 
+		return false;
+	} else {
+		document.getElementById("valider-langue-usage-autre").style.display = "none";
+		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-langue-usage-autre').innerHTML = '';
-		return true; 
+		return true;
 	}
 }
 
 
 function autreLangueMaternelleValidation() {
-	var valeur = document.getElementById("langue-maternelle-autre"); 
+	var valeur = document.getElementById("langue-maternelle-autre");
 
-	if(valeur.value == "") {  
+	if(valeur.value == "") {
 		document.getElementById("valider-langue-maternelle-autre").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback'); 
+		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-langue-maternelle-autre').innerHTML = 'Le champs est requis !';
-		return false; 
-	} else { 
-		document.getElementById("valider-langue-maternelle-autre").style.display = "none"; 
-		valeur.classList.add('has-success', 'has-feedback'); 
+		return false;
+	} else {
+		document.getElementById("valider-langue-maternelle-autre").style.display = "none";
+		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-langue-maternelle-autre').innerHTML = '';
-		return true; 
+		return true;
 	}
 }
 
@@ -548,8 +568,8 @@ function verifierSexe(){
 	if(valeur != null){
 		return true;
 	} else {
-		return false; 
-	}	
+		return false;
+	}
 }
 
 function verifierCitoyennete(){
@@ -557,8 +577,8 @@ function verifierCitoyennete(){
 	if(valeur != null){
 		return true;
 	} else {
-		return false; 
-	}	
+		return false;
+	}
 }
 
 
@@ -567,8 +587,8 @@ function verifierStatutCanada(){
 	if(valeur != null){
 		return true;
 	} else {
-		return false; 
-	}	
+		return false;
+	}
 }
 
 function verifierLangueUsage(){
@@ -581,8 +601,8 @@ function verifierLangueUsage(){
 		}
 		return true;
 	} else {
-		return false; 
-	}	
+		return false;
+	}
 }
 
 function verifierLangueMaternelle(){
@@ -595,8 +615,8 @@ function verifierLangueMaternelle(){
 		}
 		return true;
 	} else {
-		return false; 
-	}	
+		return false;
+	}
 }
 
 /*
@@ -630,9 +650,9 @@ function validerCodePermanent(codePemanent) {
 }
 
 
-function validerCodePostal(codePostal) { 
-	var pattern = /^[A-Z]\d[A-Z][" "]\d[A-Z]\d$/; 
-	return pattern.test(codePostal); 
+function validerCodePostal(codePostal) {
+	var pattern = /^[A-Z]\d[A-Z][" "]\d[A-Z]\d$/;
+	return pattern.test(codePostal);
 }
 
 
@@ -680,123 +700,123 @@ function verifierTrimestre(){
 		return true;
 	} else {
 		document.getElementById("valider-trimestre").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback'); 
+		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-trimestre').innerHTML = 'Le champs est requis !';
-		return false; 
-	}	
+		return false;
+	}
 }
 
 
 function trimestreAnneeValidation() {
-	var valeur = document.getElementById("trimestre-annee"); 
+	var valeur = document.getElementById("trimestre-annee");
 
-	if(valeur.value == "") {  
+	if(valeur.value == "") {
 		document.getElementById("valider-trimestre-annee").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback'); 
+		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-trimestre-annee').innerHTML = 'Le champs est requis !';
-		return false; 
-	} else if(!validerAnnee(valeur.value)) { 
+		return false;
+	} else if(!validerAnnee(valeur.value)) {
 		document.getElementById('valider-trimestre-annee').style.display = "block";
-		valeur.classList.add('has-warning', 'has-feedback'); 
+		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-trimestre-annee').innerHTML = 'Le format est invalide !';
-		return false; 
-	} else { 
-		document.getElementById("valider-trimestre-annee").style.display = "none"; 
-		valeur.classList.add('has-success', 'has-feedback'); 
+		return false;
+	} else {
+		document.getElementById("valider-trimestre-annee").style.display = "none";
+		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-trimestre-annee').innerHTML = '';
-		return true; 
+		return true;
 	}
 }
 
 
 function premierChoixValidation() {
-	var progChoixTitre = document.getElementById("premier-choix-titre"); 
+	var progChoixTitre = document.getElementById("premier-choix-titre");
 	var progChoixTemp  = document.querySelector('input[name = "radio-temp-1"]:checked');
-	var progChoixCode  = document.getElementById("premier-choix-code"); 
+	var progChoixCode  = document.getElementById("premier-choix-code");
 	var progChoixType  = document.querySelector('input[name = "radio-type-programme-1"]:checked');
 
-	if(progChoixTitre.value == "") {  
-		document.getElementById("valider-programme-choix-1").style.display = "block";
-		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont tous requis!';
-		return false; 
-	} else if(progChoixCode.value == "" ) { 
+	if(progChoixTitre.value == "") {
 		document.getElementById("valider-programme-choix-1").style.display = "block";
 		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont tous requis!';
 		return false;
-	} else if(progChoixTemp == null ) { 
+	} else if(progChoixCode.value == "" ) {
 		document.getElementById("valider-programme-choix-1").style.display = "block";
 		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont tous requis!';
-		return false; 
-	} else if(progChoixType == null ) { 
+		return false;
+	} else if(progChoixTemp == null ) {
 		document.getElementById("valider-programme-choix-1").style.display = "block";
 		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont tous requis!';
-		return false; 		 
-	} else { 
-		document.getElementById("valider-programme-choix-1").style.display = "none"; 
+		return false;
+	} else if(progChoixType == null ) {
+		document.getElementById("valider-programme-choix-1").style.display = "block";
+		document.getElementById('valider-programme-choix-1').innerHTML = 'Les champs du premier choix sont tous requis!';
+		return false;
+	} else {
+		document.getElementById("valider-programme-choix-1").style.display = "none";
 		document.getElementById('valider-programme-choix-1').innerHTML = '';
-		return true; 
+		return true;
 	}
 }
 
 
 function deuxiemeChoixValidation() {
-	var progChoixTitre = document.getElementById("deuxieme-choix-titre"); 
+	var progChoixTitre = document.getElementById("deuxieme-choix-titre");
 	var progChoixTemp  = document.querySelector('input[name = "radio-temp-2"]:checked');
-	var progChoixCode  = document.getElementById("deuxieme-choix-code"); 
+	var progChoixCode  = document.getElementById("deuxieme-choix-code");
 	var progChoixType  = document.querySelector('input[name = "radio-type-programme-2"]:checked');
 
 	if(progChoixTitre.value == "") {
-		return true; 		
-	}else if(progChoixTitre.value.length > 0) { 
-		if(progChoixCode.value == "" ) { 
+		return true;
+	}else if(progChoixTitre.value.length > 0) {
+		if(progChoixCode.value == "" ) {
 			document.getElementById("valider-programme-choix-2").style.display = "block";
 			document.getElementById('valider-programme-choix-2').innerHTML = 'Les champs du deuxieme choix sont tous requis!';
 			return false;
-		} else if(progChoixTemp == null ) { 
+		} else if(progChoixTemp == null ) {
 			document.getElementById("valider-programme-choix-2").style.display = "block";
 			document.getElementById('valider-programme-choix-2').innerHTML = 'Les champs du deuxieme choix sont tous requis!';
-			return false; 
-		} else if(progChoixType == null ) { 
+			return false;
+		} else if(progChoixType == null ) {
 			document.getElementById("valider-programme-choix-2").style.display = "block";
 			document.getElementById('valider-programme-choix-2').innerHTML = 'Les champs du deuxieme choix sont tous requis!';
-			return false; 		 
-		} else { 
-			document.getElementById("valider-programme-choix-2").style.display = "none"; 
+			return false;
+		} else {
+			document.getElementById("valider-programme-choix-2").style.display = "none";
 			document.getElementById('valider-programme-choix-2').innerHTML = '';
-			return true; 
+			return true;
 		}
-	}	
+	}
 }
 
 
 
 function troisiemeChoixValidation() {
-	var progChoixTitre = document.getElementById("troisieme-choix-titre"); 
+	var progChoixTitre = document.getElementById("troisieme-choix-titre");
 	var progChoixTemp  = document.querySelector('input[name = "radio-temp-3"]:checked');
-	var progChoixCode  = document.getElementById("troisieme-choix-code"); 
+	var progChoixCode  = document.getElementById("troisieme-choix-code");
 	var progChoixType  = document.querySelector('input[name = "radio-type-programme-3"]:checked');
 
 	if(progChoixTitre.value == "") {
-		return true; 		
-	}else if(progChoixTitre.value.length > 0) { 
-		if(progChoixCode.value == "" ) { 
+		return true;
+	}else if(progChoixTitre.value.length > 0) {
+		if(progChoixCode.value == "" ) {
 			document.getElementById("valider-programme-choix-3").style.display = "block";
 			document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
 			return false;
-		} else if(progChoixTemp == null ) { 
+		} else if(progChoixTemp == null ) {
 			document.getElementById("valider-programme-choix-3").style.display = "block";
 			document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
-			return false; 
-		} else if(progChoixType == null ) { 
+			return false;
+		} else if(progChoixType == null ) {
 			document.getElementById("valider-programme-choix-3").style.display = "block";
 			document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
-			return false; 		 
-		} else { 
-			document.getElementById("valider-programme-choix-3").style.display = "none"; 
+			return false;
+		} else {
+			document.getElementById("valider-programme-choix-3").style.display = "none";
 			document.getElementById('valider-programme-choix-3').innerHTML = '';
-			return true; 
+			return true;
 		}
-	}	
+	}
 }
 
 /*
@@ -807,23 +827,23 @@ function troisiemeChoixValidation() {
 function derniereAnneeSecondaireValidation() {
 	var programme = document.getElementById("derniere-annee-secondaire");
 	var deAnnnee = document.getElementById("de-annee-derniere-annee-secondaire");
-	var aAnnnee = document.getElementById("a-annee-derniere-annee-secondaire"); 	
+	var aAnnnee = document.getElementById("a-annee-derniere-annee-secondaire");
 
 	if(programme.value == "") {
-		return true; 		
-	}else if(programme.value.length > 0) { 
-		if(deAnnnee.value == "" ) { 
+		return true;
+	}else if(programme.value.length > 0) {
+		if(deAnnnee.value == "" ) {
 			document.getElementById("valider-derniere-annee-secondaire").style.display = "block";
 			document.getElementById('valider-derniere-annee-secondaire').innerHTML = 'Les champs sont tous requis!';
 			return false;
-		} else if(aAnnnee.value == "" ) { 
+		} else if(aAnnnee.value == "" ) {
 			document.getElementById("valider-derniere-annee-secondaire").style.display = "block";
 			document.getElementById('valider-derniere-annee-secondaire').innerHTML = 'Les champs sont tous requis!';
-			return false; 
+			return false;
 		}else if ( !validerAnnee(deAnnnee.value)) {
 			document.getElementById("valider-derniere-annee-secondaire").style.display = "block";
 			document.getElementById('valider-derniere-annee-secondaire').innerHTML = 'Le format (de)(Annee) est invalide!';
-			return false; 				 
+			return false;
 		}else if ( !validerAnnee(aAnnnee.value)) {
 			document.getElementById("valider-derniere-annee-secondaire").style.display = "block";
 			document.getElementById('valider-derniere-annee-secondaire').innerHTML = 'Le format (a)(Annee) est invalide!';
@@ -832,12 +852,12 @@ function derniereAnneeSecondaireValidation() {
 			document.getElementById("valider-derniere-annee-secondaire").style.display = "block";
 			document.getElementById('valider-derniere-annee-secondaire').innerHTML = 'Annee de debut supperieur a annee de fin!';
 			return false;
-		} else { 
-			document.getElementById("valider-derniere-annee-secondaire").style.display = "none"; 
+		} else {
+			document.getElementById("valider-derniere-annee-secondaire").style.display = "none";
 			document.getElementById('valider-derniere-annee-secondaire').innerHTML = '';
-			return true; 
+			return true;
 		}
-	}	
+	}
 }
 
 
@@ -855,40 +875,40 @@ function diplomeSecColHorsQuebecValidation() {
 
 
 	if(diplome.value == "") {
-		return true; 		
-	}else if(diplome.value.length > 0) { 
-		if(descipline.value == "" ) { 
+		return true;
+	}else if(diplome.value.length > 0) {
+		if(descipline.value == "" ) {
 			document.getElementById("valider-diplome-hors-quebec").style.display = "block";
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = 'Les champs sont tous requis!';
 			return false;
-		} else if(institution.value == "" ) { 
+		} else if(institution.value == "" ) {
 			document.getElementById("valider-diplome-hors-quebec").style.display = "block";
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = 'Les champs sont tous requis!';
-			return false; 
-		} else if(pays.value == "" ) { 
+			return false;
+		} else if(pays.value == "" ) {
 			document.getElementById("valider-diplome-hors-quebec").style.display = "block";
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = 'Les champs sont tous requis!';
-			return false; 
-		} else if(deAnnee.value == "" ) { 
+			return false;
+		} else if(deAnnee.value == "" ) {
 			document.getElementById("valider-diplome-hors-quebec").style.display = "block";
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = 'Les champs sont tous requis!';
-			return false; 
-		} else if(aAnnee.value == "" ) { 
+			return false;
+		} else if(aAnnee.value == "" ) {
 			document.getElementById("valider-diplome-hors-quebec").style.display = "block";
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = 'Les champs sont tous requis!';
-			return false; 
-		} else if(moisObtention.value == "" ) { 
+			return false;
+		} else if(moisObtention.value == "" ) {
 			document.getElementById("valider-diplome-hors-quebec").style.display = "block";
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = 'Les champs sont tous requis!';
-			return false; 
-		} else if(anneeObtention.value == "" ) { 
+			return false;
+		} else if(anneeObtention.value == "" ) {
 			document.getElementById("valider-diplome-hors-quebec").style.display = "block";
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = 'Les champs sont tous requis!';
 			return false;
 		}else if ( !validerAnnee(deAnnee.value)) {
 			document.getElementById("valider-diplome-hors-quebec").style.display = "block";
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = 'Le format (de)(Annee) est invalide!';
-			return false; 				 
+			return false;
 		}else if ( !validerAnnee(aAnnee.value)) {
 			document.getElementById("valider-diplome-hors-quebec").style.display = "block";
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = 'Le format (a)(Annee) est invalide!';
@@ -905,16 +925,16 @@ function diplomeSecColHorsQuebecValidation() {
 			document.getElementById("valider-diplome-hors-quebec").style.display = "block";
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = 'Annee de debut supperieur a annee de fin!';
 			return false;
-		}else if(radioEtudeHorsQuebec == null ) { 
+		}else if(radioEtudeHorsQuebec == null ) {
 			document.getElementById("valider-diplome-hors-quebec").style.display = "block";
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = 'Les champs sont tous requis!';
-			return false; 
-		} else { 
-			document.getElementById("valider-diplome-hors-quebec").style.display = "none"; 
+			return false;
+		} else {
+			document.getElementById("valider-diplome-hors-quebec").style.display = "none";
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = '';
-			return true; 
+			return true;
 		}
-	}	
+	}
 }
 
 
@@ -932,36 +952,36 @@ function diplomeSecColDansQuebecValidation() {
 
 
 	if(diplome.value == "") {
-		return true; 		
-	}else if(diplome.value.length > 0) { 
-		if(descipline.value == "" ) { 
+		return true;
+	}else if(diplome.value.length > 0) {
+		if(descipline.value == "" ) {
 			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
 			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
 			return false;
-		} else if(institution.value == "" ) { 
+		} else if(institution.value == "" ) {
 			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
 			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
-			return false;  
-		} else if(deAnnee.value == "" ) { 
+			return false;
+		} else if(deAnnee.value == "" ) {
 			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
 			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
-			return false; 
-		} else if(aAnnee.value == "" ) { 
+			return false;
+		} else if(aAnnee.value == "" ) {
 			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
 			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
-			return false; 
-		} else if(moisObtention.value == "" ) { 
+			return false;
+		} else if(moisObtention.value == "" ) {
 			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
 			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
-			return false; 
-		} else if(anneeObtention.value == "" ) { 
+			return false;
+		} else if(anneeObtention.value == "" ) {
 			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
 			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
 			return false;
 		}else if ( !validerAnnee(deAnnee.value)) {
 			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
 			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Le format (de)(Annee) est invalide!';
-			return false; 				 
+			return false;
 		}else if ( !validerAnnee(aAnnee.value)) {
 			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
 			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Le format (a)(Annee) est invalide!';
@@ -978,20 +998,20 @@ function diplomeSecColDansQuebecValidation() {
 			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
 			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Annee de debut supperieur a annee de fin!';
 			return false;
-		}else if(radioDECAutre == null ) { 
+		}else if(radioDECAutre == null ) {
 			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
 			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
-			return false; 
-		}else if(radioDiplomeObtenu == null ) { 
+			return false;
+		}else if(radioDiplomeObtenu == null ) {
 			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
 			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
-			return false; 
-		} else { 
-			document.getElementById("valider-diplome-dans-quebec").style.display = "none"; 
+			return false;
+		} else {
+			document.getElementById("valider-diplome-dans-quebec").style.display = "none";
 			document.getElementById('valider-diplome-dans-quebec').innerHTML = '';
-			return true; 
+			return true;
 		}
-	}	
+	}
 }
 
 
@@ -1023,40 +1043,40 @@ function diplomeUniversitaire1Validation() {
 
 
   if(diplome.value == "") {
-    return true;    
-  }else if(diplome.value.length > 0) { 
-    if(descipline.value == "" ) { 
+    return true;
+  }else if(diplome.value.length > 0) {
+    if(descipline.value == "" ) {
       document.getElementById("valider-diplome-universitaire-1").style.display = "block";
       document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
       return false;
-    } else if(institution.value == "" ) { 
-      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
-      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
-      return false;  
-    } else if(deAnnee.value == "" ) { 
-      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
-      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else if(aAnnee.value == "" ) { 
-      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
-      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else if(moisObtention.value == "" ) { 
-      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
-      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else if(anneeObtention.value == "" ) { 
+    } else if(institution.value == "" ) {
       document.getElementById("valider-diplome-universitaire-1").style.display = "block";
       document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
       return false;
-    } else if(nombreCredits.value == "" ) { 
+    } else if(deAnnee.value == "" ) {
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(aAnnee.value == "" ) {
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(moisObtention.value == "" ) {
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(anneeObtention.value == "" ) {
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(nombreCredits.value == "" ) {
       document.getElementById("valider-diplome-universitaire-1").style.display = "block";
       document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
       return false;
     }else if ( !validerAnnee(deAnnee.value)) {
       document.getElementById("valider-diplome-universitaire-1").style.display = "block";
       document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Le format (de)(Annee) est invalide!';
-      return false;          
+      return false;
     }else if ( !validerAnnee(aAnnee.value)) {
       document.getElementById("valider-diplome-universitaire-1").style.display = "block";
       document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Le format (a)(Annee) est invalide!';
@@ -1073,20 +1093,20 @@ function diplomeUniversitaire1Validation() {
       document.getElementById("valider-diplome-universitaire-1").style.display = "block";
       document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Annee de debut supperieur a annee de fin!';
       return false;
-    }else if(radioDiplome == null ) { 
+    }else if(radioDiplome == null ) {
       document.getElementById("valider-diplome-universitaire-1").style.display = "block";
       document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    }else if(radioDiplomeObtenu == null ) { 
+      return false;
+    }else if(radioDiplomeObtenu == null ) {
       document.getElementById("valider-diplome-universitaire-1").style.display = "block";
       document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else { 
-      document.getElementById("valider-diplome-universitaire-1").style.display = "none"; 
+      return false;
+    } else {
+      document.getElementById("valider-diplome-universitaire-1").style.display = "none";
       document.getElementById('valider-diplome-universitaire-1').innerHTML = '';
-      return true; 
+      return true;
     }
-  } 
+  }
 }
 
 
@@ -1107,40 +1127,40 @@ function diplomeUniversitaire2Validation() {
 
 
   if(diplome.value == "") {
-    return true;    
-  }else if(diplome.value.length > 0) { 
-    if(descipline.value == "" ) { 
+    return true;
+  }else if(diplome.value.length > 0) {
+    if(descipline.value == "" ) {
       document.getElementById("valider-diplome-universitaire-2").style.display = "block";
       document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
       return false;
-    } else if(institution.value == "" ) { 
-      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
-      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
-      return false;  
-    } else if(deAnnee.value == "" ) { 
-      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
-      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else if(aAnnee.value == "" ) { 
-      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
-      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else if(moisObtention.value == "" ) { 
-      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
-      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else if(anneeObtention.value == "" ) { 
+    } else if(institution.value == "" ) {
       document.getElementById("valider-diplome-universitaire-2").style.display = "block";
       document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
       return false;
-    } else if(nombreCredits.value == "" ) { 
+    } else if(deAnnee.value == "" ) {
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(aAnnee.value == "" ) {
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(moisObtention.value == "" ) {
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(anneeObtention.value == "" ) {
+      document.getElementById("valider-diplome-universitaire-2").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    } else if(nombreCredits.value == "" ) {
       document.getElementById("valider-diplome-universitaire-2").style.display = "block";
       document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
       return false;
     }else if ( !validerAnnee(deAnnee.value)) {
       document.getElementById("valider-diplome-universitaire-2").style.display = "block";
       document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Le format (de)(Annee) est invalide!';
-      return false;          
+      return false;
     }else if ( !validerAnnee(aAnnee.value)) {
       document.getElementById("valider-diplome-universitaire-2").style.display = "block";
       document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Le format (a)(Annee) est invalide!';
@@ -1157,71 +1177,71 @@ function diplomeUniversitaire2Validation() {
       document.getElementById("valider-diplome-universitaire-2").style.display = "block";
       document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Annee de debut supperieur a annee de fin!';
       return false;
-    }else if(radioDiplome == null ) { 
+    }else if(radioDiplome == null ) {
       document.getElementById("valider-diplome-universitaire-2").style.display = "block";
       document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    }else if(radioDiplomeObtenu == null ) { 
+      return false;
+    }else if(radioDiplomeObtenu == null ) {
       document.getElementById("valider-diplome-universitaire-2").style.display = "block";
       document.getElementById('valider-diplome-universitaire-2').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else { 
-      document.getElementById("valider-diplome-universitaire-2").style.display = "none"; 
+      return false;
+    } else {
+      document.getElementById("valider-diplome-universitaire-2").style.display = "none";
       document.getElementById('valider-diplome-universitaire-2').innerHTML = '';
-      return true; 
+      return true;
     }
-  } 
+  }
 }
 
 
 
-function employe1Validation() {  
+function employe1Validation() {
 
   var radioTypeEmploye  = document.querySelector('input[name = "radio-type-employe-1"]:checked');
   var radioTempsEmploye = document.querySelector('input[name = "radio-temps-employe-1"]:checked');
   var nomDiplome        = document.getElementById("nom-employe-1");
   var fonctionOccupee   = document.getElementById("fonction-occupee-1");
-  var moisDebut         = document.getElementById("de-mois-employe-1"); 
+  var moisDebut         = document.getElementById("de-mois-employe-1");
   var anneeDebut        = document.getElementById("de-annee-employe-1");
-  var moisFin           = document.getElementById("a-mois-employe-1"); 
+  var moisFin           = document.getElementById("a-mois-employe-1");
   var anneeFin          = document.getElementById("a-annee-employe-1");
 
 
 if(nomDiplome.value == "") {
-    return true;    
-  }else if(nomDiplome.value.length > 0) { 
-    if(fonctionOccupee.value == "" ) { 
+    return true;
+  }else if(nomDiplome.value.length > 0) {
+    if(fonctionOccupee.value == "" ) {
       document.getElementById("valider-employe-1").style.display = "block";
       document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
       return false;
-    } else if(moisDebut.value == "" ) { 
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else if(anneeDebut.value == "" ) { 
+    } else if(moisDebut.value == "" ) {
       document.getElementById("valider-employe-1").style.display = "block";
       document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
       return false;
-    } else if(moisFin.value == "" ) { 
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else if(anneeFin.value == "" ) { 
+    } else if(anneeDebut.value == "" ) {
       document.getElementById("valider-employe-1").style.display = "block";
       document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
       return false;
-    }else if(radioTypeEmploye == null ) { 
+    } else if(moisFin.value == "" ) {
       document.getElementById("valider-employe-1").style.display = "block";
       document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    }else if(radioTempsEmploye == null ) { 
+      return false;
+    } else if(anneeFin.value == "" ) {
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if(radioTypeEmploye == null ) {
+      document.getElementById("valider-employe-1").style.display = "block";
+      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if(radioTempsEmploye == null ) {
       document.getElementById("valider-employe-1").style.display = "block";
       document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
       return false;
     }else if ( !validerAnnee(anneeDebut.value)) {
       document.getElementById("valider-employe-1").style.display = "block";
       document.getElementById('valider-employe-1').innerHTML = 'Le format (de)(Annee) est invalide!';
-      return false;          
+      return false;
     }else if ( !validerAnnee(anneeFin.value)) {
       document.getElementById("valider-employe-1").style.display = "block";
       document.getElementById('valider-employe-1').innerHTML = 'Le format (a)(Annee) est invalide!';
@@ -1238,62 +1258,62 @@ if(nomDiplome.value == "") {
       document.getElementById("valider-employe-1").style.display = "block";
       document.getElementById('valider-employe-1').innerHTML = 'Date de debut est supperieur a date de fin!';
       return false;
-    } else { 
-      document.getElementById("valider-employe-1").style.display = "none"; 
+    } else {
+      document.getElementById("valider-employe-1").style.display = "none";
       document.getElementById('valider-employe-1').innerHTML = '';
-      return true; 
+      return true;
     }
   }
 }
 
 
-function employe2Validation() {  
+function employe2Validation() {
 
   var radioTypeEmploye  = document.querySelector('input[name = "radio-type-employe-2"]:checked');
   var radioTempsEmploye = document.querySelector('input[name = "radio-temps-employe-2"]:checked');
   var nomDiplome        = document.getElementById("nom-employe-2");
   var fonctionOccupee   = document.getElementById("fonction-occupee-2");
-  var moisDebut         = document.getElementById("de-mois-employe-2"); 
+  var moisDebut         = document.getElementById("de-mois-employe-2");
   var anneeDebut        = document.getElementById("de-annee-employe-2");
-  var moisFin           = document.getElementById("a-mois-employe-2"); 
+  var moisFin           = document.getElementById("a-mois-employe-2");
   var anneeFin          = document.getElementById("a-annee-employe-2");
 
 
 if(nomDiplome.value == "") {
-    return true;    
-  }else if(nomDiplome.value.length > 0) { 
-    if(fonctionOccupee.value == "" ) { 
+    return true;
+  }else if(nomDiplome.value.length > 0) {
+    if(fonctionOccupee.value == "" ) {
       document.getElementById("valider-employe-2").style.display = "block";
       document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
       return false;
-    } else if(moisDebut.value == "" ) { 
-      document.getElementById("valider-employe-2").style.display = "block";
-      document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else if(anneeDebut.value == "" ) { 
+    } else if(moisDebut.value == "" ) {
       document.getElementById("valider-employe-2").style.display = "block";
       document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
       return false;
-    } else if(moisFin.value == "" ) { 
-      document.getElementById("valider-employe-2").style.display = "block";
-      document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else if(anneeFin.value == "" ) { 
+    } else if(anneeDebut.value == "" ) {
       document.getElementById("valider-employe-2").style.display = "block";
       document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
       return false;
-    }else if(radioTypeEmploye == null ) { 
+    } else if(moisFin.value == "" ) {
       document.getElementById("valider-employe-2").style.display = "block";
       document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    }else if(radioTempsEmploye == null ) { 
+      return false;
+    } else if(anneeFin.value == "" ) {
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if(radioTypeEmploye == null ) {
+      document.getElementById("valider-employe-2").style.display = "block";
+      document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if(radioTempsEmploye == null ) {
       document.getElementById("valider-employe-2").style.display = "block";
       document.getElementById('valider-employe-2').innerHTML = 'Les champs sont tous requis!';
       return false;
     }else if ( !validerAnnee(anneeDebut.value)) {
       document.getElementById("valider-employe-2").style.display = "block";
       document.getElementById('valider-employe-2').innerHTML = 'Le format (de)(Annee) est invalide!';
-      return false;          
+      return false;
     }else if ( !validerAnnee(anneeFin.value)) {
       document.getElementById("valider-employe-2").style.display = "block";
       document.getElementById('valider-employe-2').innerHTML = 'Le format (a)(Annee) est invalide!';
@@ -1310,62 +1330,62 @@ if(nomDiplome.value == "") {
       document.getElementById("valider-employe-2").style.display = "block";
       document.getElementById('valider-employe-2').innerHTML = 'Dte de debut est supperieur a date de fin!';
       return false;
-    } else { 
-      document.getElementById("valider-employe-2").style.display = "none"; 
+    } else {
+      document.getElementById("valider-employe-2").style.display = "none";
       document.getElementById('valider-employe-2').innerHTML = '';
-      return true; 
+      return true;
     }
   }
 }
 
 
-function employe3Validation() {  
+function employe3Validation() {
 
   var radioTypeEmploye  = document.querySelector('input[name = "radio-type-employe-3"]:checked');
   var radioTempsEmploye = document.querySelector('input[name = "radio-temps-employe-3"]:checked');
   var nomDiplome        = document.getElementById("nom-employe-3");
   var fonctionOccupee   = document.getElementById("fonction-occupee-3");
-  var moisDebut         = document.getElementById("de-mois-employe-3"); 
+  var moisDebut         = document.getElementById("de-mois-employe-3");
   var anneeDebut        = document.getElementById("de-annee-employe-3");
-  var moisFin           = document.getElementById("a-mois-employe-3"); 
+  var moisFin           = document.getElementById("a-mois-employe-3");
   var anneeFin          = document.getElementById("a-annee-employe-3");
 
 
 if(nomDiplome.value == "") {
-    return true;    
-  }else if(nomDiplome.value.length > 0) { 
-    if(fonctionOccupee.value == "" ) { 
+    return true;
+  }else if(nomDiplome.value.length > 0) {
+    if(fonctionOccupee.value == "" ) {
       document.getElementById("valider-employe-3").style.display = "block";
       document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
       return false;
-    } else if(moisDebut.value == "" ) { 
-      document.getElementById("valider-employe-3").style.display = "block";
-      document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else if(anneeDebut.value == "" ) { 
+    } else if(moisDebut.value == "" ) {
       document.getElementById("valider-employe-3").style.display = "block";
       document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
       return false;
-    } else if(moisFin.value == "" ) { 
-      document.getElementById("valider-employe-3").style.display = "block";
-      document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    } else if(anneeFin.value == "" ) { 
+    } else if(anneeDebut.value == "" ) {
       document.getElementById("valider-employe-3").style.display = "block";
       document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
       return false;
-    }else if(radioTypeEmploye == null ) { 
+    } else if(moisFin.value == "" ) {
       document.getElementById("valider-employe-3").style.display = "block";
       document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
-      return false; 
-    }else if(radioTempsEmploye == null ) { 
+      return false;
+    } else if(anneeFin.value == "" ) {
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if(radioTypeEmploye == null ) {
+      document.getElementById("valider-employe-3").style.display = "block";
+      document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
+      return false;
+    }else if(radioTempsEmploye == null ) {
       document.getElementById("valider-employe-3").style.display = "block";
       document.getElementById('valider-employe-3').innerHTML = 'Les champs sont tous requis!';
       return false;
     }else if ( !validerAnnee(anneeDebut.value)) {
       document.getElementById("valider-employe-3").style.display = "block";
       document.getElementById('valider-employe-3').innerHTML = 'Le format (de)(Annee) est invalide!';
-      return false;          
+      return false;
     }else if ( !validerAnnee(anneeFin.value)) {
       document.getElementById("valider-employe-3").style.display = "block";
       document.getElementById('valider-employe-3').innerHTML = 'Le format (a)(Annee) est invalide!';
@@ -1382,10 +1402,10 @@ if(nomDiplome.value == "") {
       document.getElementById("valider-employe-3").style.display = "block";
       document.getElementById('valider-employe-3').innerHTML = 'Dte de debut est supperieur a date de fin!';
       return false;
-    } else { 
-      document.getElementById("valider-employe-3").style.display = "none"; 
+    } else {
+      document.getElementById("valider-employe-3").style.display = "none";
       document.getElementById('valider-employe-3').innerHTML = '';
-      return true; 
+      return true;
     }
   }
 }
@@ -1399,7 +1419,7 @@ function validerAnnee(annee){
 	console.log(annee);
 
 	var pattern = /^(19|20)\d\d$/;
-	
+
 	console.log(pattern.test(annee));
 
 	return pattern.test(annee);
@@ -1413,7 +1433,7 @@ function verifierDateCorrecte(annee1, annee2){
 
 	if (diffrence > 0) {
 		return true;
-	}	
+	}
 	return false;
 }
 
@@ -1423,7 +1443,7 @@ function verifierAnneeMoisCorrecte(anneefin, moisfin, anneedebut, moisdebut){
 	console.log(diffrence);
 	if (diffrence > 0) {
 		return true;
-	}	
+	}
 	return false;
 }
 
