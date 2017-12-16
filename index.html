@@ -920,7 +920,7 @@
             </div>
             <div id="valider-diplome-dans-quebec" class="errorHeader"></div>
         </div>
-        <!-- ####### Page 2 partie date text#############-->
+        <!-- ############# Page 2 partie date text #############-->
         <div class="col-md-4">
           <div class="row">
             <div class="col-md-12">
@@ -999,7 +999,6 @@
               <p>Année</p>
             </div>
           </div>
-
           <br>
           <br>
           <br>
@@ -1008,12 +1007,18 @@
           <div class="row">
             <div class="col-md-6">
               <div class="radio">
-                <label><input type="radio" name="radio-obtention-diplome">Obtenu</label>
+                <label><input 
+                  onclick="diplomeSecColDansQuebecValidation()" 
+                  type="radio"
+                  name="radio-obtention-diplome-page-2">Obtenu</label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="radio">
-                <label><input type="radio" name="radio-obtention-diplome">À obtenir</label>
+                <label><input 
+                  onclick="diplomeSecColDansQuebecValidation()" 
+                  type="radio"
+                  name="radio-obtention-diplome-page-2">À obtenir</label>
               </div>
             </div>
           </div>
@@ -1021,23 +1026,35 @@
           <div class="row">
             <div class="col-md-12">
                <div class="radio">
-                <label><input type="radio" name="radio-obtention-diplome">Ne sera pas obtenu</label>
+                <label><input 
+                  onclick="diplomeSecColDansQuebecValidation()" 
+                  type="radio" 
+                  name="radio-obtention-diplome-page-2">Ne sera pas obtenu</label>
               </div>
             </div>
           </div>
-
-          <div class="row">
+           <div class="row">
             <div class="col-md-12">
               <p>Période de fréquentation</p>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="de_annee_diplome_dans_quebec"
+                id="de-annee-diplome-dans-quebec"
+                placeholder="1999"
+                onblur="diplomeSecColDansQuebecValidation()">
               <p>De (année)</p>
             </div>
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="a_annee_diplome_dans_quebec"
+                id="a-annee-diplome-dans-quebec"
+                placeholder="1999"
+                onblur="diplomeSecColDansQuebecValidation()">
               <p>à (année)</p>
             </div>
           </div>
@@ -1049,11 +1066,21 @@
           </div>
           <div class="row">
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="mois_obtention_diplome_dans_quebec"
+                id="mois-obtention-diplome-dans-quebec"
+                placeholder="10"
+                onblur="diplomeSecColDansQuebecValidation()">
               <p>Mois</p>
             </div>
             <div class="col-md-6">
-              <input class="date-own form-control" type="text">
+              <input class="date-own form-control"
+                type="text"
+                name="annee_obtention_diplome_dans_quebec"
+                id="annee-obtention-diplome-dans-quebec"
+                placeholder="1999"
+                onblur="diplomeSecColDansQuebecValidation()">
               <p>Année</p>
             </div>
           </div>

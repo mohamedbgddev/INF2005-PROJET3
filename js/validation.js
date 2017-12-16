@@ -892,6 +892,10 @@ function diplomeSecColHorsQuebecValidation() {
 			document.getElementById("valider-diplome-hors-quebec").style.display = "block";
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = 'Annee de debut supperieur a annee de fin!';
 			return false;
+		}else if(radioEtudeHorsQuebec == null ) { 
+			document.getElementById("valider-diplome-hors-quebec").style.display = "block";
+			document.getElementById('valider-diplome-hors-quebec').innerHTML = 'Les champs sont tous requis!';
+			return false; 
 		} else { 
 			document.getElementById("valider-diplome-hors-quebec").style.display = "none"; 
 			document.getElementById('valider-diplome-hors-quebec').innerHTML = '';
@@ -900,6 +904,82 @@ function diplomeSecColHorsQuebecValidation() {
 	}	
 }
 
+
+function diplomeSecColDansQuebecValidation() {
+
+	var radioDECAutre		 = document.querySelector('input[name = "radio-DEC_ou_autre"]:checked');
+	var radioDiplomeObtenu   = document.querySelector('input[name = "radio-obtention-diplome-page-2"]:checked');
+	var diplome 			 = document.getElementById("diplome-sec-col-dans-quebec");
+	var descipline 			 = document.getElementById("discipline-specialisation-dans-quebec");
+	var institution 		 = document.getElementById("institution-dans-quebec");
+	var deAnnee 			 = document.getElementById("de-annee-diplome-dans-quebec");
+	var aAnnee  			 = document.getElementById("a-annee-diplome-dans-quebec");
+	var moisObtention 		 = document.getElementById("mois-obtention-diplome-dans-quebec");
+	var anneeObtention 		 = document.getElementById("annee-obtention-diplome-dans-quebec");
+
+
+	if(diplome.value == "") {
+		return true; 		
+	}else if(diplome.value.length > 0) { 
+		if(descipline.value == "" ) { 
+			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
+			return false;
+		} else if(institution.value == "" ) { 
+			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
+			return false;  
+		} else if(deAnnee.value == "" ) { 
+			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
+			return false; 
+		} else if(aAnnee.value == "" ) { 
+			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
+			return false; 
+		} else if(moisObtention.value == "" ) { 
+			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
+			return false; 
+		} else if(anneeObtention.value == "" ) { 
+			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
+			return false;
+		}else if ( !validerAnnee(deAnnee.value)) {
+			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Le format (de)(Annee) est invalide!';
+			return false; 				 
+		}else if ( !validerAnnee(aAnnee.value)) {
+			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Le format (a)(Annee) est invalide!';
+			return false;
+		}else if ( !validerAnnee(anneeObtention.value)) {
+			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Le format (Annee)(Obtention) est invalide!';
+			return false;
+		}else if ( !validerMois(moisObtention.value)) {
+			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Le format (Mois)(Obtention) est invalide!';
+			return false;
+		}else if ( !verifierDateCorrecte(deAnnee.value,aAnnee.value)) {
+			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Annee de debut supperieur a annee de fin!';
+			return false;
+		}else if(radioDECAutre == null ) { 
+			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
+			return false; 
+		}else if(radioDiplomeObtenu == null ) { 
+			document.getElementById("valider-diplome-dans-quebec").style.display = "block";
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = 'Les champs sont tous requis!';
+			return false; 
+		} else { 
+			document.getElementById("valider-diplome-dans-quebec").style.display = "none"; 
+			document.getElementById('valider-diplome-dans-quebec').innerHTML = '';
+			return true; 
+		}
+	}	
+}
 
 
 
