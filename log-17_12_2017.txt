@@ -158,3 +158,10 @@
 [22_16_48] --- INFO - section etude universitaire valide.
 [22_16_48] --- ERREUR - section emploi 1 invalide.
 [22_16_48] --- INFO - statut des variables de validation : -  - 1 - 1 - 
+[22_23_45] --- ERREUR - Le champ radio_citoyennete est obligatoire.
+[22_23_45] --- ERREUR - Le champ Lieu_de_naissance est obligatoire.
+[22_23_45] --- INFO - section programmes valide.
+[22_23_45] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[22_23_45] --- INFO - section etude universitaire valide.
+[22_23_45] --- ERREUR - section emploi 1 invalide.
+[22_23_45] --- INFO - statut des variables de validation : - 1 - 1 - 1 - 

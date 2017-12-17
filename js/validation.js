@@ -339,9 +339,9 @@ function courrielValidation() {
 	var valeur = document.getElementById("Courriel-personnel");
 
 	if(valeur.value == "") {
-		document.getElementById("valider-Courriel-personnel").style.display = "block";
+		document.getElementById("valider-Courriel-personnel").style.display = "none";
 		valeur.classList.add('has-error', 'has-feedback');
-		document.getElementById('valider-Courriel-personnel').innerHTML = ' Le corriel est requis !';
+		document.getElementById('valider-Courriel-personnel').innerHTML = '';
 		return false;
 	} else if(!validerCourriel(valeur.value)) {
 		document.getElementById("valider-Courriel-personnel").style.display = "block";
@@ -739,6 +739,8 @@ function validerChaineSeulementNombre(nombre){
 function verifierTrimestre(){
 	var valeur = document.querySelector('input[name = "radio-trimestre"]:checked');
 	if(valeur != null){
+		document.getElementById("valider-trimestre").style.display = "";
+		document.getElementById('valider-trimestre').innerHTML = '';
 		return true;
 	} else {
 		document.getElementById("valider-trimestre").style.display = "block";
@@ -808,6 +810,8 @@ function deuxiemeChoixValidation() {
 	var progChoixType  = document.querySelector('input[name = "radio-type-programme-2"]:checked');
 
 	if(progChoixTitre.value == "") {
+		document.getElementById("valider-programme-choix-2").style.display = "none";
+		document.getElementById('valider-programme-choix-2').innerHTML = '';
 		return true;
 	}else if(progChoixTitre.value.length > 0) {
 		if(progChoixCode.value == "" ) {
@@ -839,24 +843,26 @@ function troisiemeChoixValidation() {
 	var progChoixType  = document.querySelector('input[name = "radio-type-programme-3"]:checked');
 
 	if(progChoixTitre.value == "") {
+		document.getElementById("valider-programme-choix-3").style.display = "none";
+		document.getElementById('valider-programme-choix-3').innerHTML = '';
 		return true;
 	}else if(progChoixTitre.value.length > 0) {
 		if(progChoixCode.value == "" ) {
-                    document.getElementById("valider-programme-choix-3").style.display = "block";
-                    document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
-                    return false;
+			document.getElementById("valider-programme-choix-3").style.display = "block";
+			document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
+			return false;
 		} else if(progChoixTemp == null ) {
-                    document.getElementById("valider-programme-choix-3").style.display = "block";
-                    document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
-                    return false;
+			document.getElementById("valider-programme-choix-3").style.display = "block";
+			document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
+			return false;
 		} else if(progChoixType == null ) {
-                    document.getElementById("valider-programme-choix-3").style.display = "block";
-                    document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
-                    return false;
+			document.getElementById("valider-programme-choix-3").style.display = "block";
+			document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
+			return false;
 		} else {
-                    document.getElementById("valider-programme-choix-3").style.display = "none";
-                    document.getElementById('valider-programme-choix-3').innerHTML = '';
-                    return true;
+			document.getElementById("valider-programme-choix-3").style.display = "none";
+			document.getElementById('valider-programme-choix-3').innerHTML = '';
+			return true;
 		}
 	}
 }
@@ -872,6 +878,8 @@ function derniereAnneeSecondaireValidation() {
 	var aAnnnee = document.getElementById("a-annee-derniere-annee-secondaire");
 
 	if(programme.value == "") {
+		document.getElementById("valider-derniere-annee-secondaire").style.display = "none";
+		document.getElementById('valider-derniere-annee-secondaire').innerHTML = '';
 		return true;
 	}else if(programme.value.length > 0) {
 		if(deAnnnee.value == "" ) {
@@ -917,6 +925,8 @@ function diplomeSecColHorsQuebecValidation() {
 
 
 	if(diplome.value == "") {
+		document.getElementById("valider-diplome-hors-quebec").style.display = "none";
+		document.getElementById('valider-diplome-hors-quebec').innerHTML = '';
 		return true;
 	}else if(diplome.value.length > 0) {
 		if(descipline.value == "" ) {
@@ -994,6 +1004,8 @@ function diplomeSecColDansQuebecValidation() {
 
 
 	if(diplome.value == "") {
+		document.getElementById("valider-diplome-dans-quebec").style.display = "none";
+		document.getElementById('valider-diplome-dans-quebec').innerHTML = '';
 		return true;
 	}else if(diplome.value.length > 0) {
 		if(descipline.value == "" ) {
@@ -1085,7 +1097,9 @@ function diplomeUniversitaire1Validation() {
 
 
   if(diplome.value == "") {
-    return true;
+		document.getElementById("valider-diplome-universitaire-1").style.display = "none";
+		document.getElementById('valider-diplome-universitaire-1').innerHTML = '';
+		return true;
   }else if(diplome.value.length > 0) {
     if(descipline.value == "" ) {
       document.getElementById("valider-diplome-universitaire-1").style.display = "block";
@@ -1169,7 +1183,9 @@ function diplomeUniversitaire2Validation() {
 
 
   if(diplome.value == "") {
-    return true;
+		document.getElementById("valider-diplome-universitaire-2").style.display = "none";
+		document.getElementById('valider-diplome-universitaire-2').innerHTML = '';
+		return true;
   }else if(diplome.value.length > 0) {
     if(descipline.value == "" ) {
       document.getElementById("valider-diplome-universitaire-2").style.display = "block";
@@ -1250,7 +1266,9 @@ function employe1Validation() {
 
 
 if(nomDiplome.value == "") {
-    return true;
+		document.getElementById("valider-employe-1").style.display = "none";
+		document.getElementById('valider-employe-1').innerHTML = '';
+		return true;
   }else if(nomDiplome.value.length > 0) {
     if(fonctionOccupee.value == "" ) {
       document.getElementById("valider-employe-1").style.display = "block";
@@ -1322,7 +1340,9 @@ function employe2Validation() {
 
 
 if(nomDiplome.value == "") {
-    return true;
+		document.getElementById("valider-employe-2").style.display = "none";
+		document.getElementById('valider-employe-2').innerHTML = '';
+		return true;
   }else if(nomDiplome.value.length > 0) {
     if(fonctionOccupee.value == "" ) {
       document.getElementById("valider-employe-2").style.display = "block";
@@ -1394,7 +1414,9 @@ function employe3Validation() {
 
 
 if(nomDiplome.value == "") {
-    return true;
+		document.getElementById("valider-employe-3").style.display = "none";
+		document.getElementById('valider-employe-3').innerHTML = '';
+		return true;
   }else if(nomDiplome.value.length > 0) {
     if(fonctionOccupee.value == "" ) {
       document.getElementById("valider-employe-3").style.display = "block";

@@ -355,8 +355,10 @@ function validerSectionEmploi(){
 
   if(arrayBooleanUniqueCount($champsEmploi1) && !empty($_POST["nom_employe_1"])){
     $dateValide1 = comparerEtValiderDatesAvecMoi("de_mois_employe_1", "de_annee_employe_1", "a_mois_employe_1", "a_annee_employe_1");
-    return $dateValide1;
-  } else {
+    if(!$dateValide1){
+      return $dateValide1;
+    }
+  } else if(arrayBooleanUniqueCount($champsEmploi1) && empty($_POST["nom_employe_1"])){
     logger("ERREUR - section emploi 1 invalide.");
     return false;
   }
@@ -368,8 +370,10 @@ function validerSectionEmploi(){
 
   if(arrayBooleanUniqueCount($champsEmploi2) && !empty($_POST["nom_employe_2"])){
     $dateValide2 = comparerEtValiderDatesAvecMoi("de_mois_employe_2", "de_annee_employe_2", "a_mois_employe_2", "a_annee_employe_2");
-    return $dateValide2;
-  } else {
+    if(!$dateValide2){
+      return $dateValide2;
+    }
+  } else if(arrayBooleanUniqueCount($champsEmploi2) && empty($_POST["nom_employe_2"])){
     logger("ERREUR - section emploi 2 invalide.");
     return false;
   }
@@ -381,8 +385,10 @@ function validerSectionEmploi(){
 
   if(arrayBooleanUniqueCount($champsEmploi3) && !empty($_POST["nom_employe_3"])){
     $dateValide3 = comparerEtValiderDatesAvecMoi("de_mois_employe_3", "de_annee_employe_3", "a_mois_employe_3", "a_annee_employe_3");
-    return $dateValide3;
-  } else {
+    if(!$dateValide3){
+      return $dateValide3;
+    }
+  } else if(arrayBooleanUniqueCount($champsEmploi3) && empty($_POST["nom_employe_3"])){
     logger("ERREUR - section emploi 3 invalide.");
     return false;
   }
