@@ -17,6 +17,8 @@ if ($_POST) {
   $etudeSecondairesEtCollegialesValide = validerSectionEtudeSC();
   $etudeUniversitairesValide = validerSectionUniversitaire();
   $emploiValide = validerSectionEmploi();
+  logger("INFO - statut des variables de validation :".$identificationValide." - ".$programmesValide." - ".$etudeSecondairesEtCollegialesValide.
+      " - ".$etudeUniversitairesValide." - ".$emploiValide);
   if($identificationValide && $programmesValide && $etudeSecondairesEtCollegialesValide && $etudeUniversitairesValide && $emploiValide){
       $codePerm = $_POST["Code_permanent_ministere"];
       $text = "";
