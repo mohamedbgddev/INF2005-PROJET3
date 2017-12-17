@@ -88,6 +88,7 @@ function arrayBooleanUniqueCount($array){
     logger("ERREUR - Parametre de fonction innatendu.");
     header("Location: erreur.php", true, 400);
     exit();
+    return false;
   }
   $unique = array_unique($array);
   $count = count($unique);
