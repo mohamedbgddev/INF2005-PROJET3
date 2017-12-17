@@ -109,7 +109,7 @@ function codePermanentMinistereValidation(){
 function numeroAssurranceSocialeValidation() {
 	var valeur = document.getElementById("");
 
-	if(!validerNumeroAssurranceSociale(value.value)) {
+	if(!validerNumeroAssurranceSociale(valeur.value)) {
 		document.getElementById("valider-Numero-assurance-sociale").style.display = "block";
 		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Numero-assurance-sociale').innerHTML = 'Le numéro assurance social est composé de 9 chiffres !';
@@ -270,7 +270,7 @@ function prenomUsuelMere(){
 function numeroTelephoneDomicileValidation() {
 	var valeur = document.getElementById("Numero-telephone-domicile");
 
-	if(!validerFormatTelephone(value.value)) {
+	if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-telephone-domicile").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-telephone-domicile').innerHTML = 'Le format est invalide !';
@@ -286,7 +286,7 @@ function numeroTelephoneDomicileValidation() {
 function numeroCellulaireValidation() {
 	var valeur = document.getElementById("Numero-cellulaire");
 
-	if(!validerFormatTelephone(value.value)) {
+	if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-cellulaire").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-cellulaire').innerHTML = 'Le format est invalide !';
@@ -302,7 +302,7 @@ function numeroCellulaireValidation() {
 function numeroTelephoneTravailValidation() {
 	var valeur = document.getElementById("Numero-telephone-travail");
 
-	if(!validerFormatTelephone(value.value)) {
+	if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-telephone-travail").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-telephone-travail').innerHTML = 'Le format est invalide !';
@@ -365,7 +365,7 @@ function numeroApartementValidation() {
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-apartement').innerHTML = 'Ce champs est requis !';
 		return false;
-	} else if(!validerChaineSeulementNombre(value.value)) {
+	} else if(!validerChaineSeulementNombre(valeur.value)) {
 		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Numero-apartement').innerHTML = 'Ce champs doit etre comprose de nombre seulement !';
 		return false;
@@ -404,7 +404,7 @@ function codePostalValidation() {
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Code-postal').innerHTML = 'Ce champs est requis !';
 		return false;
-	} else if(!validerCodePostal(value.value)) {
+	} else if(!validerCodePostal(valeur.value)) {
 		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Code-postal').innerHTML = 'Le format du code postal est invalide!';
 		return false;
@@ -448,7 +448,7 @@ function numeroApartementAutreValidation() {
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-apartement-autre').innerHTML = 'Ce champs est requis !';
 		return false;
-	} else if(!validerChaineSeulementNombre(value.value)) {
+	} else if(!validerChaineSeulementNombre(valeur.value)) {
 		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Numero-apartement-autre').innerHTML = 'Ce champs doit etre comprose de nombre seulement !';
 		return false;
@@ -487,7 +487,7 @@ function codePostalAutreValidation() {
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Code-postal-autre').innerHTML = 'Ce champs est requis !';
 		return false;
-	} else if(!validerCodePostal(value.value)) {
+	} else if(!validerCodePostal(valeur.value)) {
 		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Code-postal-autre').innerHTML = 'Le format du code postal est invalide!';
 		return false;
