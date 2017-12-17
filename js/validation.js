@@ -75,10 +75,9 @@ function codePermanentValidation(){
 	var valeur = document.getElementById("Code-permanent");
 
 	if(valeur.value == "") {
-		document.getElementById("valider-Code-permanent").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
-		document.getElementById('valider-Code-permanent').innerHTML = ' Code permanent requis!';
-		return false;
+		document.getElementById("valider-Code-permanent").style.display = "";
+		document.getElementById('valider-Code-permanent').innerHTML = '';
+		return true;
 	} else if(!validerCodePermanent(valeur.value)) {
 		document.getElementById("valider-Code-permanent").style.display = "block";
 		valeur.classList.add('has-warning', 'has-feedback');
