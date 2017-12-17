@@ -1,7 +1,7 @@
 // form.js
 window.onload = function() {
 	document.formulaire_inscription.onsubmit = function()  { return validerFormulaire(); }
-	
+
 }
 
 
@@ -75,10 +75,10 @@ function codePermanentValidation(){
 	var valeur = document.getElementById("Code-permanent");
 
 	if(valeur.value == "") {
-		document.getElementById("valider-Code-permanent").style.display = "block";
+		document.getElementById("valider-Code-permanent").style.display = "none";
 		valeur.classList.add('has-error', 'has-feedback');
-		document.getElementById('valider-Code-permanent').innerHTML = ' Code permanent requis!';
-		return false;
+		document.getElementById('valider-Code-permanent').innerHTML = '';
+		return true;
 	} else if(!validerCodePermanent(valeur.value)) {
 		document.getElementById("valider-Code-permanent").style.display = "block";
 		valeur.classList.add('has-warning', 'has-feedback');
@@ -608,7 +608,7 @@ function verifierStatutCanada(){
 	console.log("verifierStatutCanada");
 	var valeur = document.querySelector('input[name = "radio-statut-canada"]:checked');
 	if(valeur != null){
-		document.getElementById('valider-statut-canada').innerHTML = ''; 
+		document.getElementById('valider-statut-canada').innerHTML = '';
 		return true;
 	} else {
 		document.getElementById("valider-statut-canada").style.display = "block";
@@ -1506,10 +1506,10 @@ function auMoinsUnTelephone(){
 
 	var valeurTravail = document.getElementById("Numero-telephone-travail");
 	var valeurDomicile = document.getElementById("Numero-telephone-domicile");
-	var valeurCellulaire = document.getElementById("Numero-cellulaire");		
+	var valeurCellulaire = document.getElementById("Numero-cellulaire");
 
 	if ( valeurTravail.value != "" || valeurDomicile.value != "" || valeurCellulaire.value != "") {
-		return true;	
+		return true;
 	}else {
 
 		document.getElementById("erreur-groupe-telephone").style.display = "block";
