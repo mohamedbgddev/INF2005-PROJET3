@@ -1,7 +1,7 @@
 // form.js
 window.onload = function() {
 	document.formulaire_inscription.onsubmit = function()  { return validerFormulaire(); }
-	console.log("Hello");
+	
 }
 
 
@@ -570,11 +570,16 @@ function AutreCitoyenneteValidation() {
 */
 
 function verifierSexe(){
+	console.log("verifierSexe");
 	var valeur = document.querySelector('input[name = "radio-sexe"]:checked');
 
 	if(valeur != null){
+		document.getElementById("valider-Sexe").style.display = "none";
+		document.getElementById('valider-Sexe').innerHTML = '';
 		return true;
 	} else {
+		document.getElementById("valider-Sexe").style.display = "block";
+		document.getElementById('valider-Sexe').innerHTML = 'Le champs est requis !';
 		return false;
 	}
 }
@@ -586,8 +591,10 @@ function verifierCitoyennete(){
 			if(!AutreCitoyenneteValidation()){
 				return false;
 			}
+			document.getElementById('valider-Autre-citoyennete').innerHTML = '';
 			return true;
 		}
+		document.getElementById('valider-Autre-citoyennete').innerHTML = '';
 		return true;
 	} else {
 		document.getElementById("valider-Autre-citoyennete").style.display = "block";
@@ -600,7 +607,8 @@ function verifierCitoyennete(){
 function verifierStatutCanada(){
 	console.log("verifierStatutCanada");
 	var valeur = document.querySelector('input[name = "radio-statut-canada"]:checked');
-	if(valeur != null){ 
+	if(valeur != null){
+		document.getElementById('valider-statut-canada').innerHTML = ''; 
 		return true;
 	} else {
 		document.getElementById("valider-statut-canada").style.display = "block";
@@ -616,8 +624,10 @@ function verifierLangueUsage(){
 			if(!autreLangueUsageValidation()){
 				return false;
 			}
+			document.getElementById('valider-langue-usage-autre').innerHTML = '';
 			return true;
 		}
+		document.getElementById('valider-langue-usage-autre').innerHTML = '';
 		return true;
 	} else {
 		document.getElementById("valider-langue-usage-autre").style.display = "block";
@@ -630,10 +640,13 @@ function verifierLangueMaternelle(){
 	var valeur = document.querySelector('input[name = "radio-langue-maternelle"]:checked');
 	if(valeur != null){
 		if (valeur.value == "AutreLangueMaternelle") {
-			if(!autreLangueMaternelleValidation())
-				return false
-			return true
+			if(!autreLangueMaternelleValidation()){
+				return false;
+			}
+			document.getElementById('valider-langue-maternelle-autre').innerHTML = '';
+			return true;
 		}
+		document.getElementById('valider-langue-maternelle-autre').innerHTML = '';
 		return true;
 	} else {
 		document.getElementById("valider-langue-maternelle-autre").style.display = "block";
@@ -1541,8 +1554,7 @@ function validerFormulaire() {
 	if(!auMoinsUnTelephone()) valider = false;
 	if(!verifierCitoyennete()) valider = false;
 	if(!verifierStatutCanada() ) valider = false;
-
-	console.log("Fonction validation formulaire" + " valeur : " +  valider);
+	if(!verifierSexe()) valider = false;
 
 	return valider;
 }
