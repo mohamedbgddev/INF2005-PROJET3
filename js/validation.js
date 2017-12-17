@@ -380,10 +380,9 @@ function numeroApartementValidation() {
 	var valeur = document.getElementById("Numero-apartement");
 
 	if(valeur.value == "") {
-		document.getElementById("valider-Numero-apartement").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
-		document.getElementById('valider-Numero-apartement').innerHTML = 'Ce champs est requis !';
-		return false;
+		document.getElementById("valider-Numero-apartement").style.display = "";
+		document.getElementById('valider-Numero-apartement').innerHTML = '';
+		return true;
 	} else if(!validerChaineSeulementNombre(valeur.value)) {
 		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Numero-apartement').innerHTML = 'Ce champs doit etre comprose de nombre seulement !';
@@ -448,7 +447,7 @@ function NoCivicNomDirectionAutreValidation(){
 			document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre').innerHTML = 'Ce champs est requis !';
-			return false;	
+			return false;
 	} else {
 		document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
@@ -466,12 +465,12 @@ function numeroApartementAutreValidation() {
 		document.getElementById("valider-Numero-apartement-autre").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-apartement-autre').innerHTML = 'Ce champs est requis !';
-			return false;	
+			return false;
 	} else if(!validerChaineSeulementNombre(valeur.value)) {
 		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Numero-apartement-autre').innerHTML = 'Ce champs doit etre comprose de nombre seulement !';
 			return false;
-		} else {		
+		} else {
 		document.getElementById("valider-Numero-apartement").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Numero-apartement-autre').innerHTML = '';
@@ -515,7 +514,7 @@ function codePostalAutreValidation() {
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Code-postal-autre').innerHTML = '';
 		return true;
-}	
+}
 }
 
 
