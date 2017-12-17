@@ -265,10 +265,10 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-              <div id="erreur-groupe-telephone" class="errorHeader"></div>    
+              <div id="erreur-groupe-telephone" class="errorHeader"></div>
             </div>
           </div>
-          
+
         </div>
         <div class="col-md-6">
           <br>
