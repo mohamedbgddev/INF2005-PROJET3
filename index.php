@@ -325,6 +325,11 @@
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div id="valider-statut-canada" class="errorHeader"></div>
+            </div>
+          </div>
           <br>
           <div class="row">
             <div class="col-md-12">

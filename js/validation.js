@@ -598,10 +598,13 @@ function verifierCitoyennete(){
 
 
 function verifierStatutCanada(){
+	console.log("verifierStatutCanada");
 	var valeur = document.querySelector('input[name = "radio-statut-canada"]:checked');
-	if(valeur != null){
+	if(valeur != null){ 
 		return true;
 	} else {
+		document.getElementById("valider-statut-canada").style.display = "block";
+		document.getElementById('valider-statut-canada').innerHTML = 'Le champs est requis !';
 		return false;
 	}
 }
@@ -1537,6 +1540,7 @@ function validerFormulaire() {
 	if(!verifierLangueMaternelle()) valider = false;
 	if(!auMoinsUnTelephone()) valider = false;
 	if(!verifierCitoyennete()) valider = false;
+	if(!verifierStatutCanada() ) valider = false;
 
 	console.log("Fonction validation formulaire" + " valeur : " +  valider);
 
