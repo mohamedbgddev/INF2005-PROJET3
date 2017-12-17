@@ -62,6 +62,17 @@ function verifierChampsVide($listeChamps, $logger){
   return $champsPresents;
 }
 
+//fonction qui prend une liste de booleans en parametre et qui retourne vrai si
+//tout les membres on la meme valeur, faux sinon.
+function arrayBooleanUniqueCount($array){
+  $unique = array_unique($array);
+  $count = count($unique);
+  if($count === 1){
+    return true;
+  }
+  return false;
+}
+
 function verifierTexteAutre($radioID, $textName, $pattern){
   $valeurRadio = $_POST[$radioID];
   //test si le radio autre les selectionner
@@ -234,21 +245,16 @@ function validerSectionEtudeSC(){
   return true;
 }
 
-//fonction qui prend une liste de booleans en parametre et qui retourne vrai si
-//tout les membres on la meme valeur, faux sinon.
-function arrayBooleanUniqueCount($array){
-  $unique = array_unique($array);
-  $count = count($unique);
-  if($count === 1){
-    return true;
-  }
-  return false;
+function validerSectionUniversitaire(){
+  logger("INFO - section etude universitaire valide.");
+  return true;
 }
 
 if ($_POST) {
   $identificationValide = validerSectionIdentification();
   $programmesValide = validerSectionProgrammes();
   $etudeSecondairesEtCollegialesValide = validerSectionEtudeSC();
+  $etudeUniversitairesValide = validerSectionUniversitaire():
   //test();
   /*foreach ($_POST as $param_name => $param_val) {
     logger( "Param: $param_name - Value: $param_val");
