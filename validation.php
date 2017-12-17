@@ -54,14 +54,8 @@ function logger($message){
   file_put_contents("log-".$dateLarge.".txt", $ligne, FILE_APPEND);
 }
 
-function creerNomFichierTemporaire($prefixe){
-  $date = date('H_i_s');
-  $nom = $prefixe."-".$date;
-  return $nom;
-}
-
 function sauvegardeRedirect($text, $nom){
-  if(enregistrerInformations($text, creerNomFichierTemporaire($nom))){
+  if(enregistrerInformations($text, $nom)){
     header("Location: confirmation.php", true, 303);
     exit();
   } else {
@@ -118,7 +112,7 @@ function verifierTexteAutre($radioID, $textName, $pattern){
 
 function validerSectionIdentification(){
   //tout les champs obligatoires sont pleins
-  $champsObligatoires = array("Nom_de_famille_a_la_naissance", "Date_de_naissance", "Prenom_usuel", "radio-sexe", "Code_permanent_ministere", "radio_citoyennete", "Lieu_de_naissance",
+  $champsObligatoires = array("Nom_de_famille_a_la_naissance", "Date_de_naissance", "Prenom_usuel", "radio-sexe", "Code_permanent_ministere", "radio-citoyennete", "Lieu_de_naissance",
     "radio-statut-canada", "radio-langue-usage", "radio-langue-maternelle", "Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue");
   if(!verifierChampsVide($champsObligatoires, true)){
     return false;
@@ -358,7 +352,7 @@ function validerSectionEmploi(){
     if(!$dateValide1){
       return $dateValide1;
     }
-  } else if(arrayBooleanUniqueCount($champsEmploi1) && empty($_POST["nom_employe_1"])){
+  } else if(!arrayBooleanUniqueCount($champsEmploi1) ){
     logger("ERREUR - section emploi 1 invalide.");
     return false;
   }
@@ -373,7 +367,7 @@ function validerSectionEmploi(){
     if(!$dateValide2){
       return $dateValide2;
     }
-  } else if(arrayBooleanUniqueCount($champsEmploi2) && empty($_POST["nom_employe_2"])){
+  } else if(!arrayBooleanUniqueCount($champsEmploi2)){
     logger("ERREUR - section emploi 2 invalide.");
     return false;
   }
@@ -388,7 +382,7 @@ function validerSectionEmploi(){
     if(!$dateValide3){
       return $dateValide3;
     }
-  } else if(arrayBooleanUniqueCount($champsEmploi3) && empty($_POST["nom_employe_3"])){
+  } else if(!arrayBooleanUniqueCount($champsEmploi3)){
     logger("ERREUR - section emploi 3 invalide.");
     return false;
   }

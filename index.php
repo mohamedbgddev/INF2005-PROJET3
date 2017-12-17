@@ -157,7 +157,7 @@
             <div class="col-md-12">
               <label for="Lieu-de-naissance(ville)">Lieu de naissance(ville)</label>
               <input type="text" class="form-control"
-                    name="Lieu_de_naissance(ville)"
+                    name="Lieu_de_naissance"
                     id="Lieu-de-naissance"
                     placeholder=""
                     onblur="lieuNaissanceValidation()">
@@ -300,7 +300,7 @@
                 <label><input type="radio" name="radio-statut-canada" value="Résident permanent">Résident permanent</label>
               </div>
             </div>
-            <div class="col-md-6">  
+            <div class="col-md-6">
               <div class="radio">
                 <label><input type="radio" name="radio-statut-canada" value="Visa diplomatique">Visa diplomatique</label>
               </div>

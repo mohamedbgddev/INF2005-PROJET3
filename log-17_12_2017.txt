@@ -179,3 +179,23 @@
 [22_35_06] --- INFO - section etude universitaire valide.
 [22_35_06] --- ERREUR - section emploi 1 invalide.
 [22_35_06] --- INFO - statut des variables de validation : - 1 - 1 - 1 - 
+[22_38_39] --- ERREUR - Le champ radio_citoyennete est obligatoire.
+[22_38_39] --- ERREUR - Le champ Lieu_de_naissance est obligatoire.
+[22_38_39] --- INFO - section programmes valide.
+[22_38_39] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[22_38_39] --- INFO - section etude universitaire valide.
+[22_38_39] --- INFO - section emploi valide.
+[22_38_39] --- INFO - statut des variables de validation : - 1 - 1 - 1 - 1
+[22_41_24] --- ERREUR - Le champ Lieu_de_naissance est obligatoire.
+[22_41_24] --- INFO - section programmes valide.
+[22_41_24] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[22_41_24] --- INFO - section etude universitaire valide.
+[22_41_24] --- INFO - section emploi valide.
+[22_41_24] --- INFO - statut des variables de validation : - 1 - 1 - 1 - 1
+[22_42_10] --- INFO - section identification valide - fin courte.
+[22_42_10] --- INFO - section programmes valide.
+[22_42_10] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[22_42_10] --- INFO - section etude universitaire valide.
+[22_42_10] --- INFO - section emploi valide.
+[22_42_10] --- INFO - statut des variables de validation :1 - 1 - 1 - 1 - 1
+[22_42_10] --- Fichier sauvegarde/LABJ24049500-22_42_10.txt enregistrer.
