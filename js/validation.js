@@ -276,7 +276,9 @@ function prenomUsuelMere(){
 function numeroTelephoneDomicileValidation() {
 	var valeur = document.getElementById("Numero-telephone-domicile");
 
-	if(!validerFormatTelephone(valeur.value)) {
+	if(valeur.value == "") {
+		return true;
+	} else if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-telephone-domicile").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-telephone-domicile').innerHTML = 'Le format est invalide !';
@@ -292,7 +294,9 @@ function numeroTelephoneDomicileValidation() {
 function numeroCellulaireValidation() {
 	var valeur = document.getElementById("Numero-cellulaire");
 
-	if(!validerFormatTelephone(valeur.value)) {
+	if(valeur.value == "") {
+		return true;
+	} else if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-cellulaire").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-cellulaire').innerHTML = 'Le format est invalide !';
@@ -308,7 +312,9 @@ function numeroCellulaireValidation() {
 function numeroTelephoneTravailValidation() {
 	var valeur = document.getElementById("Numero-telephone-travail");
 
-	if(!validerFormatTelephone(valeur.value)) {
+	if(valeur.value == "") {
+		return true;
+	} else if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-telephone-travail").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-telephone-travail').innerHTML = 'Le format est invalide !';
@@ -1400,7 +1406,7 @@ if(nomDiplome.value == "") {
       return false;
     }else if ( !verifierAnneeMoisCorrecte(anneeFin.value,moisFin.value,anneeDebut.value,moisDebut.value)) {
       document.getElementById("valider-employe-3").style.display = "block";
-      document.getElementById('valider-employe-3').innerHTML = 'Dte de debut est supperieur a date de fin!';
+      document.getElementById('valider-employe-3').innerHTML = 'Date de debut est supperieur a date de fin!';
       return false;
     } else {
       document.getElementById("valider-employe-3").style.display = "none";
@@ -1466,6 +1472,24 @@ function validerMois(mois){
 }
 
 
+function auMoinsUnTelephone(){
+
+	var valeurTravail = document.getElementById("Numero-telephone-travail");
+	var valeurDomicile = document.getElementById("Numero-telephone-domicile");
+	var valeurCellulaire = document.getElementById("Numero-cellulaire");		
+
+	if ( valeurTravail.value != "" || valeurDomicile.value != "" || valeurCellulaire.value != "") {
+		return true;	
+	}else {
+
+		document.getElementById("erreur-groupe-telephone").style.display = "block";
+        document.getElementById('erreur-groupe-telephone').innerHTML = 'Au moins un des numeros de telephone est requis !';
+		return false;
+	}
+
+}
+
+
 function validerFormulaire() {
 
 
@@ -1498,7 +1522,7 @@ function validerFormulaire() {
 	if(!autreLangueUsageValidation()) valider = false;
 	if(!autreLangueMaternelleValidation()) valider = false;
 	if(!AutreCitoyenneteValidation()) valider = false;
-
+	if(!auMoinsUnTelephone()) valider = false;
 
 	console.log("Fonction validation formulaire" + " valeur : " +  valider);
 

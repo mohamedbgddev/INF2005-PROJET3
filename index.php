@@ -218,7 +218,7 @@
                     placeholder="999-999-9999"
                     onblur="numeroTelephoneDomicileValidation()">
               <p class="text-left">Numéro</p>
-              <div id="valider-Numero-telephone-domicile"></div>
+              <div id="valider-Numero-telephone-domicile" class="errorHeader"></div>
             </div>
           </div>
           <!-- Cellulaire -->
@@ -235,7 +235,7 @@
                     placeholder="999-999-9999"
                     onblur="numeroCellulaireValidation()">
               <p class="text-left">Numéro</p>
-              <div id="valider-Numero-cellulaire"></div>
+              <div id="valider-Numero-cellulaire" class="errorHeader"></div>
             </div>
           </div>
           <!-- Telephone au travail -->
@@ -252,7 +252,7 @@
                   placeholder="999-999-9999"
                   onblur="numeroTelephoneTravailValidation()">
               <p class="text-left">Numéro</p>
-              <div id="valider-Numero-telephone-travail"></div>
+              <div id="valider-Numero-telephone-travail" class="errorHeader"></div>
             </div>
             <div class="col-md-4">
               <input type="text" class="form-control"
@@ -263,6 +263,12 @@
               <div id="valider-Poste-telephone-travail"></div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div id="erreur-groupe-telephone" class="errorHeader"></div>    
+            </div>
+          </div>
+          
         </div>
         <div class="col-md-6">
           <br>
