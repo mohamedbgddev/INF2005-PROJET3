@@ -1,0 +1,160 @@
+[22_02_29] --- ERREUR - Le champ Nom_de_famille_a_la_naissance est obligatoire.
+[22_02_29] --- ERREUR - Le champ Date_de_naissance est obligatoire.
+[22_02_29] --- ERREUR - Le champ Prenom_usuel est obligatoire.
+[22_02_29] --- ERREUR - Le champ radio-sexe est obligatoire.
+[22_02_29] --- ERREUR - Le champ Code_permanent_ministere est obligatoire.
+[22_02_29] --- ERREUR - Le champ radio_citoyennete est obligatoire.
+[22_02_29] --- ERREUR - Le champ Lieu_de_naissance est obligatoire.
+[22_02_29] --- ERREUR - Le champ radio-statut-canada est obligatoire.
+[22_02_29] --- ERREUR - Le champ radio-langue-usage est obligatoire.
+[22_02_29] --- ERREUR - Le champ radio-langue-maternelle est obligatoire.
+[22_02_29] --- ERREUR - Le champ Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue est obligatoire.
+[22_02_29] --- ERREUR - Le champ radio-trimestre est obligatoire.
+[22_02_29] --- ERREUR - Le champ trimestre_annee est obligatoire.
+[22_02_29] --- ERREUR - Le champ premier_choix_titre est obligatoire.
+[22_02_29] --- ERREUR - Le champ radio-temp-1 est obligatoire.
+[22_02_29] --- ERREUR - Le champ premier_choix_code est obligatoire.
+[22_02_29] --- ERREUR - Le champ radio-type-programme-1 est obligatoire.
+[22_02_29] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[22_02_29] --- ERREUR - section grade ou diplome le plus recent ou complete invalide.
+[22_02_29] --- ERREUR - section emploi 1 invalide.
+[22_03_28] --- ERREUR - Le champ Nom_de_famille_a_la_naissance est obligatoire.
+[22_03_28] --- ERREUR - Le champ Date_de_naissance est obligatoire.
+[22_03_28] --- ERREUR - Le champ Prenom_usuel est obligatoire.
+[22_03_28] --- ERREUR - Le champ radio-sexe est obligatoire.
+[22_03_28] --- ERREUR - Le champ Code_permanent_ministere est obligatoire.
+[22_03_28] --- ERREUR - Le champ radio_citoyennete est obligatoire.
+[22_03_28] --- ERREUR - Le champ Lieu_de_naissance est obligatoire.
+[22_03_28] --- ERREUR - Le champ radio-statut-canada est obligatoire.
+[22_03_28] --- ERREUR - Le champ radio-langue-usage est obligatoire.
+[22_03_28] --- ERREUR - Le champ radio-langue-maternelle est obligatoire.
+[22_03_28] --- ERREUR - Le champ Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue est obligatoire.
+[22_03_28] --- ERREUR - Le champ radio-trimestre est obligatoire.
+[22_03_28] --- ERREUR - Le champ trimestre_annee est obligatoire.
+[22_03_28] --- ERREUR - Le champ premier_choix_titre est obligatoire.
+[22_03_28] --- ERREUR - Le champ radio-temp-1 est obligatoire.
+[22_03_28] --- ERREUR - Le champ premier_choix_code est obligatoire.
+[22_03_28] --- ERREUR - Le champ radio-type-programme-1 est obligatoire.
+[22_03_28] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[22_03_28] --- ERREUR - section grade ou diplome le plus recent ou complete invalide.
+[22_03_28] --- ERREUR - section emploi 1 invalide.
+[22_07_15] --- ERREUR - Le champ Nom_de_famille_a_la_naissance est obligatoire.
+[22_07_15] --- ERREUR - Le champ Date_de_naissance est obligatoire.
+[22_07_15] --- ERREUR - Le champ Prenom_usuel est obligatoire.
+[22_07_15] --- ERREUR - Le champ radio-sexe est obligatoire.
+[22_07_15] --- ERREUR - Le champ Code_permanent_ministere est obligatoire.
+[22_07_15] --- ERREUR - Le champ radio_citoyennete est obligatoire.
+[22_07_15] --- ERREUR - Le champ Lieu_de_naissance est obligatoire.
+[22_07_15] --- ERREUR - Le champ radio-statut-canada est obligatoire.
+[22_07_15] --- ERREUR - Le champ radio-langue-usage est obligatoire.
+[22_07_15] --- ERREUR - Le champ radio-langue-maternelle est obligatoire.
+[22_07_15] --- ERREUR - Le champ Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue est obligatoire.
+[22_07_15] --- ERREUR - Le champ radio-trimestre est obligatoire.
+[22_07_15] --- ERREUR - Le champ trimestre_annee est obligatoire.
+[22_07_15] --- ERREUR - Le champ premier_choix_titre est obligatoire.
+[22_07_15] --- ERREUR - Le champ radio-temp-1 est obligatoire.
+[22_07_15] --- ERREUR - Le champ premier_choix_code est obligatoire.
+[22_07_15] --- ERREUR - Le champ radio-type-programme-1 est obligatoire.
+[22_07_15] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[22_07_15] --- ERREUR - section grade ou diplome le plus recent ou complete invalide.
+[22_07_15] --- ERREUR - section emploi 1 invalide.
+[22_08_31] --- ERREUR - Le champ Nom_de_famille_a_la_naissance est obligatoire.
+[22_08_31] --- ERREUR - Le champ Date_de_naissance est obligatoire.
+[22_08_31] --- ERREUR - Le champ Prenom_usuel est obligatoire.
+[22_08_31] --- ERREUR - Le champ radio-sexe est obligatoire.
+[22_08_31] --- ERREUR - Le champ Code_permanent_ministere est obligatoire.
+[22_08_31] --- ERREUR - Le champ radio_citoyennete est obligatoire.
+[22_08_31] --- ERREUR - Le champ Lieu_de_naissance est obligatoire.
+[22_08_31] --- ERREUR - Le champ radio-statut-canada est obligatoire.
+[22_08_31] --- ERREUR - Le champ radio-langue-usage est obligatoire.
+[22_08_31] --- ERREUR - Le champ radio-langue-maternelle est obligatoire.
+[22_08_31] --- ERREUR - Le champ Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue est obligatoire.
+[22_08_31] --- ERREUR - Le champ radio-trimestre est obligatoire.
+[22_08_31] --- ERREUR - Le champ trimestre_annee est obligatoire.
+[22_08_31] --- ERREUR - Le champ premier_choix_titre est obligatoire.
+[22_08_31] --- ERREUR - Le champ radio-temp-1 est obligatoire.
+[22_08_31] --- ERREUR - Le champ premier_choix_code est obligatoire.
+[22_08_31] --- ERREUR - Le champ radio-type-programme-1 est obligatoire.
+[22_08_31] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[22_08_31] --- ERREUR - Parametre de fonction innatendu.
+[22_08_40] --- ERREUR - Le champ Nom_de_famille_a_la_naissance est obligatoire.
+[22_08_40] --- ERREUR - Le champ Date_de_naissance est obligatoire.
+[22_08_40] --- ERREUR - Le champ Prenom_usuel est obligatoire.
+[22_08_40] --- ERREUR - Le champ radio-sexe est obligatoire.
+[22_08_40] --- ERREUR - Le champ Code_permanent_ministere est obligatoire.
+[22_08_40] --- ERREUR - Le champ radio_citoyennete est obligatoire.
+[22_08_40] --- ERREUR - Le champ Lieu_de_naissance est obligatoire.
+[22_08_40] --- ERREUR - Le champ radio-statut-canada est obligatoire.
+[22_08_40] --- ERREUR - Le champ radio-langue-usage est obligatoire.
+[22_08_40] --- ERREUR - Le champ radio-langue-maternelle est obligatoire.
+[22_08_40] --- ERREUR - Le champ Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue est obligatoire.
+[22_08_40] --- ERREUR - Le champ radio-trimestre est obligatoire.
+[22_08_40] --- ERREUR - Le champ trimestre_annee est obligatoire.
+[22_08_40] --- ERREUR - Le champ premier_choix_titre est obligatoire.
+[22_08_40] --- ERREUR - Le champ radio-temp-1 est obligatoire.
+[22_08_40] --- ERREUR - Le champ premier_choix_code est obligatoire.
+[22_08_40] --- ERREUR - Le champ radio-type-programme-1 est obligatoire.
+[22_08_40] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[22_08_40] --- ERREUR - Parametre de fonction innatendu.
+[22_10_03] --- ERREUR - Le champ Nom_de_famille_a_la_naissance est obligatoire.
+[22_10_03] --- ERREUR - Le champ Date_de_naissance est obligatoire.
+[22_10_03] --- ERREUR - Le champ Prenom_usuel est obligatoire.
+[22_10_03] --- ERREUR - Le champ radio-sexe est obligatoire.
+[22_10_03] --- ERREUR - Le champ Code_permanent_ministere est obligatoire.
+[22_10_03] --- ERREUR - Le champ radio_citoyennete est obligatoire.
+[22_10_03] --- ERREUR - Le champ Lieu_de_naissance est obligatoire.
+[22_10_03] --- ERREUR - Le champ radio-statut-canada est obligatoire.
+[22_10_03] --- ERREUR - Le champ radio-langue-usage est obligatoire.
+[22_10_03] --- ERREUR - Le champ radio-langue-maternelle est obligatoire.
+[22_10_03] --- ERREUR - Le champ Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue est obligatoire.
+[22_10_03] --- ERREUR - Le champ radio-trimestre est obligatoire.
+[22_10_03] --- ERREUR - Le champ trimestre_annee est obligatoire.
+[22_10_03] --- ERREUR - Le champ premier_choix_titre est obligatoire.
+[22_10_03] --- ERREUR - Le champ radio-temp-1 est obligatoire.
+[22_10_03] --- ERREUR - Le champ premier_choix_code est obligatoire.
+[22_10_03] --- ERREUR - Le champ radio-type-programme-1 est obligatoire.
+[22_10_03] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[22_10_03] --- INFO - section etude universitaire valide.
+[22_10_03] --- ERREUR - section emploi 1 invalide.
+[22_16_06] --- ERREUR - Le champ Nom_de_famille_a_la_naissance est obligatoire.
+[22_16_06] --- ERREUR - Le champ Date_de_naissance est obligatoire.
+[22_16_06] --- ERREUR - Le champ Prenom_usuel est obligatoire.
+[22_16_06] --- ERREUR - Le champ radio-sexe est obligatoire.
+[22_16_06] --- ERREUR - Le champ Code_permanent_ministere est obligatoire.
+[22_16_06] --- ERREUR - Le champ radio_citoyennete est obligatoire.
+[22_16_06] --- ERREUR - Le champ Lieu_de_naissance est obligatoire.
+[22_16_06] --- ERREUR - Le champ radio-statut-canada est obligatoire.
+[22_16_06] --- ERREUR - Le champ radio-langue-usage est obligatoire.
+[22_16_06] --- ERREUR - Le champ radio-langue-maternelle est obligatoire.
+[22_16_06] --- ERREUR - Le champ Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue est obligatoire.
+[22_16_06] --- ERREUR - Le champ radio-trimestre est obligatoire.
+[22_16_06] --- ERREUR - Le champ trimestre_annee est obligatoire.
+[22_16_06] --- ERREUR - Le champ premier_choix_titre est obligatoire.
+[22_16_06] --- ERREUR - Le champ radio-temp-1 est obligatoire.
+[22_16_06] --- ERREUR - Le champ premier_choix_code est obligatoire.
+[22_16_06] --- ERREUR - Le champ radio-type-programme-1 est obligatoire.
+[22_16_06] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[22_16_06] --- INFO - section etude universitaire valide.
+[22_16_06] --- ERREUR - section emploi 1 invalide.
+[22_16_06] --- INFO - statut des variables de validation : -  - 1 - 1 - 
+[22_16_48] --- ERREUR - Le champ Nom_de_famille_a_la_naissance est obligatoire.
+[22_16_48] --- ERREUR - Le champ Date_de_naissance est obligatoire.
+[22_16_48] --- ERREUR - Le champ Prenom_usuel est obligatoire.
+[22_16_48] --- ERREUR - Le champ radio-sexe est obligatoire.
+[22_16_48] --- ERREUR - Le champ Code_permanent_ministere est obligatoire.
+[22_16_48] --- ERREUR - Le champ radio_citoyennete est obligatoire.
+[22_16_48] --- ERREUR - Le champ Lieu_de_naissance est obligatoire.
+[22_16_48] --- ERREUR - Le champ radio-statut-canada est obligatoire.
+[22_16_48] --- ERREUR - Le champ radio-langue-usage est obligatoire.
+[22_16_48] --- ERREUR - Le champ radio-langue-maternelle est obligatoire.
+[22_16_48] --- ERREUR - Le champ Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue est obligatoire.
+[22_16_48] --- ERREUR - Le champ radio-trimestre est obligatoire.
+[22_16_48] --- ERREUR - Le champ trimestre_annee est obligatoire.
+[22_16_48] --- ERREUR - Le champ premier_choix_titre est obligatoire.
+[22_16_48] --- ERREUR - Le champ radio-temp-1 est obligatoire.
+[22_16_48] --- ERREUR - Le champ premier_choix_code est obligatoire.
+[22_16_48] --- ERREUR - Le champ radio-type-programme-1 est obligatoire.
+[22_16_48] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[22_16_48] --- INFO - section etude universitaire valide.
+[22_16_48] --- ERREUR - section emploi 1 invalide.
+[22_16_48] --- INFO - statut des variables de validation : -  - 1 - 1 - 

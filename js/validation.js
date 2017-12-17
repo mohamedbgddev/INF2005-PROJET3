@@ -1,6 +1,7 @@
 // form.js
 window.onload = function() {
 	document.formulaire_inscription.onsubmit = function()  { return validerFormulaire(); }
+	console.log("Hello");
 }
 
 
@@ -601,12 +602,15 @@ function verifierLangueUsage(){
 	var valeur = document.querySelector('input[name = "radio-langue-usage"]:checked');
 	if(valeur != null){
 		if (valeur.value == "AutreLangueUsage") {
-			if(!autreLangueUsageValidation())
-				return false
-			return true
+			if(!autreLangueUsageValidation()){
+				return false;
+			}
+			return true;
 		}
 		return true;
 	} else {
+		document.getElementById("valider-langue-usage-autre").style.display = "block";
+		document.getElementById('valider-langue-usage-autre').innerHTML = 'Le champs est requis !';
 		return false;
 	}
 }
@@ -621,6 +625,8 @@ function verifierLangueMaternelle(){
 		}
 		return true;
 	} else {
+		document.getElementById("valider-langue-maternelle-autre").style.display = "block";
+		document.getElementById('valider-langue-maternelle-autre').innerHTML = 'Le champs est requis !';
 		return false;
 	}
 }
@@ -1519,8 +1525,8 @@ function validerFormulaire() {
 	if(!numeroApartementAutreValidation()) valider = false;
 	if(!municipalitéPaysAutreValidation()) valider = false;
 	if(!codePostalAutreValidation()) valider = false;
-	if(!autreLangueUsageValidation()) valider = false;
-	if(!autreLangueMaternelleValidation()) valider = false;
+	if(!verifierLangueUsage()) valider = false;
+	if(!verifierLangueMaternelle()) valider = false;
 	if(!AutreCitoyenneteValidation()) valider = false;
 	if(!auMoinsUnTelephone()) valider = false;
 
