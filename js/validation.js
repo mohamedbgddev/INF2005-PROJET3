@@ -1477,7 +1477,7 @@ function validerFormulaire() {
 
 
 	var valider = true;
-/*
+
 	if(!nomFamilleNaissanceValidation()) valider = false;
 	if(!dateDeNaissanceValidation()) valider = false;
 	if(!prenomUsuelValidation()) valider = false;
@@ -1504,6 +1504,6 @@ function validerFormulaire() {
 	if(!verifierCitoyennete()) valider = false;
 	if(!verifierStatutCanada() ) valider = false;
 	if(!verifierSexe()) valider = false;
-*/
+
 	return valider;
 }

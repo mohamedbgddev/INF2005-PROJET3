@@ -27,7 +27,10 @@ if ($_POST) {
       }
       sauvegardeRedirect($text, $codePerm);
   }else{
+    logger("CODE 400");
     header("Location: erreur.php", true, 400);
+    include 'erreur.php';
+    die();
     exit();
   }
 }
@@ -60,6 +63,8 @@ function sauvegardeRedirect($text, $nom){
     exit();
   } else {
     header("Location: erreur.php", true, 400);
+    include 'erreur.php';
+    die();
     exit();
   }
 }
