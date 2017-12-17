@@ -332,10 +332,10 @@ function courrielValidation() {
 	var valeur = document.getElementById("Courriel-personnel");
 
 	if(valeur.value == "") {
-		document.getElementById("valider-Courriel-personnel").style.display = "block";
+		document.getElementById("valider-Courriel-personnel").style.display = "none";
 		valeur.classList.add('has-error', 'has-feedback');
-		document.getElementById('valider-Courriel-personnel').innerHTML = ' Le corriel est requis !';
-		return false;
+		document.getElementById('valider-Courriel-personnel').innerHTML = '';
+		return true;
 	} else if(!validerCourriel(valeur.value)) {
 		document.getElementById("valider-Courriel-personnel").style.display = "block";
 		valeur.classList.add('has-warning', 'has-feedback');
@@ -440,6 +440,8 @@ function NoCivicNomDirectionAutreValidation(){
 
 
 	if (numero.value == "") {
+		document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "none";
+		document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre').innerHTML = '';
 		return true;
 	}else if (numero.value.length > 0)
 	{
@@ -456,9 +458,9 @@ function NoCivicNomDirectionAutreValidation(){
 			document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre').innerHTML = 'Le format du code postal est invalide!';
 			return false;
 		} else {
-			document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "block";
+			document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "none";
 			document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre').innerHTML = '';
-			return false;
+			return true;
 		}
 	}
 }
@@ -1475,7 +1477,7 @@ function validerFormulaire() {
 
 
 	var valider = true;
-
+/*
 	if(!nomFamilleNaissanceValidation()) valider = false;
 	if(!dateDeNaissanceValidation()) valider = false;
 	if(!prenomUsuelValidation()) valider = false;
@@ -1502,6 +1504,6 @@ function validerFormulaire() {
 	if(!verifierCitoyennete()) valider = false;
 	if(!verifierStatutCanada() ) valider = false;
 	if(!verifierSexe()) valider = false;
-
+*/
 	return valider;
 }

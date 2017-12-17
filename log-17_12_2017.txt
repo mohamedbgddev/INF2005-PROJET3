@@ -199,3 +199,31 @@
 [22_42_10] --- INFO - section emploi valide.
 [22_42_10] --- INFO - statut des variables de validation :1 - 1 - 1 - 1 - 1
 [22_42_10] --- Fichier sauvegarde/LABJ24049500-22_42_10.txt enregistrer.
+[23_27_23] --- INFO - section identification valide - fin courte.
+[23_27_23] --- INFO - section programmes valide.
+[23_27_23] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[23_27_23] --- INFO - section etude universitaire valide.
+[23_27_23] --- INFO - section emploi valide.
+[23_27_23] --- INFO - statut des variables de validation :1 - 1 - 1 - 1 - 1
+[23_27_23] --- Fichier sauvegarde/LABJ24049501.txt enregistrer.
+[23_30_04] --- ERREUR - Le champ Nom_de_famille_a_la_naissance est obligatoire.
+[23_30_04] --- ERREUR - Le champ Date_de_naissance est obligatoire.
+[23_30_04] --- ERREUR - Le champ Prenom_usuel est obligatoire.
+[23_30_04] --- ERREUR - Le champ radio-sexe est obligatoire.
+[23_30_04] --- ERREUR - Le champ Code_permanent_ministere est obligatoire.
+[23_30_04] --- ERREUR - Le champ radio-citoyennete est obligatoire.
+[23_30_04] --- ERREUR - Le champ Lieu_de_naissance est obligatoire.
+[23_30_04] --- ERREUR - Le champ radio-statut-canada est obligatoire.
+[23_30_04] --- ERREUR - Le champ radio-langue-usage est obligatoire.
+[23_30_04] --- ERREUR - Le champ radio-langue-maternelle est obligatoire.
+[23_30_04] --- ERREUR - Le champ Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue est obligatoire.
+[23_30_04] --- ERREUR - Le champ radio-trimestre est obligatoire.
+[23_30_04] --- ERREUR - Le champ trimestre_annee est obligatoire.
+[23_30_04] --- ERREUR - Le champ premier_choix_titre est obligatoire.
+[23_30_04] --- ERREUR - Le champ radio-temp-1 est obligatoire.
+[23_30_04] --- ERREUR - Le champ premier_choix_code est obligatoire.
+[23_30_04] --- ERREUR - Le champ radio-type-programme-1 est obligatoire.
+[23_30_04] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[23_30_04] --- INFO - section etude universitaire valide.
+[23_30_04] --- INFO - section emploi valide.
+[23_30_04] --- INFO - statut des variables de validation : -  - 1 - 1 - 1
