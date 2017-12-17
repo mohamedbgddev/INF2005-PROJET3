@@ -79,7 +79,7 @@
             </div>
             <div class="col-md-2 col-md-offset-1">
               <div class="radio">
-                <label><input type="radio" name="radio-sexe" value="Masculain">Masculin</label>
+                <label><input type="radio" name="radio-sexe" value="Masculin">Masculin</label>
               </div>
             </div>
           </div>
