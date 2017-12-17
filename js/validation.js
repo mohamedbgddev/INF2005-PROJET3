@@ -75,10 +75,10 @@ function codePermanentValidation(){
 	var valeur = document.getElementById("Code-permanent");
 
 	if(valeur.value == "") {
-		document.getElementById("valider-Code-permanent").style.display = "none";
+		document.getElementById("valider-Code-permanent").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
-		document.getElementById('valider-Code-permanent').innerHTML = '';
-		return true;
+		document.getElementById('valider-Code-permanent').innerHTML = ' Code permanent requis!';
+		return false;
 	} else if(!validerCodePermanent(valeur.value)) {
 		document.getElementById("valider-Code-permanent").style.display = "block";
 		valeur.classList.add('has-warning', 'has-feedback');
@@ -278,8 +278,6 @@ function numeroTelephoneDomicileValidation() {
 	var valeur = document.getElementById("Numero-telephone-domicile");
 
 	if(valeur.value == "") {
-		document.getElementById("valider-Numero-telephone-domicile").style.display = "none";
-		document.getElementById('valider-Numero-telephone-domicile').innerHTML = '';
 		return true;
 	} else if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-telephone-domicile").style.display = "block";
@@ -299,8 +297,6 @@ function numeroCellulaireValidation() {
 
 	if(valeur.value == "") {
 		return true;
-		document.getElementById("valider-Numero-cellulaire").style.display = "none";
-		document.getElementById('valider-Numero-cellulaire').innerHTML = '';
 	} else if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-cellulaire").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
@@ -318,8 +314,6 @@ function numeroTelephoneTravailValidation() {
 	var valeur = document.getElementById("Numero-telephone-travail");
 
 	if(valeur.value == "") {
-		document.getElementById("valider-Numero-telephone-travail").style.display = "none";
-		document.getElementById('valider-Numero-telephone-travail').innerHTML = '';
 		return true;
 	} else if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-telephone-travail").style.display = "block";
@@ -339,9 +333,9 @@ function courrielValidation() {
 	var valeur = document.getElementById("Courriel-personnel");
 
 	if(valeur.value == "") {
-		document.getElementById("valider-Courriel-personnel").style.display = "none";
+		document.getElementById("valider-Courriel-personnel").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
-		document.getElementById('valider-Courriel-personnel').innerHTML = '';
+		document.getElementById('valider-Courriel-personnel').innerHTML = ' Le corriel est requis !';
 		return false;
 	} else if(!validerCourriel(valeur.value)) {
 		document.getElementById("valider-Courriel-personnel").style.display = "block";
@@ -441,82 +435,34 @@ function codePostalValidation() {
 
 function NoCivicNomDirectionAutreValidation(){
 
-	var valeur = document.getElementById("Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre");
+	var numero = document.getElementById("Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre");
+	var municipalite = document.getElementById("Municipalité-Pays-Autre");
+	var codePostal = document.getElementById("Code-postal-autre");
 
-	if(valeur.value == "") {
-			document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
-		document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre').innerHTML = 'Ce champs est requis !';
-			return false;
-	} else {
-		document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
-		document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre').innerHTML = '';
+
+	if (numero.value == "") {
 		return true;
-	}
-}
-
-
-
-function numeroApartementAutreValidation() {
-	var valeur = document.getElementById("Numero-apartement-autre");
-
-	if(valeur.value == "") {
-		document.getElementById("valider-Numero-apartement-autre").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
-		document.getElementById('valider-Numero-apartement-autre').innerHTML = 'Ce champs est requis !';
+	}else if (numero.value.length > 0)
+	{
+		if (municipalite.value == "") {
+			document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "block";
+			document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre').innerHTML = 'Tous les champs sont requis !';
 			return false;
-	} else if(!validerChaineSeulementNombre(valeur.value)) {
-		valeur.classList.add('has-warning', 'has-feedback');
-		document.getElementById('valider-Numero-apartement-autre').innerHTML = 'Ce champs doit etre comprose de nombre seulement !';
+		}else if(codePostal.value == ""){
+			document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "block";
+			document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre').innerHTML = 'Tous les champs sont requis !';
+			return false;
+		}else if(!validerCodePostal(codePostal.value)) {
+			document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "block";
+			document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre').innerHTML = 'Le format du code postal est invalide!';
 			return false;
 		} else {
-		document.getElementById("valider-Numero-apartement").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
-		document.getElementById('valider-Numero-apartement-autre').innerHTML = '';
-		return true;
-	}
-}
-
-
-function municipalitéPaysAutreValidation(){
-
-	var valeur = document.getElementById("Municipalité-Pays");
-
-	if(valeur.value == "") {
-		document.getElementById("valider-Municipalité-Pays-Autre").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
-		document.getElementById('valider-Municipalité-Pays-Autre').innerHTML = 'Ce champs est requis !';
+			document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "block";
+			document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre').innerHTML = '';
 			return false;
-	} else {
-		document.getElementById("valider-Municipalité-Pays-Autre").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
-		document.getElementById('valider-Municipalité-Pays-Autre').innerHTML = '';
-		return true;
 		}
 	}
-
-
-function codePostalAutreValidation() {
-	var valeur = document.getElementById("Code-postal-autre");
-
-	if(valeur.value == "") {
-		document.getElementById("valider-Code-postal-autre").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
-		document.getElementById('valider-Code-postal-autre').innerHTML = 'Ce champs est requis !';
-		return false;
-	} else if(!validerCodePostal(valeur.value)) {
-		valeur.classList.add('has-warning', 'has-feedback');
-		document.getElementById('valider-Code-postal-autre').innerHTML = 'Le format du code postal est invalide!';
-		return false;
-	} else {
-		document.getElementById("valider-Code-postal-autre").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
-		document.getElementById('valider-Code-postal-autre').innerHTML = '';
-		return true;
 }
-}
-
 
 
 function autreLangueUsageValidation() {
@@ -738,8 +684,6 @@ function validerChaineSeulementNombre(nombre){
 function verifierTrimestre(){
 	var valeur = document.querySelector('input[name = "radio-trimestre"]:checked');
 	if(valeur != null){
-		document.getElementById("valider-trimestre").style.display = "";
-		document.getElementById('valider-trimestre').innerHTML = '';
 		return true;
 	} else {
 		document.getElementById("valider-trimestre").style.display = "block";
@@ -809,8 +753,6 @@ function deuxiemeChoixValidation() {
 	var progChoixType  = document.querySelector('input[name = "radio-type-programme-2"]:checked');
 
 	if(progChoixTitre.value == "") {
-		document.getElementById("valider-programme-choix-2").style.display = "none";
-		document.getElementById('valider-programme-choix-2').innerHTML = '';
 		return true;
 	}else if(progChoixTitre.value.length > 0) {
 		if(progChoixCode.value == "" ) {
@@ -842,8 +784,6 @@ function troisiemeChoixValidation() {
 	var progChoixType  = document.querySelector('input[name = "radio-type-programme-3"]:checked');
 
 	if(progChoixTitre.value == "") {
-		document.getElementById("valider-programme-choix-3").style.display = "none";
-		document.getElementById('valider-programme-choix-3').innerHTML = '';
 		return true;
 	}else if(progChoixTitre.value.length > 0) {
 		if(progChoixCode.value == "" ) {
@@ -877,8 +817,6 @@ function derniereAnneeSecondaireValidation() {
 	var aAnnnee = document.getElementById("a-annee-derniere-annee-secondaire");
 
 	if(programme.value == "") {
-		document.getElementById("valider-derniere-annee-secondaire").style.display = "none";
-		document.getElementById('valider-derniere-annee-secondaire').innerHTML = '';
 		return true;
 	}else if(programme.value.length > 0) {
 		if(deAnnnee.value == "" ) {
@@ -924,8 +862,6 @@ function diplomeSecColHorsQuebecValidation() {
 
 
 	if(diplome.value == "") {
-		document.getElementById("valider-diplome-hors-quebec").style.display = "none";
-		document.getElementById('valider-diplome-hors-quebec').innerHTML = '';
 		return true;
 	}else if(diplome.value.length > 0) {
 		if(descipline.value == "" ) {
@@ -1003,8 +939,6 @@ function diplomeSecColDansQuebecValidation() {
 
 
 	if(diplome.value == "") {
-		document.getElementById("valider-diplome-dans-quebec").style.display = "none";
-		document.getElementById('valider-diplome-dans-quebec').innerHTML = '';
 		return true;
 	}else if(diplome.value.length > 0) {
 		if(descipline.value == "" ) {
@@ -1096,9 +1030,7 @@ function diplomeUniversitaire1Validation() {
 
 
   if(diplome.value == "") {
-		document.getElementById("valider-diplome-universitaire-1").style.display = "none";
-		document.getElementById('valider-diplome-universitaire-1').innerHTML = '';
-		return true;
+    return true;
   }else if(diplome.value.length > 0) {
     if(descipline.value == "" ) {
       document.getElementById("valider-diplome-universitaire-1").style.display = "block";
@@ -1182,9 +1114,7 @@ function diplomeUniversitaire2Validation() {
 
 
   if(diplome.value == "") {
-		document.getElementById("valider-diplome-universitaire-2").style.display = "none";
-		document.getElementById('valider-diplome-universitaire-2').innerHTML = '';
-		return true;
+    return true;
   }else if(diplome.value.length > 0) {
     if(descipline.value == "" ) {
       document.getElementById("valider-diplome-universitaire-2").style.display = "block";
@@ -1265,9 +1195,7 @@ function employe1Validation() {
 
 
 if(nomDiplome.value == "") {
-		document.getElementById("valider-employe-1").style.display = "none";
-		document.getElementById('valider-employe-1').innerHTML = '';
-		return true;
+    return true;
   }else if(nomDiplome.value.length > 0) {
     if(fonctionOccupee.value == "" ) {
       document.getElementById("valider-employe-1").style.display = "block";
@@ -1339,9 +1267,7 @@ function employe2Validation() {
 
 
 if(nomDiplome.value == "") {
-		document.getElementById("valider-employe-2").style.display = "none";
-		document.getElementById('valider-employe-2').innerHTML = '';
-		return true;
+    return true;
   }else if(nomDiplome.value.length > 0) {
     if(fonctionOccupee.value == "" ) {
       document.getElementById("valider-employe-2").style.display = "block";
@@ -1413,9 +1339,7 @@ function employe3Validation() {
 
 
 if(nomDiplome.value == "") {
-		document.getElementById("valider-employe-3").style.display = "none";
-		document.getElementById('valider-employe-3').innerHTML = '';
-		return true;
+    return true;
   }else if(nomDiplome.value.length > 0) {
     if(fonctionOccupee.value == "" ) {
       document.getElementById("valider-employe-3").style.display = "block";
@@ -1573,9 +1497,6 @@ function validerFormulaire() {
 	if(!municipalitéPaysValidation()) valider = false;
 	if(!codePostalValidation()) valider = false;
 	if(!NoCivicNomDirectionAutreValidation()) valider = false;
-	if(!numeroApartementAutreValidation()) valider = false;
-	if(!municipalitéPaysAutreValidation()) valider = false;
-	if(!codePostalAutreValidation()) valider = false;
 	if(!verifierLangueUsage()) valider = false;
 	if(!verifierLangueMaternelle()) valider = false;
 	if(!auMoinsUnTelephone()) valider = false;
