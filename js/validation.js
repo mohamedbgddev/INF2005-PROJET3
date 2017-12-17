@@ -439,10 +439,10 @@ function NoCivicNomDirectionAutreValidation(){
 	var valeur = document.getElementById("Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre");
 
 	if(valeur.value == "") {
-		document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "block";
+			document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre').innerHTML = 'Ce champs est requis !';
-		return false;
+			return false;	
 	} else {
 		document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
@@ -460,12 +460,12 @@ function numeroApartementAutreValidation() {
 		document.getElementById("valider-Numero-apartement-autre").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-apartement-autre').innerHTML = 'Ce champs est requis !';
-		return false;
+			return false;	
 	} else if(!validerChaineSeulementNombre(valeur.value)) {
 		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Numero-apartement-autre').innerHTML = 'Ce champs doit etre comprose de nombre seulement !';
-		return false;
-	} else {
+			return false;
+		} else {		
 		document.getElementById("valider-Numero-apartement").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Numero-apartement-autre').innerHTML = '';
@@ -482,14 +482,14 @@ function municipalitéPaysAutreValidation(){
 		document.getElementById("valider-Municipalité-Pays-Autre").style.display = "block";
 		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Municipalité-Pays-Autre').innerHTML = 'Ce champs est requis !';
-		return false;
+			return false;
 	} else {
 		document.getElementById("valider-Municipalité-Pays-Autre").style.display = "none";
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Municipalité-Pays-Autre').innerHTML = '';
 		return true;
+		}
 	}
-}
 
 
 function codePostalAutreValidation() {
@@ -509,7 +509,7 @@ function codePostalAutreValidation() {
 		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Code-postal-autre').innerHTML = '';
 		return true;
-	}
+}	
 }
 
 

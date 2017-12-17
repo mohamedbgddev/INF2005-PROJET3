@@ -300,7 +300,7 @@
                 <label><input type="radio" name="radio-statut-canada" value="Résident permanent">Résident permanent</label>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6">  
               <div class="radio">
                 <label><input type="radio" name="radio-statut-canada" value="Visa diplomatique">Visa diplomatique</label>
               </div>
