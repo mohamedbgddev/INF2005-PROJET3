@@ -254,7 +254,7 @@ if ($_POST) {
   $identificationValide = validerSectionIdentification();
   $programmesValide = validerSectionProgrammes();
   $etudeSecondairesEtCollegialesValide = validerSectionEtudeSC();
-  $etudeUniversitairesValide = validerSectionUniversitaire():
+  $etudeUniversitairesValide = validerSectionUniversitaire();
   //test();
   /*foreach ($_POST as $param_name => $param_val) {
     logger( "Param: $param_name - Value: $param_val");

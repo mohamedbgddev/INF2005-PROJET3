@@ -12,15 +12,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
 </head>
 <body>
-  <form method="post" action="validation.php">
+  <form id="formulaire-inscription" name="formulaire_inscription" method="post" action="validation.php">
     <div class="container preface">
       <p><span class="premier-titre">prenez</span><span class="premier-titre-suite">votre place.</span></p>
       <p class="second-titre">Études de premier cycle</p>
       <p class="troisieme-titre">Demande d'admission</p>
       <p class="quatrieme-titre">Instruction et formulaire</p>
       <p class="cinquieme-titre">UQÀM</p>
-    </div><br>
-
+    </div>
+    <br>
     <div class="container well">
       <div class="row">
         <div class="col-md-4">

@@ -1,3 +1,9 @@
+// form.js 
+window.onload = function() { 
+	document.formulaire_inscription.onsubmit = function()  { return validerFormulaire(); }
+} 
+
+
 
 /*
 	=========================== PAGE 1 ========================
@@ -794,21 +800,21 @@ function troisiemeChoixValidation() {
 		return true;
 	}else if(progChoixTitre.value.length > 0) {
 		if(progChoixCode.value == "" ) {
-			document.getElementById("valider-programme-choix-3").style.display = "block";
-			document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
-			return false;
+                    document.getElementById("valider-programme-choix-3").style.display = "block";
+                    document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
+                    return false;
 		} else if(progChoixTemp == null ) {
-			document.getElementById("valider-programme-choix-3").style.display = "block";
-			document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
-			return false;
+                    document.getElementById("valider-programme-choix-3").style.display = "block";
+                    document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
+                    return false;
 		} else if(progChoixType == null ) {
-			document.getElementById("valider-programme-choix-3").style.display = "block";
-			document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
-			return false;
+                    document.getElementById("valider-programme-choix-3").style.display = "block";
+                    document.getElementById('valider-programme-choix-3').innerHTML = 'Les champs du troisieme choix sont tous requis!';
+                    return false;
 		} else {
-			document.getElementById("valider-programme-choix-3").style.display = "none";
-			document.getElementById('valider-programme-choix-3').innerHTML = '';
-			return true;
+                    document.getElementById("valider-programme-choix-3").style.display = "none";
+                    document.getElementById('valider-programme-choix-3').innerHTML = '';
+                    return true;
 		}
 	}
 }
@@ -1405,6 +1411,7 @@ if(nomDiplome.value == "") {
 }
 
 
+
 /*
 	Fonction de validations de formatage
 */
@@ -1431,18 +1438,69 @@ function verifierDateCorrecte(annee1, annee2){
 	return false;
 }
 
-
-function verifierAnneeMoisCorrecte(anneefin, moisfin, anneedebut, moisdebut){
-	var diffrence = (anneefin + moisfin) - (anneedebut + moisdebut);
-	console.log(diffrence);
-	if (diffrence > 0) {
+function verifierDateCorrecteAvance(annee1, annee2){
+	var diffrence = annee2 - annee1;
+	if (diffrence == 0) {
 		return true;
 	}
 	return false;
 }
 
 
+function verifierAnneeMoisCorrecte(anneefin, moisfin, anneedebut, moisdebut){
+		
+	if (verifierDateCorrecteAvance(anneefin,anneedebut)) {
+		if ( (moisfin-moisdebut) > 0) {
+			return true;
+		}	
+	}else{
+		return false;
+	}
+	
+}
+
+
 function validerMois(mois){
 	var pattern = /^(0[1-9]|1[012])$/;
 	return pattern.test(mois);
+}
+
+
+function validerFormulaire() { 
+
+	
+
+	var valider = true; 
+ 
+	if(!nomFamilleNaissanceValidation()) valider = false;
+	if(!dateDeNaissanceValidation()) valider = false;  
+	if(!prenomUsuelValidation()) valider = false; 
+	if(!codePermanentValidation()) valider = false; 
+	if(!codePermanentMinistereValidation()) valider = false; 
+	if(!numeroAssurranceSocialeValidation()) valider = false; 
+	if(!lieuNaissanceValidation()) valider = false; 
+	if(!nomFamillePereNaissance()) valider = false; 
+	if(!prenomUsuelPere()) valider = false; 
+	if(!nomFamilleMereNaissance()) valider = false; 
+	if(!prenomUsuelMere()) valider = false; 
+	if(!numeroTelephoneDomicileValidation()) valider = false; 
+	if(!numeroCellulaireValidation()) valider = false; 
+	if(!numeroTelephoneTravailValidation()) valider = false; 
+	if(!courrielValidation()) valider = false; 
+	if(!NoCivicNomDirectionValidation()) valider = false; 
+	if(!numeroApartementValidation()) valider = false; 
+	if(!municipalitéPaysValidation()) valider = false; 
+	if(!codePostalValidation()) valider = false; 
+	if(!NoCivicNomDirectionAutreValidation()) valider = false; 
+	if(!numeroApartementAutreValidation()) valider = false; 
+	if(!municipalitéPaysAutreValidation()) valider = false;
+	if(!codePostalAutreValidation()) valider = false; 
+	if(!autreLangueUsageValidation()) valider = false;  
+	if(!autreLangueMaternelleValidation()) valider = false; 
+	if(!AutreCitoyenneteValidation()) valider = false; 
+
+	
+	console.log("Fonction validation formulaire" + " valeur : " +  valider);
+
+	return valider; 
 }
