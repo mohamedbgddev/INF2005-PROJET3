@@ -79,7 +79,7 @@
             </div>
             <div class="col-md-2 col-md-offset-1">
               <div class="radio">
-                <label><input type="radio" name="radio-sexe" value="Masculain">Masculin</label>
+                <label><input type="radio" name="radio-sexe" value="Masculin">Masculin</label>
               </div>
             </div>
           </div>
@@ -270,10 +270,10 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-              <div id="erreur-groupe-telephone" class="errorHeader"></div>    
+              <div id="erreur-groupe-telephone" class="errorHeader"></div>
             </div>
           </div>
-          
+
         </div>
         <div class="col-md-6">
           <br>
