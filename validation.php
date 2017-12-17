@@ -1,6 +1,6 @@
 <?php
 
-define('REGEX_TELEPHONE', '/^\d{3}-\d{3}-\d{3}$/');
+define('REGEX_TELEPHONE', '/^\d{3}-\d{3}-\d{4}$/');
 define('REGEX_POSTE', '/^\d{1,10}$/');
 define('REGEX_TAILLE_CHAMPS', '/.{2,60}/');
 define('REGEX_DATE', '/^(0[1-9]|[12][0-9]|3[01])[-](0[1-9]|1[012])[-]19\d\d$/');

@@ -1,7 +1,7 @@
-// form.js 
-window.onload = function() { 
+// form.js
+window.onload = function() {
 	document.formulaire_inscription.onsubmit = function()  { return validerFormulaire(); }
-} 
+}
 
 
 
@@ -673,7 +673,7 @@ function validerNumeroAssurranceSociale(numero)
 */
 function validerFormatTelephone(numeroTelephone)
 {
-	var pattern = /^\d{3}-\d{3}-\d{3}$/;
+	var pattern = /^\d{3}-\d{3}-\d{4}$/;
 	return pattern.test(numeroTelephone);
 }
 
@@ -1448,15 +1448,15 @@ function verifierDateCorrecteAvance(annee1, annee2){
 
 
 function verifierAnneeMoisCorrecte(anneefin, moisfin, anneedebut, moisdebut){
-		
+
 	if (verifierDateCorrecteAvance(anneefin,anneedebut)) {
 		if ( (moisfin-moisdebut) > 0) {
 			return true;
-		}	
+		}
 	}else{
 		return false;
 	}
-	
+
 }
 
 
@@ -1466,41 +1466,41 @@ function validerMois(mois){
 }
 
 
-function validerFormulaire() { 
+function validerFormulaire() {
 
-	
 
-	var valider = true; 
- 
+
+	var valider = true;
+
 	if(!nomFamilleNaissanceValidation()) valider = false;
-	if(!dateDeNaissanceValidation()) valider = false;  
-	if(!prenomUsuelValidation()) valider = false; 
-	if(!codePermanentValidation()) valider = false; 
-	if(!codePermanentMinistereValidation()) valider = false; 
-	if(!numeroAssurranceSocialeValidation()) valider = false; 
-	if(!lieuNaissanceValidation()) valider = false; 
-	if(!nomFamillePereNaissance()) valider = false; 
-	if(!prenomUsuelPere()) valider = false; 
-	if(!nomFamilleMereNaissance()) valider = false; 
-	if(!prenomUsuelMere()) valider = false; 
-	if(!numeroTelephoneDomicileValidation()) valider = false; 
-	if(!numeroCellulaireValidation()) valider = false; 
-	if(!numeroTelephoneTravailValidation()) valider = false; 
-	if(!courrielValidation()) valider = false; 
-	if(!NoCivicNomDirectionValidation()) valider = false; 
-	if(!numeroApartementValidation()) valider = false; 
-	if(!municipalitéPaysValidation()) valider = false; 
-	if(!codePostalValidation()) valider = false; 
-	if(!NoCivicNomDirectionAutreValidation()) valider = false; 
-	if(!numeroApartementAutreValidation()) valider = false; 
+	if(!dateDeNaissanceValidation()) valider = false;
+	if(!prenomUsuelValidation()) valider = false;
+	if(!codePermanentValidation()) valider = false;
+	if(!codePermanentMinistereValidation()) valider = false;
+	if(!numeroAssurranceSocialeValidation()) valider = false;
+	if(!lieuNaissanceValidation()) valider = false;
+	if(!nomFamillePereNaissance()) valider = false;
+	if(!prenomUsuelPere()) valider = false;
+	if(!nomFamilleMereNaissance()) valider = false;
+	if(!prenomUsuelMere()) valider = false;
+	if(!numeroTelephoneDomicileValidation()) valider = false;
+	if(!numeroCellulaireValidation()) valider = false;
+	if(!numeroTelephoneTravailValidation()) valider = false;
+	if(!courrielValidation()) valider = false;
+	if(!NoCivicNomDirectionValidation()) valider = false;
+	if(!numeroApartementValidation()) valider = false;
+	if(!municipalitéPaysValidation()) valider = false;
+	if(!codePostalValidation()) valider = false;
+	if(!NoCivicNomDirectionAutreValidation()) valider = false;
+	if(!numeroApartementAutreValidation()) valider = false;
 	if(!municipalitéPaysAutreValidation()) valider = false;
-	if(!codePostalAutreValidation()) valider = false; 
-	if(!autreLangueUsageValidation()) valider = false;  
-	if(!autreLangueMaternelleValidation()) valider = false; 
-	if(!AutreCitoyenneteValidation()) valider = false; 
+	if(!codePostalAutreValidation()) valider = false;
+	if(!autreLangueUsageValidation()) valider = false;
+	if(!autreLangueMaternelleValidation()) valider = false;
+	if(!AutreCitoyenneteValidation()) valider = false;
 
-	
+
 	console.log("Fonction validation formulaire" + " valeur : " +  valider);
 
-	return valider; 
+	return valider;
 }
