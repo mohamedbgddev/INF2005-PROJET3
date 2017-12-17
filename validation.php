@@ -289,7 +289,7 @@ function validerSectionUniversitaire(){
       logger("ERREUR - section grade ou diplome le plus recent ou complete invalide.");
       return false;
     }
-  } else if (!arrayBooleanUniqueCount($champsDiplomeU1Recent)){
+  } else if (!arrayBooleanUniqueCount($champsDiplomeURecent)){
     logger("ERREUR - section grade ou diplome le plus recent ou complete invalide.");
     return false;
   }
