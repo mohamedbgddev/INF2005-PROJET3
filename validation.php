@@ -84,6 +84,11 @@ function verifierChampsVide($listeChamps, $logger){
 //fonction qui prend une liste de booleans en parametre et qui retourne vrai si
 //tout les membres on la meme valeur, faux sinon.
 function arrayBooleanUniqueCount($array){
+  if(!$array){
+    logger("ERREUR - Parametre de fonction innatendu.");
+    header("Location: erreur.php", true, 400);
+    exit();
+  }
   $unique = array_unique($array);
   $count = count($unique);
   if($count === 1){
