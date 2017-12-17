@@ -113,7 +113,7 @@ function codePermanentMinistereValidation(){
 }
 
 function numeroAssurranceSocialeValidation() {
-	var valeur = document.getElementById("");
+	var valeur = document.getElementById("Numero-assurance-sociale");
 
 	if(!validerNumeroAssurranceSociale(valeur.value)) {
 		document.getElementById("valider-Numero-assurance-sociale").style.display = "block";
