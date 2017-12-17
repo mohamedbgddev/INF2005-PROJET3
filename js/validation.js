@@ -582,8 +582,16 @@ function verifierSexe(){
 function verifierCitoyennete(){
 	var valeur = document.querySelector('input[name = "radio-citoyennete"]:checked');
 	if(valeur != null){
+		if (valeur.value == "AutreCitoyennete") {
+			if(!AutreCitoyenneteValidation()){
+				return false;
+			}
+			return true;
+		}
 		return true;
 	} else {
+		document.getElementById("valider-Autre-citoyennete").style.display = "block";
+		document.getElementById('valider-Autre-citoyennete').innerHTML = 'Le champs est requis !';
 		return false;
 	}
 }
@@ -1527,8 +1535,8 @@ function validerFormulaire() {
 	if(!codePostalAutreValidation()) valider = false;
 	if(!verifierLangueUsage()) valider = false;
 	if(!verifierLangueMaternelle()) valider = false;
-	if(!AutreCitoyenneteValidation()) valider = false;
 	if(!auMoinsUnTelephone()) valider = false;
+	if(!verifierCitoyennete()) valider = false;
 
 	console.log("Fonction validation formulaire" + " valeur : " +  valider);
 
