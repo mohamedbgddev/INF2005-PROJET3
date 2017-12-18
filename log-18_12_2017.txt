@@ -21,3 +21,15 @@
 [00_08_15] --- INFO - section emploi valide.
 [00_08_15] --- INFO - statut des variables de validation :1 - 1 - 1 - 1 - 1
 [00_08_15] --- Fichier sauvegarde/LABJ24049502.txt enregistrer.
+[00_30_49] --- INFO - section identification valide - fin courte.
+[00_30_49] --- ERREUR - deuxieme choix invalide.
+[00_30_49] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[00_30_49] --- INFO - section etude universitaire valide.
+[00_30_49] --- INFO - section emploi valide.
+[00_30_49] --- INFO - statut des variables de validation :1 -  - 1 - 1 - 1
+[00_31_11] --- INFO - section identification valide - fin courte.
+[00_31_11] --- ERREUR - deuxieme choix invalide.
+[00_31_11] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[00_31_11] --- INFO - section etude universitaire valide.
+[00_31_11] --- INFO - section emploi valide.
+[00_31_11] --- INFO - statut des variables de validation :1 -  - 1 - 1 - 1
