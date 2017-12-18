@@ -21,12 +21,10 @@ function nomFamilleNaissanceValidation() {
 
 	if(valeur.value == "") {
 		document.getElementById("valider-Nom-de-famille-a-la-naissance").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Nom-de-famille-a-la-naissance').innerHTML = 'Nom de famille a la naissance requis !';
 		return false;
 	} else {
 		document.getElementById("valider-Nom-de-famille-a-la-naissance").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Nom-de-famille-a-la-naissance').innerHTML = '';
 		return true;
 	}
@@ -38,16 +36,13 @@ function dateDeNaissanceValidation() {
 
 	if(valeur.value == "") {
 		document.getElementById("valider-Date-de-naissance").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Date-de-naissance').innerHTML = ' Date de naissance requise !';
 		return false;
 	}else if (!validerDateNaissance(valeur.value)) {
 		document.getElementById("valider-Date-de-naissance").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Date-de-naissance').innerHTML = 'Format de date invalide !';
 	}else {
 		document.getElementById("valider-Date-de-naissance").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Date-de-naissance').innerHTML = '';
 		return true;
 	}
@@ -59,12 +54,10 @@ function prenomUsuelValidation(){
 
 	if(valeur.value == "") {
 		document.getElementById("valider-Prenom-usuel").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Prenom-usuel').innerHTML = 'Prenom usuel est requis !';
 		return false;
 	} else {
 		document.getElementById("valider-Prenom-usuel").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Prenom-usuel').innerHTML = '';
 		return true;
 	}
@@ -80,12 +73,10 @@ function codePermanentValidation(){
 		return true;
 	} else if(!validerCodePermanent(valeur.value)) {
 		document.getElementById("valider-Code-permanent").style.display = "block";
-		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById("valider-Code-permanent").innerHTML = "Code permanent non valide!";
 		return false;
 	} else {
 		document.getElementById("valider-Code-permanent").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Code-permanent').innerHTML = '';
 		return true;
 	}
@@ -96,17 +87,14 @@ function codePermanentMinistereValidation(){
 
 	if(valeur.value == "") {
 		document.getElementById("valider-Code-permanent-ministere").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Code-permanent-ministere').innerHTML = ' Code permanent ministere requis!';
 		return false;
 	} else if(!validerCodePermanent(valeur.value)) {
 		document.getElementById("valider-Code-permanent-ministere").style.display = "block";
-		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById("valider-Code-permanent-ministere").innerHTML = "Code permanent ministere non valide!";
 		return false;
 	} else {
 		document.getElementById("valider-Code-permanent-ministere").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Code-permanent-ministere').innerHTML = '';
 		return true;
 	}
@@ -117,12 +105,10 @@ function numeroAssurranceSocialeValidation() {
 
 	if(!validerNumeroAssurranceSociale(valeur.value)) {
 		document.getElementById("valider-Numero-assurance-sociale").style.display = "block";
-		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Numero-assurance-sociale').innerHTML = 'Le numéro assurance social est composé de 9 chiffres !';
 		return false;
 	} else {
 		document.getElementById("valider-Numero-assurance-sociale").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Numero-assurance-sociale').innerHTML = '';
 		return true;
 	}
@@ -134,12 +120,10 @@ function lieuNaissanceValidation() {
 
 	if(valeur.value == "") {
 		document.getElementById("valider-Lieu-de-naissance").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Lieu-de-naissance').innerHTML = 'Lieu de naissance requis !';
 		return false;
 	} else {
 		document.getElementById("valider-Lieu-de-naissance").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Lieu-de-naissance').innerHTML = '';
 		return true;
 	}
@@ -282,12 +266,10 @@ function numeroTelephoneDomicileValidation() {
 		return true;
 	} else if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-telephone-domicile").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-telephone-domicile').innerHTML = 'Le format est invalide !';
 		return false;
 	} else {
 		document.getElementById("valider-Numero-telephone-domicile").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Numero-telephone-domicile').innerHTML = '';
 		return true;
 	}
@@ -302,12 +284,10 @@ function numeroCellulaireValidation() {
 		return true;
 	} else if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-cellulaire").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-cellulaire').innerHTML = 'Le format est invalide !';
 		return false;
 	} else {
 		document.getElementById("valider-Numero-cellulaire").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Numero-cellulaire').innerHTML = '';
 		return true;
 	}
@@ -322,12 +302,10 @@ function numeroTelephoneTravailValidation() {
 		return true;
 	} else if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-telephone-travail").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numero-telephone-travail').innerHTML = 'Le format est invalide !';
 		return false;
 	} else {
 		document.getElementById("valider-Numero-telephone-travail").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Numero-telephone-travail').innerHTML = '';
 		return true;
 	}
@@ -339,17 +317,14 @@ function courrielValidation() {
 
 	if(valeur.value == "") {
 		document.getElementById("valider-Courriel-personnel").style.display = "none";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Courriel-personnel').innerHTML = '';
 		return true;
 	} else if(!validerCourriel(valeur.value)) {
 		document.getElementById("valider-Courriel-personnel").style.display = "block";
-		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById("valider-Courriel-personnel").innerHTML = "Format du courriel est incorrect!";
 		return false;
 	} else {
 		document.getElementById("valider-Courriel-personnel").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Courriel-personnel').innerHTML = '';
 		return true;
 	}
@@ -362,12 +337,10 @@ function NoCivicNomDirectionValidation(){
 
 	if(valeur.value == "") {
 		document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue').innerHTML = 'Ce champs est requis !';
 		return false;
 	} else {
 		document.getElementById("valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue').innerHTML = '';
 		return true;
 	}
@@ -383,12 +356,10 @@ function numeroApartementValidation() {
 		document.getElementById('valider-Numero-apartement').innerHTML = '';
 		return true;
 	} else if(!validerChaineSeulementNombre(valeur.value)) {
-		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-Numero-apartement').innerHTML = 'Ce champs doit etre comprose de nombre seulement !';
 		return false;
 	} else {
 		document.getElementById("valider-Numero-apartement").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Numero-apartement').innerHTML = '';
 		return true;
 	}
@@ -401,12 +372,10 @@ function municipalitéPaysValidation(){
 
 	if(valeur.value == "") {
 		document.getElementById("valider-Municipalité-Pays").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Municipalité-Pays').innerHTML = 'Ce champs est requis !';
 		return false;
 	} else {
 		document.getElementById("valider-Municipalité-Pays").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Municipalité-Pays').innerHTML = '';
 		return true;
 	}
@@ -418,16 +387,14 @@ function codePostalValidation() {
 
 	if(valeur.value == "") {
 		document.getElementById("valider-Code-postal").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Code-postal').innerHTML = 'Ce champs est requis !';
 		return false;
 	} else if(!validerCodePostal(valeur.value)) {
-		valeur.classList.add('has-warning', 'has-feedback');
+		document.getElementById("valider-Code-postal").style.display = "block";
 		document.getElementById('valider-Code-postal').innerHTML = 'Le format du code postal est invalide!';
 		return false;
 	} else {
 		document.getElementById("valider-Code-postal").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Code-postal').innerHTML = '';
 		return true;
 	}
@@ -477,12 +444,10 @@ function autreLangueUsageValidation() {
 
 	if(valeur.value == "") {
 		document.getElementById("valider-langue-usage-autre").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-langue-usage-autre').innerHTML = ' Le champs est requis !';
 		return false;
 	} else {
 		document.getElementById("valider-langue-usage-autre").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-langue-usage-autre').innerHTML = '';
 		return true;
 	}
@@ -494,12 +459,10 @@ function autreLangueMaternelleValidation() {
 
 	if(valeur.value == "") {
 		document.getElementById("valider-langue-maternelle-autre").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-langue-maternelle-autre').innerHTML = 'Le champs est requis !';
 		return false;
 	} else {
 		document.getElementById("valider-langue-maternelle-autre").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-langue-maternelle-autre').innerHTML = '';
 		return true;
 	}
@@ -510,12 +473,10 @@ function AutreCitoyenneteValidation() {
 
 	if(valeur.value == "") {
 		document.getElementById("valider-Autre-citoyennete").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-Autre-citoyennete').innerHTML = 'Le champs est requis !';
 		return false;
 	} else {
 		document.getElementById("valider-Autre-citoyennete").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-Autre-citoyennete').innerHTML = '';
 		return true;
 	}
@@ -694,7 +655,6 @@ function verifierTrimestre(){
 		return true;
 	} else {
 		document.getElementById("valider-trimestre").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-trimestre').innerHTML = 'Le champs est requis !';
 		return false;
 	}
@@ -706,17 +666,14 @@ function trimestreAnneeValidation() {
 
 	if(valeur.value == "") {
 		document.getElementById("valider-trimestre-annee").style.display = "block";
-		valeur.classList.add('has-error', 'has-feedback');
 		document.getElementById('valider-trimestre-annee').innerHTML = 'Le champs est requis !';
 		return false;
 	} else if(!validerAnnee(valeur.value)) {
 		document.getElementById('valider-trimestre-annee').style.display = "block";
-		valeur.classList.add('has-warning', 'has-feedback');
 		document.getElementById('valider-trimestre-annee').innerHTML = 'Le format est invalide !';
 		return false;
 	} else {
 		document.getElementById("valider-trimestre-annee").style.display = "none";
-		valeur.classList.add('has-success', 'has-feedback');
 		document.getElementById('valider-trimestre-annee').innerHTML = '';
 		return true;
 	}
