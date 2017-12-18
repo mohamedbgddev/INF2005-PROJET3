@@ -70,7 +70,7 @@
           <div id="valider-Prenom-usuel" class="errorHeader"></div>
         </div>
         <div class="col-md-4">
-          <label for="Sexe">Sexe</label>
+          <label>Sexe</label>
           <div class="row">
             <div class="col-md-2">
               <div class="radio">
@@ -126,7 +126,7 @@
         <div class="col-md-6">
           <div class="row">
             <div class="col-md-12">
-              <label for="">Citoyenneté</label>
+              <label>Citoyenneté</label>
             </div>
           </div>
           <div class="row">
@@ -155,7 +155,7 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-              <label for="Lieu-de-naissance(ville)">Lieu de naissance(ville)</label>
+              <label for="Lieu-de-naissance">Lieu de naissance(ville)</label>
               <input type="text" class="form-control"
                     name="Lieu_de_naissance"
                     id="Lieu-de-naissance"
@@ -212,7 +212,7 @@
           <!-- Telephone a domicile -->
           <div class="row">
             <div class="col-md-12">
-              <label for="">Téléphone a domicile</label>
+              <label for="Numero-telephone-domicile">Téléphone a domicile</label>
             </div>
           </div>
           <div class="row">
@@ -229,7 +229,7 @@
           <!-- Cellulaire -->
           <div class="row">
             <div class="col-md-12">
-              <label for="#">Cellulaire</label>
+              <label for="Numero-cellulaire">Cellulaire</label>
             </div>
           </div>
           <div class="row">
@@ -246,7 +246,7 @@
           <!-- Telephone au travail -->
           <div class="row">
             <div class="col-md-12">
-              <label for="#">Téléphone au travail</label>
+              <label for="Numero-telephone-travail">Téléphone au travail</label>
             </div>
           </div>
           <div class="row">
@@ -279,7 +279,7 @@
           <br>
           <div class="row">
             <div class="col-md-12">
-              <label for="#">Statut au Canada</label>
+              <label>Statut au Canada</label>
             </div>
           </div>
           <div class="row">
@@ -338,7 +338,7 @@
           <br>
           <div class="row">
             <div class="col-md-12">
-              <label for="#">Langue d’usage (Langue parlée le plus souvent à la maison)</label></div>
+              <label>Langue d’usage (Langue parlée le plus souvent à la maison)</label></div>
           </div>
           <div class="row">
             <div class="col-md-12">
@@ -390,7 +390,7 @@
           <br>
           <div class="row">
             <div class="col-md-12">
-              <label for="">Langue maternelle (Première langue apprise et encore comprise)</label></div>
+              <label>Langue maternelle (Première langue apprise et encore comprise)</label></div>
           </div>
           <div class="row">
             <div class="col-md-12">
@@ -457,7 +457,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <label for="Adresse-de-correspondance">Adresse de correspondance</label>
+          <label for="Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue">Adresse de correspondance</label>
         </div>
       </div>
         <div class="row">
@@ -507,7 +507,7 @@
 
         <div class="row">
           <div class="col-md-12">
-            <label for="Adresse-de-correspondance-autre">Adresse où vous résidez actuellement (si différente de l’adresse de correspondance)</label>
+            <label for="Numéro-civique-Type-et-nom-de-la-rue-Direction-de-rue-autre">Adresse où vous résidez actuellement (si différente de l’adresse de correspondance)</label>
           </div>
         </div>
 
@@ -625,7 +625,7 @@
             id="premier-choix-titre"
             placeholder=""
             onblur="premierChoixValidation()">
-          <label for="Premier-choix">Titre</label>
+          <label for="premier-choix-titre">Titre</label>
         </div>
         <div class="col-md-2">
           <div class="radio">
@@ -815,7 +815,7 @@
       <!-- ################################# Page 2  renseignement sur les etudes secondaires et collegiales ################-->
       <div class="row">
         <div class="col-md-12">
-          <label for="#">RENSEIGNEMENTS SUR LES ÉTUDES SECONDAIRES ET COLLÉGIALES</label>
+          <label for="derniere-annee-secondaire">RENSEIGNEMENTS SUR LES ÉTUDES SECONDAIRES ET COLLÉGIALES</label>
           <hr class="trait">
         </div>
       </div>
@@ -1333,7 +1333,7 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-                <label for="">Nombre de crédits complétés</label>
+                <label for="nombre-credits-diplome-universitaire-1">Nombre de crédits complétés</label>
                 <input type="text"
                 class="form-control"
                 name="nombre_credits_diplome_universitaire_1"
@@ -1425,7 +1425,7 @@
             </div>
             <div class="row">
             <div class="col-md-12">
-                <label for="">Nombre de crédits complétés</label>
+                <label for="nombre-credits-diplome-universitaire-2">Nombre de crédits complétés</label>
                 <input type="text"
                 class="form-control"
                 name="nombre_credits_diplome_universitaire_2"
@@ -1440,7 +1440,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <label for="#">RENSEIGNEMENTS SUR LES EMPLOIS</label>
+          <label for="nom-employe-1">RENSEIGNEMENTS SUR LES EMPLOIS</label>
           <hr class="trait">
         </div>
       </div>
@@ -1645,9 +1645,8 @@
                 </div>
               </div>
             </div>
-            <div id="valider-employe-3" class="errorHeader"></div>
         </div>
-
+        <div id="valider-employe-3" class="errorHeader"></div>
 
         <div class="col-md-4">
           <div class="row">
@@ -1842,7 +1841,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <textarea class="form-control" rows="20" id=""></textarea>
+          <textarea class="form-control" rows="20" id="informations-secondaires"></textarea>
         </div>
       </div>
     </div><br>
@@ -1859,7 +1858,6 @@
       </div>
     </div>
   </form>
-</body>
 <script type="text/javascript" src="js/validation.js"></script>
 <script>
   $("form").keypress(function(key) {
@@ -1869,4 +1867,6 @@
   }
   });
 </script>
+</body>
+
 </html>
