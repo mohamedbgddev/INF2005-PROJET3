@@ -37,7 +37,7 @@
       <hr class="trait">
       <div class="row">
         <div class="col-md-8">
-          <label for="Nom-de-famille-a-la-naissance">Nom de famille a la naissance</label>
+          <label for="Nom-de-famille-a-la-naissance">Nom de famille à la naissance</label>
           <input type="text" class="form-control"
                    name="Nom_de_famille_a_la_naissance"
                    id="Nom-de-famille-a-la-naissance"
@@ -61,7 +61,7 @@
       </div>
       <div class="row">
         <div class="col-md-8">
-          <label for="Prenom-usuel">Prenom usuel</label>
+          <label for="Prenom-usuel">Prénom usuel</label>
           <input type="text" class="form-control"
               name="Prenom_usuel"
               id="Prenom-usuel"
@@ -74,7 +74,7 @@
           <div class="row">
             <div class="col-md-2">
               <div class="radio">
-                <label><input type="radio" name="radio-sexe" value="Feminin">Feminin</label>
+                <label><input type="radio" name="radio-sexe" value="Feminin">Féminin</label>
               </div>
             </div>
             <div class="col-md-2 col-md-offset-1">
@@ -606,7 +606,7 @@
                    id="trimestre-annee"
                    placeholder=""
                    onblur="trimestreAnneeValidation()">
-            <p>Annee</p>
+            <p>Année</p>
             <div id="valider-trimestre-annee" class="errorHeader"></div>
           </div>
       </div>

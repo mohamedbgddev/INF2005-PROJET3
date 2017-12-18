@@ -13,7 +13,7 @@
     </head>  
     <body>
       <div class="container confirmation">
-        <p><span class="premier-titre">Felicitation</span><span class="premier-titre-suite">et Bienvenue.</span></p>
+        <p><span class="premier-titre">Félicitation</span><span class="premier-titre-suite">et Bienvenue.</span></p>
         <p class="second-titre">Études de premier cycle</p>
         <p class="troisieme-titre">Demande d'admission</p>
         <p class="quatrieme-titre">Instruction et formulaire</p>
