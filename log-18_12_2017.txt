@@ -1,0 +1,7 @@
+[02_34_56] --- INFO - section identification valide - fin courte.
+[02_34_56] --- INFO - section programmes valide.
+[02_34_56] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[02_34_56] --- INFO - section etude universitaire valide.
+[02_34_56] --- INFO - section emploi valide.
+[02_34_56] --- INFO - statut des variables de validation :1 - 1 - 1 - 1 - 1
+[02_34_56] --- Fichier sauvegarde/ABCD12345678.txt enregistrer.
