@@ -33,3 +33,8 @@
 [00_31_11] --- INFO - section etude universitaire valide.
 [00_31_11] --- INFO - section emploi valide.
 [00_31_11] --- INFO - statut des variables de validation :1 -  - 1 - 1 - 1
+[00_46_24] --- INFO - section identification valide - fin courte.
+[00_46_24] --- INFO - section programmes valide.
+[00_46_24] --- ERREUR - Les dates de periode de fréquentation ne sont pas valides.
+[00_46_24] --- ERREUR - section grade ou diplome le plus recent ou complete invalide.
+[00_46_24] --- INFO - statut des variables de validation :1 - 1 -  -  - 

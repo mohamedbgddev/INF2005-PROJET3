@@ -1645,8 +1645,9 @@
                 </div>
               </div>
             </div>
+            <div id="valider-employe-3" class="errorHeader"></div>
         </div>
-        <div id="valider-employe-3" class="errorHeader"></div>
+
 
         <div class="col-md-4">
           <div class="row">
