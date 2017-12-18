@@ -526,8 +526,7 @@
             <input type="text" class="form-control"
               name="Numero_apartement_autre"
               id="Numero-apartement-autre"
-              placeholder=""
-              onblur="numeroApartementAutreValidation()">
+              placeholder="">
             <p>No d’appartement ou d’unité</p>
             <div id="valider-Numero-apartement-autre" class="errorHeader"></div>
           </div>
@@ -539,7 +538,7 @@
                 name="Municipalité_Pays_Autre"
                 id="Municipalité-Pays-Autre"
                 placeholder=""
-                onblur="municipalitéPaysAutreValidation()">
+                onblur="NoCivicNomDirectionAutreValidation()">
             <p><span class="text-gauche">Municipalité</span><span class="text-droite">Pays (si autre que le Canada)</span></p>
             <div id="valider-Municipalité-Pays-Autre" class="errorHeader"></div>
           </div>
@@ -548,7 +547,7 @@
               name="Code_postal-autre"
               id="Code-postal-autre"
               placeholder="X9X 9X9"
-              onblur="codePostalAutreValidation()">
+              onblur="NoCivicNomDirectionAutreValidation()">
             <p>Code postal</p>
             <div id="valider-Code-postal-autre" class="errorHeader"></div>
           </div>
