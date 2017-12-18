@@ -1,24 +1,46 @@
-[01_56_10] --- INFO - section identification valide - fin courte.
-[01_56_10] --- INFO - section programmes valide.
-[01_56_10] --- ERREUR - section etude secondaires et collegiales dans le Quebec invalide. (2)
-[01_56_10] --- INFO - section etude universitaire valide.
-[01_56_10] --- INFO - section emploi valide.
-[01_56_10] --- INFO - statut des variables de validation :1 - 1 -  - 1 - 1
-[02_23_41] --- INFO - section identification valide - fin courte.
-[02_23_41] --- ERREUR - Le champ radio-trimestre est obligatoire.
-[02_23_41] --- ERREUR - Le champ trimestre_annee est obligatoire.
-[02_23_41] --- ERREUR - Le champ premier_choix_titre est obligatoire.
-[02_23_41] --- ERREUR - Le champ radio-temp-1 est obligatoire.
-[02_23_41] --- ERREUR - Le champ premier_choix_code est obligatoire.
-[02_23_41] --- ERREUR - Le champ radio-type-programme-1 est obligatoire.
-[02_23_41] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
-[02_23_41] --- INFO - section etude universitaire valide.
-[02_23_41] --- INFO - section emploi valide.
-[02_23_41] --- INFO - statut des variables de validation :1 -  - 1 - 1 - 1
-[02_24_45] --- INFO - section identification valide - fin courte.
-[02_24_45] --- INFO - section programmes valide.
-[02_24_45] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
-[02_24_45] --- INFO - section etude universitaire valide.
-[02_24_45] --- INFO - section emploi valide.
-[02_24_45] --- INFO - statut des variables de validation :1 - 1 - 1 - 1 - 1
-[02_24_45] --- Fichier sauvegarde/LABJ24049500.txt enregistrer.
+[03_20_50] --- INFO - section identification valide - fin courte.
+[03_20_50] --- ERREUR - Le champ radio-trimestre est obligatoire.
+[03_20_50] --- ERREUR - Le champ trimestre_annee est obligatoire.
+[03_20_50] --- ERREUR - Le champ premier_choix_titre est obligatoire.
+[03_20_50] --- ERREUR - Le champ radio-temp-1 est obligatoire.
+[03_20_50] --- ERREUR - Le champ premier_choix_code est obligatoire.
+[03_20_50] --- ERREUR - Le champ radio-type-programme-1 est obligatoire.
+[03_20_50] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[03_20_50] --- INFO - section etude universitaire valide.
+[03_20_50] --- INFO - section emploi valide.
+[03_20_50] --- INFO - statut des variables de validation :1 -  - 1 - 1 - 1
+[03_22_11] --- INFO - section identification valide - fin courte.
+[03_22_11] --- INFO - section programmes valide.
+[03_22_11] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[03_22_11] --- INFO - section etude universitaire valide.
+[03_22_11] --- INFO - section emploi valide.
+[03_22_11] --- INFO - statut des variables de validation :1 - 1 - 1 - 1 - 1
+[03_22_11] --- Fichier sauvegarde/ABCD12345678.txt enregistrer.
+[04_05_54] --- INFO - section identification valide - fin courte.
+[04_05_54] --- ERREUR - Le champ radio-trimestre est obligatoire.
+[04_05_54] --- ERREUR - Le champ trimestre_annee est obligatoire.
+[04_05_54] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[04_05_54] --- INFO - section etude universitaire valide.
+[04_05_54] --- INFO - section emploi valide.
+[04_05_54] --- INFO - statut des variables de validation :1 -  - 1 - 1 - 1
+[04_07_07] --- INFO - section identification valide - fin courte.
+[04_07_07] --- INFO - section programmes valide.
+[04_07_07] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[04_07_07] --- INFO - section etude universitaire valide.
+[04_07_07] --- INFO - section emploi valide.
+[04_07_07] --- INFO - statut des variables de validation :1 - 1 - 1 - 1 - 1
+[04_07_07] --- Fichier sauvegarde/ABCD12345678.txt enregistrer.
+[04_07_38] --- INFO - section identification valide - fin courte.
+[04_07_38] --- INFO - section programmes valide.
+[04_07_38] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[04_07_38] --- INFO - section etude universitaire valide.
+[04_07_38] --- INFO - section emploi valide.
+[04_07_38] --- INFO - statut des variables de validation :1 - 1 - 1 - 1 - 1
+[04_07_38] --- Fichier sauvegarde/ABCD12345678.txt enregistrer.
+[04_14_08] --- INFO - section identification valide - fin courte.
+[04_14_08] --- INFO - section programmes valide.
+[04_14_08] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[04_14_08] --- INFO - section etude universitaire valide.
+[04_14_08] --- INFO - section emploi valide.
+[04_14_08] --- INFO - statut des variables de validation :1 - 1 - 1 - 1 - 1
+[04_14_08] --- Fichier sauvegarde/ABCD12345678.txt enregistrer.

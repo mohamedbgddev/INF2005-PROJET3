@@ -356,7 +356,8 @@ function numeroApartementValidation() {
 		document.getElementById('valider-Numero-apartement').innerHTML = '';
 		return true;
 	} else if(!validerChaineSeulementNombre(valeur.value)) {
-		document.getElementById('valider-Numero-apartement').innerHTML = 'Ce champs doit etre comprose de nombre seulement !';
+		document.getElementById("valider-Numero-apartement").style.display = "block";
+		document.getElementById('valider-Numero-apartement').innerHTML = 'Ce champs doit etre comprose de chiffres ou de lettres seulement !';
 		return false;
 	} else {
 		document.getElementById("valider-Numero-apartement").style.display = "none";
@@ -489,7 +490,6 @@ function AutreCitoyenneteValidation() {
 */
 
 function verifierSexe(){
-	console.log("verifierSexe");
 	var valeur = document.querySelector('input[name = "radio-sexe"]:checked');
 
 	if(valeur != null){
@@ -524,7 +524,7 @@ function verifierCitoyennete(){
 
 
 function verifierStatutCanada(){
-	console.log("verifierStatutCanada");
+	
 	var valeur = document.querySelector('input[name = "radio-statut-canada"]:checked');
 	if(valeur != null){
 		document.getElementById('valider-statut-canada').innerHTML = '';
@@ -633,7 +633,7 @@ function validerFormatTelephone(numeroTelephone)
 }
 
 function validerChaineSeulementNombre(nombre){
-	var pattern = /^[0-9]*$/;
+	var pattern = /^[0-9a-zA-Z]+$/;
 	return pattern.test(nombre);
 }
 
@@ -655,7 +655,7 @@ function verifierTrimestre(){
 		return true;
 	} else {
 		document.getElementById("valider-trimestre").style.display = "block";
-		document.getElementById('valider-trimestre').innerHTML = 'Le champs est requis !';
+		document.getElementById('valider-trimestre').innerHTML = 'Le champs trimestre st requis !';
 		return false;
 	}
 }
@@ -666,7 +666,7 @@ function trimestreAnneeValidation() {
 
 	if(valeur.value == "") {
 		document.getElementById("valider-trimestre-annee").style.display = "block";
-		document.getElementById('valider-trimestre-annee').innerHTML = 'Le champs est requis !';
+		document.getElementById('valider-trimestre-annee').innerHTML = 'Le champs Annee est requis !';
 		return false;
 	} else if(!validerAnnee(valeur.value)) {
 		document.getElementById('valider-trimestre-annee').style.display = "block";
@@ -1057,7 +1057,11 @@ function diplomeUniversitaire1Validation() {
       document.getElementById('valider-diplome-universitaire-1').innerHTML = '';
       return true;
     }
-  }
+   }else{ 
+      document.getElementById("valider-diplome-universitaire-1").style.display = "block";
+      document.getElementById('valider-diplome-universitaire-1').innerHTML = 'Les champs sont tous requis!';
+      return false;
+   }
 }
 
 
@@ -1148,73 +1152,79 @@ function diplomeUniversitaire2Validation() {
 
 function employe1Validation() {
 
-  var radioTypeEmploye  = document.querySelector('input[name = "radio-type-employe-1"]:checked');
-  var radioTempsEmploye = document.querySelector('input[name = "radio-temps-employe-1"]:checked');
-  var nomDiplome        = document.getElementById("nom-employe-1");
-  var fonctionOccupee   = document.getElementById("fonction-occupee-1");
-  var moisDebut         = document.getElementById("de-mois-employe-1");
-  var anneeDebut        = document.getElementById("de-annee-employe-1");
-  var moisFin           = document.getElementById("a-mois-employe-1");
-  var anneeFin          = document.getElementById("a-annee-employe-1");
+	var radioTypeEmploye  = document.querySelector('input[name = "radio-type-employe-1"]:checked');
+	var radioTempsEmploye = document.querySelector('input[name = "radio-temps-employe-1"]:checked');
+	var nomEmploye        = document.getElementById("nom-employe-1");
+	var fonctionOccupee   = document.getElementById("fonction-occupee-1");
+	var moisDebut         = document.getElementById("de-mois-employe-1");
+	var anneeDebut        = document.getElementById("de-annee-employe-1");
+	var moisFin           = document.getElementById("a-mois-employe-1");
+	var anneeFin          = document.getElementById("a-annee-employe-1");
 
 
-if(nomDiplome.value == "") {
-    return true;
-  }else if(nomDiplome.value.length > 0) {
-    if(fonctionOccupee.value == "" ) {
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
-      return false;
-    } else if(moisDebut.value == "" ) {
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
-      return false;
-    } else if(anneeDebut.value == "" ) {
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
-      return false;
-    } else if(moisFin.value == "" ) {
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
-      return false;
-    } else if(anneeFin.value == "" ) {
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
-      return false;
-    }else if(radioTypeEmploye == null ) {
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
-      return false;
-    }else if(radioTempsEmploye == null ) {
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
-      return false;
-    }else if ( !validerAnnee(anneeDebut.value)) {
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Le format (de)(Annee) est invalide!';
-      return false;
-    }else if ( !validerAnnee(anneeFin.value)) {
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Le format (a)(Annee) est invalide!';
-      return false;
-    }else if ( !validerMois(moisDebut.value)) {
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Le format (de)(Mois) est invalide!';
-      return false;
-    }else if ( !validerMois(moisFin.value)) {
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Le format (a)(Mois) est invalide!';
-      return false;
-    }else if ( !verifierAnneeMoisCorrecte(anneeFin.value,moisFin.value,anneeDebut.value,moisDebut.value)) {
-      document.getElementById("valider-employe-1").style.display = "block";
-      document.getElementById('valider-employe-1').innerHTML = 'Date de debut est supperieur a date de fin!';
-      return false;
-    } else {
-      document.getElementById("valider-employe-1").style.display = "none";
-      document.getElementById('valider-employe-1').innerHTML = '';
-      return true;
-    }
-  }
+	if(nomEmploye.value == "") {
+    	document.getElementById("valider-employe-1").style.display = "none";
+        document.getElementById('valider-employe-1').innerHTML = '';
+    	return true;
+  	}else if(nomEmploye.value.length > 0) {
+     	if(fonctionOccupee.value == "" ) {
+      		document.getElementById("valider-employe-1").style.display = "block";
+     		document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      	return false;
+    	} else if(moisDebut.value == "" ) {
+      		document.getElementById("valider-employe-1").style.display = "block";
+      		document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      		return false;
+    	} else if(anneeDebut.value == "" ) {
+      		document.getElementById("valider-employe-1").style.display = "block";
+      		document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      		return false;
+    	} else if(moisFin.value == "" ) {
+      		document.getElementById("valider-employe-1").style.display = "block";
+      		document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+     		return false;
+    	} else if(anneeFin.value == "" ) {
+      		document.getElementById("valider-employe-1").style.display = "block";
+      		document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      		return false;
+    	}else if(radioTypeEmploye == null ) {
+     		document.getElementById("valider-employe-1").style.display = "block";
+      		document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      		return false;
+   		}else if(radioTempsEmploye == null ) {
+      		document.getElementById("valider-employe-1").style.display = "block";
+      		document.getElementById('valider-employe-1').innerHTML = 'Les champs sont tous requis!';
+      		return false;
+    	}else if ( !validerAnnee(anneeDebut.value)) {
+      		document.getElementById("valider-employe-1").style.display = "block";
+		    document.getElementById('valider-employe-1').innerHTML = 'Le format (de)(Annee) est invalide!';
+		    return false;
+		}else if ( !validerAnnee(anneeFin.value)) {
+		    document.getElementById("valider-employe-1").style.display = "block";
+		    document.getElementById('valider-employe-1').innerHTML = 'Le format (a)(Annee) est invalide!';
+		    return false;
+		}else if ( !validerMois(moisDebut.value)) {
+		    document.getElementById("valider-employe-1").style.display = "block";
+		    document.getElementById('valider-employe-1').innerHTML = 'Le format (de)(Mois) est invalide!';
+	  		return false;
+	    }else if ( !validerMois(moisFin.value)) {
+	     	document.getElementById("valider-employe-1").style.display = "block";
+	        document.getElementById('valider-employe-1').innerHTML = 'Le format (a)(Mois) est invalide!';
+	        return false;
+   		}else if ( !verifierAnneeMoisCorrecte(anneeFin.value,moisFin.value,anneeDebut.value,moisDebut.value)) {
+            document.getElementById("valider-employe-1").style.display = "block";
+            document.getElementById('valider-employe-1').innerHTML = 'Date de debut est supperieur a date de fin!';
+      		return false;
+    	} else {
+      		document.getElementById("valider-employe-1").style.display = "none";
+      		document.getElementById('valider-employe-1').innerHTML = '';
+      		return true;
+    	}
+  	}else{
+  		document.getElementById("valider-employe-1").style.display = "none";
+      	document.getElementById('valider-employe-1').innerHTML = '';
+      	return true;
+  	}
 }
 
 
@@ -1231,6 +1241,8 @@ function employe2Validation() {
 
 
 if(nomDiplome.value == "") {
+	document.getElementById("valider-employe-2").style.display = "none";
+    document.getElementById('valider-employe-2').innerHTML = '';
     return true;
   }else if(nomDiplome.value.length > 0) {
     if(fonctionOccupee.value == "" ) {
@@ -1279,14 +1291,18 @@ if(nomDiplome.value == "") {
       return false;
     }else if ( !verifierAnneeMoisCorrecte(anneeFin.value,moisFin.value,anneeDebut.value,moisDebut.value)) {
       document.getElementById("valider-employe-2").style.display = "block";
-      document.getElementById('valider-employe-2').innerHTML = 'Dte de debut est supperieur a date de fin!';
+      document.getElementById('valider-employe-2').innerHTML = 'Date de debut est supperieur a date de fin!';
       return false;
     } else {
       document.getElementById("valider-employe-2").style.display = "none";
       document.getElementById('valider-employe-2').innerHTML = '';
       return true;
     }
-  }
+  }else{
+  		document.getElementById("valider-employe-2").style.display = "none";
+      	document.getElementById('valider-employe-2').innerHTML = '';
+      	return true;
+  	}
 }
 
 
@@ -1303,6 +1319,8 @@ function employe3Validation() {
 
 
 if(nomDiplome.value == "") {
+	document.getElementById("valider-employe-3").style.display = "none";
+    document.getElementById('valider-employe-3').innerHTML = '';
     return true;
   }else if(nomDiplome.value.length > 0) {
     if(fonctionOccupee.value == "" ) {
@@ -1358,7 +1376,11 @@ if(nomDiplome.value == "") {
       document.getElementById('valider-employe-3').innerHTML = '';
       return true;
     }
-  }
+  }else{
+  		document.getElementById("valider-employe-3").style.display = "none";
+      	document.getElementById('valider-employe-3').innerHTML = '';
+      	return true;
+  	}
 }
 
 
@@ -1368,29 +1390,21 @@ if(nomDiplome.value == "") {
 */
 
 function validerAnnee(annee){
-	console.log(annee);
-
 	var pattern = /^(19|20)\d\d$/;
-
-	console.log(pattern.test(annee));
-
 	return pattern.test(annee);
 }
 
 
-function verifierDateCorrecte(annee1, annee2){
-	var diffrence = annee2 - annee1;
-
-	console.log(diffrence);
-
+function verifierDateCorrecte(anneeDebut, anneeFin){
+	var diffrence = anneeFin - anneeDebut;
 	if (diffrence > 0) {
 		return true;
 	}
 	return false;
 }
 
-function verifierDateCorrecteAvance(annee1, annee2){
-	var diffrence = annee2 - annee1;
+function verifierDateCorrecteAvance(anneeDebut, anneeFin){
+	var diffrence = anneeFin - anneeDebut;
 	if (diffrence == 0) {
 		return true;
 	}
@@ -1398,16 +1412,20 @@ function verifierDateCorrecteAvance(annee1, annee2){
 }
 
 
-function verifierAnneeMoisCorrecte(anneefin, moisfin, anneedebut, moisdebut){
-
-	if (verifierDateCorrecteAvance(anneefin,anneedebut)) {
-		if ( (moisfin-moisdebut) > 0) {
-			return true;
-		}
-	}else{
+function verifierAnneeMoisCorrecte(anneeFin, moisFin, anneeDebut, moisDebut){
+	var diffAnnee = anneeFin - anneeDebut;
+	if(diffAnnee > 0 ){
+		return true;
+	}else if (diffAnnee < 0){
 		return false;
+	}else {
+		var diffMoi = moisFin - moisDebut;
+		if(diffMoi > 0){
+			return true;
+		}else{
+			return false;
+		}
 	}
-
 }
 
 
@@ -1424,6 +1442,8 @@ function auMoinsUnTelephone(){
 	var valeurCellulaire = document.getElementById("Numero-cellulaire");
 
 	if ( valeurTravail.value != "" || valeurDomicile.value != "" || valeurCellulaire.value != "") {
+		document.getElementById("erreur-groupe-telephone").style.display = "none";
+        document.getElementById('erreur-groupe-telephone').innerHTML = '';
 		return true;
 	}else {
 
@@ -1437,36 +1457,38 @@ function auMoinsUnTelephone(){
 
 function validerFormulaire() {
 
-
-
 	var valider = true;
 
-	if(!nomFamilleNaissanceValidation()) valider = false;
-	if(!dateDeNaissanceValidation()) valider = false;
-	if(!prenomUsuelValidation()) valider = false;
-	if(!codePermanentValidation()) valider = false;
-	if(!codePermanentMinistereValidation()) valider = false;
-	if(!numeroAssurranceSocialeValidation()) valider = false;
-	if(!lieuNaissanceValidation()) valider = false;
-	if(!nomFamillePereNaissance()) valider = false;
-	if(!prenomUsuelPere()) valider = false;
-	if(!nomFamilleMereNaissance()) valider = false;
-	if(!prenomUsuelMere()) valider = false;
-	if(!numeroTelephoneDomicileValidation()) valider = false;
-	if(!numeroCellulaireValidation()) valider = false;
-	if(!numeroTelephoneTravailValidation()) valider = false;
-	if(!courrielValidation()) valider = false;
-	if(!NoCivicNomDirectionValidation()) valider = false;
-	if(!numeroApartementValidation()) valider = false;
-	if(!municipalitéPaysValidation()) valider = false;
-	if(!codePostalValidation()) valider = false;
-	if(!NoCivicNomDirectionAutreValidation()) valider = false;
-	if(!verifierLangueUsage()) valider = false;
+	if(!nomFamilleNaissanceValidation()) valider = false;	
+	if(!dateDeNaissanceValidation()) valider = false;	
+	if(!prenomUsuelValidation()) valider = false;	
+	if(!codePermanentValidation()) valider = false;	
+	if(!codePermanentMinistereValidation()) valider = false;	
+	if(!numeroAssurranceSocialeValidation()) valider = false;	
+	if(!lieuNaissanceValidation()) valider = false;	
+	if(!nomFamillePereNaissance()) valider = false;	
+	if(!prenomUsuelPere()) valider = false;	
+	if(!nomFamilleMereNaissance()) valider = false;	
+	if(!prenomUsuelMere()) valider = false;	
+	if(!numeroTelephoneDomicileValidation()) valider = false;	
+	if(!numeroCellulaireValidation()) valider = false;	
+	if(!numeroTelephoneTravailValidation()) valider = false;	
+	if(!courrielValidation()) valider = false;	
+	if(!NoCivicNomDirectionValidation()) valider = false;	
+	if(!numeroApartementValidation()) valider = false;	
+	if(!municipalitéPaysValidation()) valider = false;	
+	if(!codePostalValidation()) valider = false;	
+	if(!NoCivicNomDirectionAutreValidation()) valider = false;	
+	if(!verifierLangueUsage()) valider = false;	
 	if(!verifierLangueMaternelle()) valider = false;
 	if(!auMoinsUnTelephone()) valider = false;
-	if(!verifierCitoyennete()) valider = false;
-	if(!verifierStatutCanada() ) valider = false;
+	if(!verifierCitoyennete()) valider = false;	
+	if(!verifierStatutCanada() ) valider = false;	
 	if(!verifierSexe()) valider = false;
+	if(!diplomeUniversitaire1Validation()) valider = false;
+	if(!premierChoixValidation()) valider = false;	
+	if(!verifierTrimestre()) valider = false;
+	if(!trimestreAnneeValidation()) valider = false;
 
 	return valider;
 }
