@@ -1858,7 +1858,7 @@
       </div>
     </div>
   </form>
-<script type="text/javascript" src="js/validation.js"></script>
+<script src="js/validation.js"></script>
 <script>
   $("form").keypress(function(key) {
   //empeche la touche 'enter' d'envoyee le formulaire
