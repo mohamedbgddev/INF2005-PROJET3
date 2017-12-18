@@ -27,7 +27,6 @@ if ($_POST) {
       }
       sauvegardeRedirect($text, $codePerm);
   }else{
-    logger("CODE 400");
     header("Location: erreur.php", true, 400);
     include 'erreur.php';
     die();
@@ -126,8 +125,9 @@ function validerSectionIdentification(){
   //si un boutton radio 'autre' est selectionner, le text correspondent doit etre plein.
   $autreTextCitoyennete = verifierTexteAutre("radio-citoyennete", "Autre_citoyennete", REGEX_TAILLE_CHAMPS);
   $autreTextLangueUsage = verifierTexteAutre("radio-langue-usage", "langue_usage_autre", REGEX_TAILLE_CHAMPS);
-  $autreTextLangueMaternelle = verifierTexteAutre("radio-langue-maternelle", "langue_usage_autre", REGEX_TAILLE_CHAMPS);
+  $autreTextLangueMaternelle = verifierTexteAutre("radio-langue-maternelle", "langue_maternelle_autre", REGEX_TAILLE_CHAMPS);
   if(!($autreTextCitoyennete && $autreTextLangueUsage && $autreTextLangueMaternelle)){
+    logger("ERREUR - si un boutton radio autre citoyennete est selectionner, le text correspondent doit etre plein.");
     return false;
   }
 

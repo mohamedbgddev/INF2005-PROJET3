@@ -512,3 +512,9 @@
 [23_50_10] --- INFO - section emploi valide.
 [23_50_10] --- INFO - statut des variables de validation : -  - 1 - 1 - 1
 [23_50_10] --- CODE 400
+[23_59_15] --- INFO - section programmes valide.
+[23_59_15] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[23_59_15] --- INFO - section etude universitaire valide.
+[23_59_15] --- INFO - section emploi valide.
+[23_59_15] --- INFO - statut des variables de validation : - 1 - 1 - 1 - 1
+[23_59_15] --- CODE 400

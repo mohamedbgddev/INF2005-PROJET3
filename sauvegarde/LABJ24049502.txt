@@ -1,0 +1,95 @@
+[Nom_de_famille_a_la_naissance] : Julien Labrosse
+[Date_de_naissance] : 24-04-1995
+[Prenom_usuel] : fghjk
+[radio-sexe] : Masculin
+[Code_permanent] : 
+[Numero_assurance_sociale] : 999999999
+[Code_permanent_ministere] : LABJ24049502
+[radio-citoyennete] : AutreCitoyennete
+[Autre_citoyennete] : AUTRE
+[Lieu_de_naissance] : Montréal
+[Nom_de_famille_pere_naissance] : Labrosse
+[Prenom_usuel_du_pere] : Julien
+[Nom_de_famille_mere_naissance] : 
+[Prenom_usuel_du_mere] : 
+[Numero_telephone_domicile] : 
+[Numero_cellulaire] : 999-999-9999
+[Numero_telephone_travail] : 
+[Poste_telephone_tavail] : 
+[radio-statut-canada] : Citoyen canadien
+[radio-langue-usage] : AutreLangueUsage
+[langue_usage_autre] : autre
+[radio-langue-maternelle] : Francais
+[Courriel_personnel] : 
+[Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue] : BKNAIO
+[Numero_apartement] : 
+[Municipalité_Pays] : IKNLM
+[Code_postal] : X9X 9X9
+[Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue_autre] : 
+[Numero_apartement_autre] : 
+[Municipalité_Pays_Autre] : 
+[Code_postal-autre] : 
+[radio-trimestre] : on
+[trimestre_annee] : 1999
+[premier_choix_titre] : SAWGGER
+[premier_choix_code] : 51
+[radio-type-programme-1] : on
+[radio-temp-1] : on
+[deuxieme_choix_titre] : 
+[deuxieme_choix_code] : 
+[troisieme_choix_titre] : 
+[troisieme_choix_code] : 
+[derniere_annee_secondaire] : 
+[diplome_sec_col_hors_quebec] : 
+[discipline_specialisation_hors_quebec] : 
+[institution_hors_quebec] : 
+[pays_hors_quebec] : 
+[diplome_sec_col_dans_quebec] : 
+[discipline_specialisation_dans_quebec] : 
+[institution_dans_quebec] : 
+[de_annee_derniere_annee_secondaire] : 
+[a_annee_derniere_annee_secondaire] : 
+[de_annee_diplome_hors_quebec] : 
+[a_annee_diplome_hors_quebec] : 
+[mois_obtention_diplome_hors_quebec] : 
+[annee_obtention_diplome_hors_quebec] : 
+[de_annee_diplome_dans_quebec] : 
+[a_annee_diplome_dans_quebec] : 
+[mois_obtention_diplome_dans_quebec] : 
+[annee_obtention_diplome_dans_quebec] : 
+[diplome_universitaire_1] : 
+[discipline_specialisation_universitaire_1] : 
+[institution_universitaire_1] : 
+[pays_universitaire_1] : 
+[diplome_universitaire_2] : 
+[discipline_specialisation_universitaire_2] : 
+[institution_universitaire_2] : 
+[pays_universitaire_2] : 
+[de_annee_diplome_universitaire_1] : 
+[a_annee_diplome_universitaire_1] : 
+[mois_obtention_diplome_universitaire_1] : 
+[annee_obtention_diplome_universitaire_1] : 
+[nombre_credits_diplome_universitaire_1] : 
+[de_annee_diplome_universitaire_2] : 
+[a_annee_diplome_universitaire_2] : 
+[mois_obtention_diplome_universitaire_2] : 
+[annee_obtention_diplome_universitaire_2] : 
+[nombre_credits_diplome_universitaire_2] : 
+[nom_employe_1] : 
+[fonction_occupee_1] : 
+[nom_employe_2] : 
+[fonction_occupee_2] : 
+[nom_employe_3] : 
+[fonction_occupee_3] : 
+[de_mois_employe_1] : 
+[de_annee_employe_1] : 
+[a_mois_employe_1] : 
+[a_annee_employe_1] : 
+[de_mois_employe_2] : 
+[de_annee_employe_2] : 
+[a_mois_employe_2] : 
+[a_annee_employe_2] : 
+[de_mois_employe_3] : 
+[de_annee_employe_3] : 
+[a_mois_employe_3] : 
+[a_annee_employe_3] : 

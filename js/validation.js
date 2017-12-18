@@ -277,6 +277,8 @@ function numeroTelephoneDomicileValidation() {
 	var valeur = document.getElementById("Numero-telephone-domicile");
 
 	if(valeur.value == "") {
+		document.getElementById("valider-Numero-telephone-domicile").style.display = "none";
+		document.getElementById('valider-Numero-telephone-domicile').innerHTML = '';
 		return true;
 	} else if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-telephone-domicile").style.display = "block";
@@ -295,6 +297,8 @@ function numeroCellulaireValidation() {
 	var valeur = document.getElementById("Numero-cellulaire");
 
 	if(valeur.value == "") {
+		document.getElementById("valider-Numero-cellulaire").style.display = "none";
+		document.getElementById('valider-Numero-cellulaire').innerHTML = '';
 		return true;
 	} else if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-cellulaire").style.display = "block";
@@ -313,6 +317,8 @@ function numeroTelephoneTravailValidation() {
 	var valeur = document.getElementById("Numero-telephone-travail");
 
 	if(valeur.value == "") {
+		document.getElementById("valider-Numero-telephone-travail").style.display = "none";
+		document.getElementById('valider-Numero-telephone-travail').innerHTML = '';
 		return true;
 	} else if(!validerFormatTelephone(valeur.value)) {
 		document.getElementById("valider-Numero-telephone-travail").style.display = "block";
