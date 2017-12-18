@@ -1,0 +1,24 @@
+[01_56_10] --- INFO - section identification valide - fin courte.
+[01_56_10] --- INFO - section programmes valide.
+[01_56_10] --- ERREUR - section etude secondaires et collegiales dans le Quebec invalide. (2)
+[01_56_10] --- INFO - section etude universitaire valide.
+[01_56_10] --- INFO - section emploi valide.
+[01_56_10] --- INFO - statut des variables de validation :1 - 1 -  - 1 - 1
+[02_23_41] --- INFO - section identification valide - fin courte.
+[02_23_41] --- ERREUR - Le champ radio-trimestre est obligatoire.
+[02_23_41] --- ERREUR - Le champ trimestre_annee est obligatoire.
+[02_23_41] --- ERREUR - Le champ premier_choix_titre est obligatoire.
+[02_23_41] --- ERREUR - Le champ radio-temp-1 est obligatoire.
+[02_23_41] --- ERREUR - Le champ premier_choix_code est obligatoire.
+[02_23_41] --- ERREUR - Le champ radio-type-programme-1 est obligatoire.
+[02_23_41] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[02_23_41] --- INFO - section etude universitaire valide.
+[02_23_41] --- INFO - section emploi valide.
+[02_23_41] --- INFO - statut des variables de validation :1 -  - 1 - 1 - 1
+[02_24_45] --- INFO - section identification valide - fin courte.
+[02_24_45] --- INFO - section programmes valide.
+[02_24_45] --- INFO - section etude secondaires et collegiales dans le Quebec valide.
+[02_24_45] --- INFO - section etude universitaire valide.
+[02_24_45] --- INFO - section emploi valide.
+[02_24_45] --- INFO - statut des variables de validation :1 - 1 - 1 - 1 - 1
+[02_24_45] --- Fichier sauvegarde/LABJ24049500.txt enregistrer.
