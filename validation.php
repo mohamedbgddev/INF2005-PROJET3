@@ -207,7 +207,7 @@ function comparerEtValiderDates($debut, $fin){
   $finValide = empty($_POST[$fin]) ? false : preg_match(REGEX_ANNEE, $_POST[$fin]);
   if($finValide && $debutValide){
     $diff = $_POST[$fin] - $_POST[$debut];
-    $diffValide = $diffAnneeHQ > 0 ? true : false;
+    $diffValide = $diff > 0 ? true : false;
     return $diffValide;
   }
   return false;
@@ -234,14 +234,15 @@ function validerSectionEtudeSC(){
     $institutionHQValide = empty($_POST["institution_hors_quebec"]) ? false : preg_match(REGEX_TAILLE_CHAMPS, $_POST["institution_hors_quebec"]);
     $paysValide = empty($_POST["pays_hors_quebec"]) ? false : preg_match(REGEX_TAILLE_CHAMPS, $_POST["pays_hors_quebec"]);
     $anneeObtentionHQ = empty($_POST["annee_obtention_diplome_hors_quebec"]) ? false : preg_match(REGEX_ANNEE, $_POST["annee_obtention_diplome_hors_quebec"]);
-    $moiObtentionHQ = empty($_POST["mois_obtention_diplome_hors_quebec"]) ? false : preg_match(REGEX_ANNEE, $_POST["mois_obtention_diplome_hors_quebec"]);
+    $moiObtentionHQ = empty($_POST["mois_obtention_diplome_hors_quebec"]) ? false : preg_match(REGEX_MOI, $_POST["mois_obtention_diplome_hors_quebec"]);
     $anneeHQValide = comparerEtValiderDates("de_annee_diplome_hors_quebec", "a_annee_diplome_hors_quebec");
     if(!($nomDiplome && $disciplineSpecialisationHQValide && $institutionHQValide && $paysValide && $anneeObtentionHQ && $moiObtentionHQ && $anneeHQValide)){
-      logger("ERREUR - section etutde secondaires et collegiales hors Quebec invalide.");
+      logger("ERREUR - section etude secondaires et collegiales hors Quebec invalide. (1)");
+      logger($nomDiplome." - ".$disciplineSpecialisationHQValide." - ".$institutionHQValide." - ".$paysValide." - ".$anneeObtentionHQ." - ".$moiObtentionHQ." - ".$anneeHQValide);
       return false;
     }
   } else if (!arrayBooleanUniqueCount($champsDiplomeHQ)){
-    logger("ERREUR - section etutde secondaires et collegiales hors Quebec invalide.");
+    logger("ERREUR - section etude secondaires et collegiales hors Quebec invalide. (2)");
     return false;
   }
 
@@ -255,14 +256,15 @@ function validerSectionEtudeSC(){
     $disciplineSpecialisationQCValide = empty($_POST["discipline_specialisation_dans_quebec"]) ? false : preg_match(REGEX_TAILLE_CHAMPS, $_POST["discipline_specialisation_dans_quebec"]);
     $institutionQCValide = empty($_POST["institution_dans_quebec"]) ? false : preg_match(REGEX_TAILLE_CHAMPS, $_POST["institution_dans_quebec"]);
     $anneeObtentionQC = empty($_POST["annee_obtention_diplome_dans_quebec"]) ? false : preg_match(REGEX_ANNEE, $_POST["annee_obtention_diplome_dans_quebec"]);
-    $moiObtentionQC = empty($_POST["mois_obtention_diplome_dans_quebec"]) ? false : preg_match(REGEX_ANNEE, $_POST["mois_obtention_diplome_dans_quebec"]);
-    $anneeQCValide = comparerEtValiderDates("a_annee_diplome_dans_quebec", "de_annee_diplome_dans_quebec");
-    if(!($nomDiplome && $disciplineSpecialisationQCValide && $institutionQCValide && $paysValide && $anneeObtentionQC && $moiObtentionQC && $anneeQCValide)){
-      logger("ERREUR - section etutde secondaires et collegiales dans le Quebec invalide.");
+    $moiObtentionQC = empty($_POST["mois_obtention_diplome_dans_quebec"]) ? false : preg_match(REGEX_MOI, $_POST["mois_obtention_diplome_dans_quebec"]);
+    $anneeQCValide = comparerEtValiderDates("de_annee_diplome_dans_quebec", "a_annee_diplome_dans_quebec");
+    if(!($nomDiplomeQC && $disciplineSpecialisationQCValide && $institutionQCValide && $anneeObtentionQC && $moiObtentionQC && $anneeQCValide)){
+      logger("ERREUR - section etude secondaires et collegiales dans le Quebec invalide. (1)");
+      logger($nomDiplomeQC." - ".$disciplineSpecialisationQCValide." - ".$institutionQCValide." - ".$anneeObtentionQC." - ".$moiObtentionQC." - ".$anneeQCValide);
       return false;
     }
   } else if (!arrayBooleanUniqueCount($champsDiplomeQC)){
-    logger("ERREUR - section etutde secondaires et collegiales dans le Quebec invalide.");
+    logger("ERREUR - section etude secondaires et collegiales dans le Quebec invalide. (2)");
     return false;
   }
 
@@ -284,14 +286,15 @@ function validerSectionUniversitaire(){
     $institutionUValide = empty($_POST["institution_universitaire_1"]) ? false : preg_match(REGEX_TAILLE_CHAMPS, $_POST["institution_universitaire_1"]);
     $paysValide = empty($_POST["pays_universitaire_1"]) ? false : preg_match(REGEX_TAILLE_CHAMPS, $_POST["pays_universitaire_1"]);
     $anneeObtentionU = empty($_POST["annee_obtention_diplome_universitaire_1"]) ? false : preg_match(REGEX_ANNEE, $_POST["annee_obtention_diplome_universitaire_1"]);
-    $moiObtentionU = empty($_POST["mois_obtention_diplome_universitaire_1"]) ? false : preg_match(REGEX_ANNEE, $_POST["mois_obtention_diplome_universitaire_1"]);
-    $anneeUValide = comparerEtValiderDates("a_annee_diplome_universitaire_1", "de_annee_diplome_universitaire_1");
-    if(!($nomDiplome && $disciplineSpecialisationUValide && $institutionUValide && $paysValide && $anneeObtentionU && $moiObtentionU && $anneeUValide)){
-      logger("ERREUR - section grade ou diplome le plus recent ou complete invalide.");
+    $moiObtentionU = empty($_POST["mois_obtention_diplome_universitaire_1"]) ? false : preg_match(REGEX_MOI, $_POST["mois_obtention_diplome_universitaire_1"]);
+    $anneeUValide = comparerEtValiderDates("de_annee_diplome_universitaire_1", "a_annee_diplome_universitaire_1");
+    if(!($nomDiplomeU && $disciplineSpecialisationUValide && $institutionUValide && $paysValide && $anneeObtentionU && $moiObtentionU && $anneeUValide)){
+      logger("ERREUR - section grade ou diplome le plus recent ou complete invalide. (1)");
+      logger($nomDiplomeU." - ".$disciplineSpecialisationUValide." - ".$institutionUValide." - ".$paysValide." - ".$anneeObtentionU." - ".$moiObtentionU." - ".$anneeUValide);
       return false;
     }
   } else if (!arrayBooleanUniqueCount($champsDiplomeURecent)){
-    logger("ERREUR - section grade ou diplome le plus recent ou complete invalide.");
+    logger("ERREUR - section grade ou diplome le plus recent ou complete invalide. (2)");
     return false;
   }
 
@@ -308,14 +311,15 @@ function validerSectionUniversitaire(){
     $institutionU2Valide = empty($_POST["institution_universitaire_2"]) ? false : preg_match(REGEX_TAILLE_CHAMPS, $_POST["institution_universitaire_2"]);
     $paysValide = empty($_POST["pays_universitaire_2"]) ? false : preg_match(REGEX_TAILLE_CHAMPS, $_POST["pays_universitaire_2"]);
     $anneeObtentionU2 = empty($_POST["annee_obtention_diplome_universitaire_2"]) ? false : preg_match(REGEX_ANNEE, $_POST["annee_obtention_diplome_universitaire_2"]);
-    $moiObtentionU2 = empty($_POST["mois_obtention_diplome_universitaire_2"]) ? false : preg_match(REGEX_ANNEE, $_POST["mois_obtention_diplome_universitaire_2"]);
-    $anneeU2Valide = comparerEtValiderDates("a_annee_diplome_universitaire_2", "de_annee_diplome_universitaire_2");
-    if(!($nomDiplome && $disciplineSpecialisationU2Valide && $institutionU2Valide && $paysValide && $anneeObtentionU2 && $moiObtentionU2 && $anneeU2Valide)){
-      logger("ERREUR - section autre etude universitaire invalide.");
+    $moiObtentionU2 = empty($_POST["mois_obtention_diplome_universitaire_2"]) ? false : preg_match(REGEX_MOI, $_POST["mois_obtention_diplome_universitaire_2"]);
+    $anneeU2Valide = comparerEtValiderDates("de_annee_diplome_universitaire_2", "a_annee_diplome_universitaire_2");
+    if(!($nomDiplomeU2 && $disciplineSpecialisationU2Valide && $institutionU2Valide && $paysValide && $anneeObtentionU2 && $moiObtentionU2 && $anneeU2Valide)){
+      logger("ERREUR - section autre etude universitaire invalide. (1)");
+      logger($nomDiplomeU2." - ".$disciplineSpecialisationU2Valide." - ".$institutionU2Valide." - ".$paysValide." - ".$anneeObtentionU2." - ".$moiObtentionU2." - ".$anneeU2Valide);
       return false;
     }
   } else if (!arrayBooleanUniqueCount($champsDiplomeU2)){
-    logger("ERREUR - section autre etude universitaire invalide.");
+    logger("ERREUR - section autre etude universitaire invalide. (2)");
     return false;
   }
 
@@ -325,15 +329,15 @@ function validerSectionUniversitaire(){
 
 function comparerEtValiderDatesAvecMoi($moiDebut, $anneeDebut, $moiFin, $anneeFin){
   $anneeDebutValide = empty($_POST[$anneeDebut]) ? false : preg_match(REGEX_ANNEE, $_POST[$anneeDebut]);
-  $moiDebutValide = empty($_POST[$moiDebut]) ? false : preg_match(REGEX_ANNEE, $_POST[$moiDebut]);
+  $moiDebutValide = empty($_POST[$moiDebut]) ? false : preg_match(REGEX_MOI, $_POST[$moiDebut]);
   $anneeFinValide = empty($_POST[$anneeFin]) ? false : preg_match(REGEX_ANNEE, $_POST[$anneeFin]);
-  $moiFinValide = empty($_POST[$moiFin]) ? false : preg_match(REGEX_ANNEE, $_POST[$moiFin]);
+  $moiFinValide = empty($_POST[$moiFin]) ? false : preg_match(REGEX_MOI, $_POST[$moiFin]);
   if($anneeDebutValide && $moiDebutValide && $anneeFinValide && $moiFinValide){
-    $anneeDiff = $_POST([$anneeFin]) - $_POST([$anneeDebut]);
+    $anneeDiff = $_POST[$anneeFin] - $_POST[$anneeDebut];
     if($anneeDiff > 0){
       return true;
     } else if ($anneeDiff === 0) {
-      $moiDiff = $_POST([$moiFin]) - $_POST([$moiDebut]);
+      $moiDiff = $_POST[$moiFin] - $_POST[$moiDebut];
       if($moiDiff > 0){
         return true;
       }else{

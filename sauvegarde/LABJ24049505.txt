@@ -1,0 +1,110 @@
+[Nom_de_famille_a_la_naissance] : ghjkhjk
+[Date_de_naissance] : 24-04-1995
+[Prenom_usuel] : hjk
+[radio-sexe] : Masculin
+[Code_permanent] : 
+[Numero_assurance_sociale] : 999999999
+[Code_permanent_ministere] : LABJ24049505
+[radio-citoyennete] : Canadienne
+[Lieu_de_naissance] : jjjj
+[Nom_de_famille_pere_naissance] : 
+[Prenom_usuel_du_pere] : 
+[Nom_de_famille_mere_naissance] : 
+[Prenom_usuel_du_mere] : 
+[Numero_telephone_domicile] : 
+[Numero_cellulaire] : 999-999-9999
+[Numero_telephone_travail] : 
+[Poste_telephone_tavail] : 
+[radio-statut-canada] : Citoyen canadien
+[radio-langue-usage] : Francais
+[radio-langue-maternelle] : Francais
+[Courriel_personnel] : 
+[Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue] : dfghj
+[Numero_apartement] : 
+[Municipalité_Pays] : ghjk
+[Code_postal] : X9X 9X9
+[Numéro_civique_Type_et_nom_de_la_rue_Direction_de_rue_autre] : GHJK
+[Numero_apartement_autre] : 
+[Municipalité_Pays_Autre] : HJK
+[Code_postal-autre] : X9X 9X9
+[radio-trimestre] : on
+[trimestre_annee] : 1999
+[premier_choix_titre] : FGHJK
+[radio-temp-1] : on
+[premier_choix_code] : JK
+[radio-type-programme-1] : on
+[deuxieme_choix_titre] : HJNKM
+[deuxieme_choix_code] : NKML
+[radio-type-programme-2] : on
+[radio-temp-2] : on
+[troisieme_choix_titre] : HJ
+[radio-temp-3] : on
+[troisieme_choix_code] : JKNML
+[radio-type-programme-3] : on
+[derniere_annee_secondaire] : FVGHBJN
+[radio-diplome-sec-col-hors-quebec] : on
+[diplome_sec_col_hors_quebec] : GHBJN
+[discipline_specialisation_hors_quebec] : HBJNKM
+[institution_hors_quebec] : BJNM
+[pays_hors_quebec] : BNJKM
+[radio-DEC_ou_autre] : on
+[diplome_sec_col_dans_quebec] : ghuj
+[discipline_specialisation_dans_quebec] : jnkm
+[institution_dans_quebec] : nm
+[de_annee_derniere_annee_secondaire] : 1999
+[a_annee_derniere_annee_secondaire] : 2000
+[de_annee_diplome_hors_quebec] : 1998
+[a_annee_diplome_hors_quebec] : 1999
+[mois_obtention_diplome_hors_quebec] : 10
+[annee_obtention_diplome_hors_quebec] : 1999
+[radio-obtention-diplome-page-2] : on
+[de_annee_diplome_dans_quebec] : 1998
+[a_annee_diplome_dans_quebec] : 1999
+[mois_obtention_diplome_dans_quebec] : 12
+[annee_obtention_diplome_dans_quebec] : 1999
+[radio-diplome-universitaire-1] : on
+[diplome_universitaire_1] : hbnjk
+[discipline_specialisation_universitaire_1] : njkm
+[institution_universitaire_1] : bjnkm
+[pays_universitaire_1] : hjk
+[radio-diplome-universitaire-2] : on
+[diplome_universitaire_2] : asd
+[discipline_specialisation_universitaire_2] : kml
+[institution_universitaire_2] : hbnjh
+[pays_universitaire_2] : hbnm
+[radio-obtention-diplome-universitaire-1] : on
+[de_annee_diplome_universitaire_1] : 2001
+[a_annee_diplome_universitaire_1] : 2002
+[mois_obtention_diplome_universitaire_1] : 04
+[annee_obtention_diplome_universitaire_1] : 1999
+[nombre_credits_diplome_universitaire_1] : 82
+[radio-obtention-diplome-universitaire-2] : on
+[de_annee_diplome_universitaire_2] : 1999
+[a_annee_diplome_universitaire_2] : 2000
+[mois_obtention_diplome_universitaire_2] : 01
+[annee_obtention_diplome_universitaire_2] : 1999
+[nombre_credits_diplome_universitaire_2] : 145
+[nom_employe_1] : bjnm
+[fonction_occupee_1] : jk
+[radio-type-employe-1] : on
+[radio-temps-employe-1] : on
+[nom_employe_2] : bnm
+[fonction_occupee_2] : nkm
+[radio-type-employe-2] : on
+[radio-temps-employe-2] : on
+[nom_employe_3] : 231t5
+[fonction_occupee_3] : 134
+[radio-type-employe-3] : on
+[radio-temps-employe-3] : on
+[de_mois_employe_1] : 10
+[de_annee_employe_1] : 1999
+[a_mois_employe_1] : 11
+[a_annee_employe_1] : 1999
+[de_mois_employe_2] : 10
+[de_annee_employe_2] : 1999
+[a_mois_employe_2] : 11
+[a_annee_employe_2] : 1999
+[de_mois_employe_3] : 10
+[de_annee_employe_3] : 1999
+[a_mois_employe_3] : 11
+[a_annee_employe_3] : 1999
